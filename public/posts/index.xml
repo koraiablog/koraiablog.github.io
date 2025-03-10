@@ -6,20 +6,20 @@
     <description>Recent content in Posts on KORAIA</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 10 Mar 2025 14:45:31 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 10 Mar 2025 16:54:20 +0900</lastBuildDate>
     <atom:link href="https://koraiablog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>중국의 &#39;마누스(Manus)&#39;: AI 에이전트의 새로운 시대를 열다</title>
+      <link>https://koraiablog.github.io/posts/china-manus-autonomous-ai-agent/</link>
+      <pubDate>Mon, 10 Mar 2025 16:54:20 +0900</pubDate>
+      <guid>https://koraiablog.github.io/posts/china-manus-autonomous-ai-agent/</guid>
+      <description>&lt;p&gt;최근 중국이 AI 기술 분야에서 또 한 번의 혁신을 이루며 세계적 주목을 받고 있습니다. 딥시크(DeepSeek)가 LLM 분야에서 새로운 지평을 열었다면, 이번에는 &amp;lsquo;마누스(Manus)&amp;lsquo;가 AI 자율 에이전트 영역에서 새로운 충격을 가져다 주며 중국의 AI 기술력이 다시 한번 글로벌 무대에서 인정받고 있습니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI 에이전트의 시대가 왔습니다</title>
       <link>https://koraiablog.github.io/posts/ai-agent-marketplace-era/</link>
       <pubDate>Mon, 10 Mar 2025 14:45:31 +0900</pubDate>
       <guid>https://koraiablog.github.io/posts/ai-agent-marketplace-era/</guid>
-      <description>&lt;p&gt;요즘 IT 업계에서 가장 뜨거운 키워드 중 하나가 &amp;lsquo;AI 에이전트&amp;rsquo;입니다. 이미 많은 기업들이 AI 기반 비서나 자동화 도구를 선보이고 있지만, 앞으로 10년 동안 우리가 목격할 변화는 그보다 훨씬 더 근본적이고 광범위할 것으로 보입니다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI 에이전트의 시대가 왔습니다</title>
-      <link>https://koraiablog.github.io/posts/first/</link>
-      <pubDate>Mon, 10 Mar 2025 14:45:31 +0900</pubDate>
-      <guid>https://koraiablog.github.io/posts/first/</guid>
       <description>&lt;p&gt;요즘 IT 업계에서 가장 뜨거운 키워드 중 하나가 &amp;lsquo;AI 에이전트&amp;rsquo;입니다. 이미 많은 기업들이 AI 기반 비서나 자동화 도구를 선보이고 있지만, 앞으로 10년 동안 우리가 목격할 변화는 그보다 훨씬 더 근본적이고 광범위할 것으로 보입니다.&lt;/p&gt;</description>
     </item>
   </channel>
