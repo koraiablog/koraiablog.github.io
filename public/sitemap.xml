@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://koraiablog.github.io/categories/</loc>
+    <loc>https://koraiablog.github.io/posts/ai-agent-marketplace-era/</loc>
     <lastmod>2025-03-10T14:45:31+09:00</lastmod>
   </url><url>
-    <loc>https://koraiablog.github.io/categories/category1/</loc>
+    <loc>https://koraiablog.github.io/posts/first/</loc>
+    <lastmod>2025-03-10T14:45:31+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</loc>
+    <lastmod>2025-03-10T14:45:31+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/categories/</loc>
     <lastmod>2025-03-10T14:45:31+09:00</lastmod>
   </url><url>
     <loc>https://koraiablog.github.io/</loc>
@@ -14,16 +20,13 @@
     <loc>https://koraiablog.github.io/posts/</loc>
     <lastmod>2025-03-10T14:45:31+09:00</lastmod>
   </url><url>
-    <loc>https://koraiablog.github.io/tags/tag1/</loc>
-    <lastmod>2025-03-10T14:45:31+09:00</lastmod>
-  </url><url>
-    <loc>https://koraiablog.github.io/tags/tag2/</loc>
-    <lastmod>2025-03-10T14:45:31+09:00</lastmod>
-  </url><url>
     <loc>https://koraiablog.github.io/tags/</loc>
     <lastmod>2025-03-10T14:45:31+09:00</lastmod>
   </url><url>
-    <loc>https://koraiablog.github.io/posts/first/</loc>
+    <loc>https://koraiablog.github.io/categories/%EA%B8%B0%EC%88%A0-%ED%8A%B8%EB%A0%8C%EB%93%9C/</loc>
+    <lastmod>2025-03-10T14:45:31+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/</loc>
     <lastmod>2025-03-10T14:45:31+09:00</lastmod>
   </url>
 </urlset>

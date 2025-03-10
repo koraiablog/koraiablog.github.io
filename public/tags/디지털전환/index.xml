@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on KORAIA</title>
-    <link>https://koraiablog.github.io/posts/</link>
-    <description>Recent content in Posts on KORAIA</description>
+    <title>디지털전환 on KORAIA</title>
+    <link>https://koraiablog.github.io/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/</link>
+    <description>Recent content in 디지털전환 on KORAIA</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 10 Mar 2025 14:45:31 +0900</lastBuildDate>
-    <atom:link href="https://koraiablog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://koraiablog.github.io/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI 에이전트의 시대가 왔습니다</title>
       <link>https://koraiablog.github.io/posts/ai-agent-marketplace-era/</link>

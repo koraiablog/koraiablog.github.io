@@ -3,8 +3,10 @@ languageCode = 'ko-kr'
 defaultContentLanguage = "en"
 title = 'KORAIA'
 theme = "dream"
+enableRobotsTXT = true
 
 [params]
+images = ["https://file.miricanvas.com/design_thumb/2025/03/10/15/40/kqu7mcbl88r29r5c/thumb.jpg"]
 lightTheme = "emerald"
 darkTheme = "forest"
 author = "koraia"
