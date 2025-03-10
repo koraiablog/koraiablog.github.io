@@ -1,77 +1,27 @@
 baseURL = 'https://koraiablog.github.io/'
 languageCode = 'ko-kr'
 defaultContentLanguage = "en"
-title = '한국인공지능협회 블로그'
-theme="dream"
-
-
-# [services]
-# [services.disqus]
-# shortname = ""
-# [services.googleAnalytics]
-# ID = ""
-
+title = 'KORAIA'
+theme = "dream"
 
 [params]
-# zenMode = true
-
 lightTheme = "emerald"
 darkTheme = "forest"
-
-# backgroundImage = "img/global-background.jpg"
-# backgroundImageDark = ""
-
-author = "KORAIA"
-# description = ""
+author = "koraia"
 avatar = "img/avatar.svg"
-headerTitle = "사단법인 한국인공지능협회 블로그"
-motto = "미래를 여는 AI"
-
-footerBottomText = "사단법인 한국인공지능협회"
-
-# rss = true
-
-# utterancesRepo = ""
-
-# valine = true
-# LEANCLOUD_APP_ID = ""
-# LEANCLOUD_APP_KEY = ""
-
-# waline = true
-# walineServer = ""
-
+headerTitle = "미래를 여는 AI,"
+motto = "사단법인 한국인공지능협회"
+footerBottomText = "🌱 사단법인 한국인공지능협회"
 email = "info@koraia.org"
-
 siteStartYear = 2017
-
 favicon = "symbol.ico"
-
-# Syntax highlighting
-# customSyntaxHighlighting = true
-
-# options
-# stickyNav = true
-# reorderNavItems = ["about", "search", "rss", "posts", "categories", "tags"]
 collapseNavItems = ["posts", "categories", "tags"]
-# noDefaultSummaryCover = true
 showTableOfContents = true
 showSummaryCoverInPost = true
 imageZoomableInPost = true
 showPrevNextPost = true
 reorderShares = ["x", "facebook"]
 
-# [params.navItems]
-
-# [params.twikoo]
-# enabled = true
-# envID = ""
-# region = ""
-# lang = ""
-
-# [params.advanced]
-# customCSS = ["css/custom.css"]
-# customJS = []
-
-# [params.experimental]
+[params.experimental]
 jsDate = true
-jsDateFormat = "yyyy년MM월dd일"
+jsDateFormat = "yyyy. MM. dd."

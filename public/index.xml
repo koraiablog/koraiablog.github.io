@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>한국인공지능협회 블로그</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on 한국인공지능협회 블로그</description>
+    <title>KORAIA</title>
+    <link>https://koraiablog.github.io/</link>
+    <description>Recent content on KORAIA</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 10 Mar 2025 10:07:06 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Mar 2025 14:45:31 +0900</lastBuildDate>
+    <atom:link href="https://koraiablog.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First_article</title>
-      <link>http://localhost:1313/posts/article2/</link>
-      <pubDate>Mon, 10 Mar 2025 10:07:06 +0900</pubDate>
-      <guid>http://localhost:1313/posts/article2/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My First_article</title>
-      <link>http://localhost:1313/posts/article3/</link>
-      <pubDate>Mon, 10 Mar 2025 10:07:06 +0900</pubDate>
-      <guid>http://localhost:1313/posts/article3/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My First_article</title>
-      <link>http://localhost:1313/posts/my-first_article/</link>
-      <pubDate>Mon, 10 Mar 2025 10:07:06 +0900</pubDate>
-      <guid>http://localhost:1313/posts/my-first_article/</guid>
-      <description>&lt;h1 id=&#34;하이&#34;&gt;하이&lt;/h1&gt;&#xA;&lt;p&gt;ㄴㅇㅁㅇㅁㄴㅁㅇㄴ&#xA;ㅇㅁㄴㅇㄴㅁ&#xA;ㄴㅇㅁ&#xA;ㅇㅁㄴ&#xA;ㄴㅇㅁ&lt;/p&gt;</description>
+      <title>일론 머스크의 &#39;xAI&#39;, 거대 AI 데이터센터와 우리 삶의 균형 찾기</title>
+      <link>https://koraiablog.github.io/posts/first/</link>
+      <pubDate>Mon, 10 Mar 2025 14:45:31 +0900</pubDate>
+      <guid>https://koraiablog.github.io/posts/first/</guid>
+      <description>&lt;h3 id=&#34;1-이슈-소개&#34;&gt;1️⃣ 이슈 소개&lt;/h3&gt;&#xA;&lt;p&gt;최근 뉴스에서 테슬라 CEO로 유명한 일론 머스크가 설립한 인공지능(AI) 기업 &amp;lsquo;xAI&amp;rsquo;가 미국 테네시주에 세계 최대 규모의 데이터센터를 건설한다는 소식이 전해졌습니다. 기업이 AI 기술 경쟁에서 앞서 나가기 위해 데이터센터의 규모를 크게 키우는 움직임은 흥미롭지만, 한편으로는 환경 문제에 대한 우려도 함께 제기되고 있습니다. 우리의 삶과도 결코 무관하지 않은 이 이야기를 조금 더 쉽게 풀어보려 합니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
