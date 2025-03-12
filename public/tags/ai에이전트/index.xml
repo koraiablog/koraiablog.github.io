@@ -6,8 +6,15 @@
     <description>Recent content in AI에이전트 on KORAIA</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 10 Mar 2025 14:45:31 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 12 Mar 2025 09:57:32 +0900</lastBuildDate>
     <atom:link href="https://koraiablog.github.io/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개</title>
+      <link>https://koraiablog.github.io/posts/openai_agentsdk/</link>
+      <pubDate>Wed, 12 Mar 2025 09:57:32 +0900</pubDate>
+      <guid>https://koraiablog.github.io/posts/openai_agentsdk/</guid>
+      <description>&lt;p&gt;2025년은 에이전트의 해가 될 것입니다. ChatGPT와 개발자 도구들이 단순히 질문에 대답하는 것을 넘어 실제 세상에서 당신을 위해 일을 해내는 해가 될 겁니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>당신의 비즈니스에 &#39;AI 직원&#39;이 생긴다면?</title>
       <link>https://koraiablog.github.io/posts/ai-agent-marketplace-era/</link>

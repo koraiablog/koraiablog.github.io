@@ -6,8 +6,22 @@
     <description>Recent content in Tags on KORAIA</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 11 Mar 2025 13:47:22 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 12 Mar 2025 09:57:32 +0900</lastBuildDate>
     <atom:link href="https://koraiablog.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI에이전트</title>
+      <link>https://koraiablog.github.io/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</link>
+      <pubDate>Wed, 12 Mar 2025 09:57:32 +0900</pubDate>
+      <guid>https://koraiablog.github.io/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://koraiablog.github.io/tags/openai/</link>
+      <pubDate>Wed, 12 Mar 2025 09:57:32 +0900</pubDate>
+      <guid>https://koraiablog.github.io/tags/openai/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI 역사</title>
       <link>https://koraiablog.github.io/tags/ai-%EC%97%AD%EC%82%AC/</link>
@@ -34,13 +48,6 @@
       <link>https://koraiablog.github.io/tags/%EC%A4%91%EA%B5%ADai/</link>
       <pubDate>Mon, 10 Mar 2025 16:54:20 +0900</pubDate>
       <guid>https://koraiablog.github.io/tags/%EC%A4%91%EA%B5%ADai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI에이전트</title>
-      <link>https://koraiablog.github.io/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</link>
-      <pubDate>Mon, 10 Mar 2025 14:45:31 +0900</pubDate>
-      <guid>https://koraiablog.github.io/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</guid>
       <description></description>
     </item>
     <item>
