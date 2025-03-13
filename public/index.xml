@@ -6,14 +6,21 @@
     <description>Recent content on KORAIA</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 12 Mar 2025 09:57:32 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 13 Mar 2025 10:33:32 +0900</lastBuildDate>
     <atom:link href="https://koraiablog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>우리 주머니 속으로 들어온 구글 &#39;젬마 3&#39; - 일상을 바꿀 포켓 AI의 혁신</title>
+      <link>https://koraiablog.github.io/posts/gemma-3/</link>
+      <pubDate>Thu, 13 Mar 2025 10:33:32 +0900</pubDate>
+      <guid>https://koraiablog.github.io/posts/gemma-3/</guid>
+      <description>&lt;p&gt;여러분, 인공지능 분야에 또 하나의 큰 물결이 찾아왔습니다. 구글이 최근 자사의 오픈소스 AI 모델 &amp;lsquo;젬마(Gemma)&amp;lsquo;의 차세대 버전인 &amp;lsquo;젬마 3(Gemma 3)&amp;lsquo;를 공개했기 때문인데요. 첫 등장 이후 단 1년 만에 1억 건 이상의 다운로드와 6만 개 이상의 변형 모델을 만들어낸 젬마가 이제 더욱 강력한 성능으로 돌아왔습니다. 이 소식이 우리의 일상에 어떤 변화를 가져올지, 함께 살펴보겠습니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개</title>
       <link>https://koraiablog.github.io/posts/openai_agentsdk/</link>
       <pubDate>Wed, 12 Mar 2025 09:57:32 +0900</pubDate>
       <guid>https://koraiablog.github.io/posts/openai_agentsdk/</guid>
-      <description>&lt;p&gt;2025년은 에이전트의 해가 될 것입니다. ChatGPT와 개발자 도구들이 단순히 질문에 대답하는 것을 넘어 실제 세상에서 당신을 위해 일을 해내는 해가 될 겁니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;2025년은 에이전트의 시대가 열리는 해가 될 것입니다. ChatGPT와 개발자 도구들이 단순히 질문에 답하는 것을 넘어, 실제 세상에서 여러분을 위해 직접 작업을 수행하는 모습을 보게 될 것입니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>인공지능의 여정: AI 역사 따라가기</title>
