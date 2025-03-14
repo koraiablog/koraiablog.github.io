@@ -6,14 +6,21 @@
     <description>Recent content in Posts on KORAIA</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 13 Mar 2025 10:33:32 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 14 Mar 2025 09:42:45 +0900</lastBuildDate>
     <atom:link href="https://koraiablog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>우리 주머니 속으로 들어온 구글 &#39;젬마 3&#39; - 일상을 바꿀 포켓 AI의 혁신</title>
+      <title>중국에 AI 육룡이 나르샤</title>
+      <link>https://koraiablog.github.io/posts/six-little-dragons/</link>
+      <pubDate>Fri, 14 Mar 2025 09:42:45 +0900</pubDate>
+      <guid>https://koraiablog.github.io/posts/six-little-dragons/</guid>
+      <description>&lt;p&gt;중국 항저우라는 도시에 대해 들어본 적 있나요? 상하이 근처에 자리 잡은 이 도시에 최근 별난 별명이 붙었어요.&lt;/p&gt;&#xA;&lt;p&gt;바로 &amp;lsquo;여섯 마리의 작은 용(Six Little Dragons)&amp;rsquo; 입니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>우리 주머니 속으로 들어온 AI</title>
       <link>https://koraiablog.github.io/posts/gemma-3/</link>
       <pubDate>Thu, 13 Mar 2025 10:33:32 +0900</pubDate>
       <guid>https://koraiablog.github.io/posts/gemma-3/</guid>
-      <description>&lt;p&gt;여러분, 인공지능 분야에 또 하나의 큰 물결이 찾아왔습니다. 구글이 최근 자사의 오픈소스 AI 모델 &amp;lsquo;젬마(Gemma)&amp;lsquo;의 차세대 버전인 &amp;lsquo;젬마 3(Gemma 3)&amp;lsquo;를 공개했기 때문인데요. 첫 등장 이후 단 1년 만에 1억 건 이상의 다운로드와 6만 개 이상의 변형 모델을 만들어낸 젬마가 이제 더욱 강력한 성능으로 돌아왔습니다. 이 소식이 우리의 일상에 어떤 변화를 가져올지, 함께 살펴보겠습니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;인공지능 분야에 또 하나의 큰 물결이 찾아왔습니다. 구글이 최근 자사의 오픈소스 AI 모델 &amp;lsquo;젬마(Gemma)&amp;lsquo;의 차세대 버전인 &amp;lsquo;젬마 3(Gemma 3)&amp;lsquo;를 공개했기 때문인데요.&lt;/p&gt;&#xA;&lt;p&gt;첫 등장 이후 단 1년 만에 1억 건 이상의 다운로드와 6만 개 이상의 변형 모델을 만들어낸 젬마가 이제 더욱 강력한 성능으로 돌아왔습니다.&lt;/p&gt;&#xA;&lt;p&gt;이 소식이 우리의 일상에 어떤 변화를 가져올지, 함께 살펴보겠습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개</title>

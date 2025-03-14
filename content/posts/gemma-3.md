@@ -1,9 +1,9 @@
 ---
-title: 우리 주머니 속으로 들어온 구글 '젬마 3' - 일상을 바꿀 포켓 AI의 혁신
+title: 우리 주머니 속으로 들어온 AI
 date: 2025-03-13T10:33:32+09:00
 lastmod: 2025-03-13T10:33:32+09:00
 #author: Author Name
-# avatar: /img/author.jpg
+avatar: 'https://th.bing.com/th/id/OIG2.ElON94aSGdQKthn0Wj97?pid=ImgGn'
 # authorlink: https://author.site
 cover: https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemma3_KeywordBlog_RD3_V01b.width-1600.format-webp.webp
 images:
@@ -17,7 +17,11 @@ nolastmod: true
 draft: false
 ---
 
-여러분, 인공지능 분야에 또 하나의 큰 물결이 찾아왔습니다. 구글이 최근 자사의 오픈소스 AI 모델 '젬마(Gemma)'의 차세대 버전인 '젬마 3(Gemma 3)'를 공개했기 때문인데요. 첫 등장 이후 단 1년 만에 1억 건 이상의 다운로드와 6만 개 이상의 변형 모델을 만들어낸 젬마가 이제 더욱 강력한 성능으로 돌아왔습니다. 이 소식이 우리의 일상에 어떤 변화를 가져올지, 함께 살펴보겠습니다.
+인공지능 분야에 또 하나의 큰 물결이 찾아왔습니다. 구글이 최근 자사의 오픈소스 AI 모델 '젬마(Gemma)'의 차세대 버전인 '젬마 3(Gemma 3)'를 공개했기 때문인데요. 
+
+첫 등장 이후 단 1년 만에 1억 건 이상의 다운로드와 6만 개 이상의 변형 모델을 만들어낸 젬마가 이제 더욱 강력한 성능으로 돌아왔습니다. 
+
+이 소식이 우리의 일상에 어떤 변화를 가져올지, 함께 살펴보겠습니다.
 
 <!--more-->
 
