@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anthropic on KORAIA</title>
+    <link>https://koraiablog.github.io/tags/anthropic/</link>
+    <description>Recent content in Anthropic on KORAIA</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 24 Mar 2025 09:44:10 +0900</lastBuildDate>
+    <atom:link href="https://koraiablog.github.io/tags/anthropic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해</title>
+      <link>https://koraiablog.github.io/posts/mcp/</link>
+      <pubDate>Mon, 24 Mar 2025 09:44:10 +0900</pubDate>
+      <guid>https://koraiablog.github.io/posts/mcp/</guid>
+      <description>&lt;p&gt;AI가 당신의 데이터와 대화할 수 있다면 어떨까요? Model Context Protocol(MCP)이 바로 그 꿈을 현실로 만들고 있습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

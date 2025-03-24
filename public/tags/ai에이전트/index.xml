@@ -6,8 +6,15 @@
     <description>Recent content in AI에이전트 on KORAIA</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 12 Mar 2025 09:57:32 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 24 Mar 2025 09:44:10 +0900</lastBuildDate>
     <atom:link href="https://koraiablog.github.io/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해</title>
+      <link>https://koraiablog.github.io/posts/mcp/</link>
+      <pubDate>Mon, 24 Mar 2025 09:44:10 +0900</pubDate>
+      <guid>https://koraiablog.github.io/posts/mcp/</guid>
+      <description>&lt;p&gt;AI가 당신의 데이터와 대화할 수 있다면 어떨까요? Model Context Protocol(MCP)이 바로 그 꿈을 현실로 만들고 있습니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개</title>
       <link>https://koraiablog.github.io/posts/openai_agentsdk/</link>
