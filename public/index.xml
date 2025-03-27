@@ -6,8 +6,15 @@
     <description>Recent content on KORAIA</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 24 Mar 2025 09:44:10 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Mar 2025 10:33:25 +0900</lastBuildDate>
     <atom:link href="https://koraiablog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI 이미지 생성, &#39;표현의 한계&#39; 시대를 끝내다</title>
+      <link>https://koraiablog.github.io/posts/4o_image_generation/</link>
+      <pubDate>Thu, 27 Mar 2025 10:33:25 +0900</pubDate>
+      <guid>https://koraiablog.github.io/posts/4o_image_generation/</guid>
+      <description>&lt;p&gt;요즘 인공지능(AI) 기술이 하루가 다르게 발전하면서 우리 삶 곳곳에 스며들고 있죠. 특히 &lt;code&gt;그림 그려주는 AI&lt;/code&gt;는 많은 사람들에게 놀라움과 재미를 선사하며 큰 관심을 받고 있습니다. 그런데 최근 OpenAI에서 기존보다 훨씬 더 똑똑하고 실용적인 이미지 생성 기능을 갖춘 &lt;strong&gt;GPT-4o&lt;/strong&gt; 를 선보여 다시 한번 화제가 되고 있습니다. 단순히 멋진 그림을 넘어, 우리가 실제로 ‘쓸모 있게’ 활용할 수 있는 이미지를 만들어낸다는 점에서 주목할 만한 변화인데요.&lt;/p&gt;&#xA;&lt;p&gt;오늘은 GPT-4o가 가져온 새로운 이미지 생성의 세계로 함께 떠나보겠습니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해</title>
       <link>https://koraiablog.github.io/posts/mcp/</link>
@@ -58,11 +65,11 @@
       <description>&lt;p&gt;최근 중국이 AI 기술 분야에서 또 한 번의 혁신을 이루며 세계적 주목을 받고 있습니다. 딥시크(DeepSeek)가 LLM 분야에서 새로운 지평을 열었다면, 이번에는 &amp;lsquo;마누스(Manus)&amp;lsquo;가 AI 자율 에이전트 영역에서 새로운 충격을 가져다 주며 중국의 AI 기술력이 다시 한번 글로벌 무대에서 인정받고 있습니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>당신의 비즈니스에 &#39;AI 직원&#39;이 생긴다면?</title>
+      <title>AI 에이전트 시대, &#39;마켓플레이스&#39;만이 정답일까?</title>
       <link>https://koraiablog.github.io/posts/ai-agent-marketplace-era/</link>
       <pubDate>Mon, 10 Mar 2025 14:45:31 +0900</pubDate>
       <guid>https://koraiablog.github.io/posts/ai-agent-marketplace-era/</guid>
-      <description>&lt;p&gt;요즘 IT 업계에서 가장 뜨거운 키워드 중 하나가 &amp;lsquo;AI 에이전트&amp;rsquo;입니다. 단순한 채팅봇이나 가상 비서를 넘어, 실제 업무를 자동으로 처리하고 의사결정까지 도와주는 &amp;lsquo;디지털 직원&amp;rsquo;이라고 생각하면 이해하기 쉽습니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;바야흐로 AI 에이전트의 시대입니다. 단순한 챗봇이나 가상 비서를 넘어, 스스로 학습하고 판단하며 실제 업무를 자율적으로 처리하는 &amp;lsquo;디지털 직원&amp;rsquo; 개념의 AI 에이전트가 속속 등장하고 있습니다. 이는 단순한 기술 트렌드를 넘어, 기업 운영 방식 자체를 근본적으로 변화시킬 잠재력을 지니고 있습니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
