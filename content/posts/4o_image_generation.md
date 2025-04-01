@@ -4,7 +4,7 @@ date: 2025-03-27T10:33:25+09:00
 lastmod: 2025-03-27T10:33:25+09:00
 # author: Author Name
 # authorlink: https://author.site
-avatar: 'https://th.bing.com/th/id/OIG2.ElON94aSGdQKthn0Wj97?pid=ImgGn'
+avatar: 'https://th.bing.com/th/id/OIG3.2WuRluIw719A8Lu3rj1W?w=1024&h=1024&rs=1&pid=ImgDetMain'
 cover: /img/poster/1/koraia.png
 images:
   - /img/poster/1/koraia.png
@@ -138,14 +138,12 @@ mindmap
         (포토 리얼리즘)
 ```
 
-![마녀간판](https://images.ctfassets.net/kftzwdyauwt9/7J4g02DAxggDAnbpAoRiX7/178f11a2a462e40c03ec82b835c7c39c/dyda_4a.png?w=828&q=90&fm=webp)
 ### **🤔 아직은 발전 중, 한계점과 안전 노력**
 
 물론 GPT-4o의 이미지 생성 기능이 완벽한 것은 아닙니다. OpenAI 스스로도 몇 가지 한계점을 인지하고 개선 중이라고 밝혔습니다. 예를 들어, 긴 이미지를 생성할 때 일부가 잘리는 경우, 때때로 부정확한 정보를 만들어내는 ‘환각 현상’, 아주 많은 수의 개념(예: 주기율표 전체)을 동시에 정확히 표현하는 어려움, 비 라틴 문자(한글 포함) 렌더링의 부정확성, 이미지 특정 부분만 정교하게 수정하는 능력 부족 등이 있습니다. 특히 사용자가 업로드한 인물 사진을 수정할 때 일관성이 떨어지는 버그는 조만간 수정될 예정이라고 합니다.
 
 한편, OpenAI는 이미지 생성 기술의 오용을 막기 위한 안전장치 마련에도 힘쓰고 있습니다. 생성된 모든 이미지에는 **C2PA 메타데이터**를 포함시켜 해당 이미지가 AI(GPT-4o)에 의해 생성되었음을 투명하게 밝히고, 아동 성 학대물이나 딥페이크와 같은 유해 콘텐츠 생성 요청은 차단합니다. 특히 실제 인물 이미지를 다룰 때는 더욱 엄격한 기준을 적용한다고 강조합니다. 기술 발전과 함께 책임감 있는 사용 환경을 만들기 위한 노력이 병행되고 있는 셈입니다.
 
-![이미지](https://images.ctfassets.net/kftzwdyauwt9/cDkSmK7mBKwN8rZ47gGbS/cc4ae2c75f5c49eb894a777f91b3354d/Screenshot_2025-03-24_at_10.08.43_PM.png?w=828&q=90&fm=webp)
 
 
 ### **✨ 그림 그리는 AI, 이제 우리 곁의 '쓸모 있는' 도구로**
@@ -156,5 +154,6 @@ GPT-4o의 새로운 이미지 생성 기능은 단순히 기술적인 발전을 
 
 오늘 이야기가 GPT-4o의 새로운 이미지 생성 기능에 대한 궁금증을 해소하고, 앞으로 AI 기술이 우리 삶에 어떤 변화를 가져올지 생각해보는 계기가 되었기를 바랍니다. 
 
+![이미지](https://images.ctfassets.net/kftzwdyauwt9/cDkSmK7mBKwN8rZ47gGbS/cc4ae2c75f5c49eb894a777f91b3354d/Screenshot_2025-03-24_at_10.08.43_PM.png?w=828&q=90&fm=webp)
 
 ![이미지](https://images.ctfassets.net/kftzwdyauwt9/2sWtvWI6hvI1kpHferQ3XR/98167a66b9135608ed58a62d173e3951/crop2.png?w=3840&q=90&fm=webp)

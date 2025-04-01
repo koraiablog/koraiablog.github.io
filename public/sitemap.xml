@@ -2,28 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://koraiablog.github.io/categories/ai-%ED%8A%B8%EB%A0%8C%EB%93%9C--%EC%9D%B4%EC%8A%88/</loc>
+    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/tags/ai%EB%82%B4%EB%B6%80%EC%9E%91%EB%8F%99/</loc>
+    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/tags/ai%ED%95%B4%EC%84%9D%EA%B0%80%EB%8A%A5%EC%84%B1/</loc>
+    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/categories/</loc>
+    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/</loc>
+    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/tags/llm/</loc>
+    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/posts/</loc>
+    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/tags/</loc>
+    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
+  </url><url>
+    <loc>https://koraiablog.github.io/posts/tracing-thoughts-language-model/</loc>
+    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
+  </url><url>
     <loc>https://koraiablog.github.io/categories/ai-%EA%B8%B0%EC%88%A0%EB%8F%99%ED%96%A5/</loc>
     <lastmod>2025-03-27T10:33:25+09:00</lastmod>
   </url><url>
     <loc>https://koraiablog.github.io/posts/4o_image_generation/</loc>
     <lastmod>2025-03-27T10:33:25+09:00</lastmod>
   </url><url>
-    <loc>https://koraiablog.github.io/categories/</loc>
-    <lastmod>2025-03-27T10:33:25+09:00</lastmod>
-  </url><url>
     <loc>https://koraiablog.github.io/tags/gpt-4o/</loc>
     <lastmod>2025-03-27T10:33:25+09:00</lastmod>
   </url><url>
-    <loc>https://koraiablog.github.io/</loc>
-    <lastmod>2025-03-27T10:33:25+09:00</lastmod>
-  </url><url>
     <loc>https://koraiablog.github.io/tags/openai/</loc>
-    <lastmod>2025-03-27T10:33:25+09:00</lastmod>
-  </url><url>
-    <loc>https://koraiablog.github.io/posts/</loc>
-    <lastmod>2025-03-27T10:33:25+09:00</lastmod>
-  </url><url>
-    <loc>https://koraiablog.github.io/tags/</loc>
     <lastmod>2025-03-27T10:33:25+09:00</lastmod>
   </url><url>
     <loc>https://koraiablog.github.io/tags/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%83%9D%EC%84%B1%EC%84%B1/</loc>
@@ -61,9 +76,6 @@
   </url><url>
     <loc>https://koraiablog.github.io/posts/six-little-dragons/</loc>
     <lastmod>2025-03-14T09:42:45+09:00</lastmod>
-  </url><url>
-    <loc>https://koraiablog.github.io/tags/llm/</loc>
-    <lastmod>2025-03-13T10:33:32+09:00</lastmod>
   </url><url>
     <loc>https://koraiablog.github.io/tags/%EA%B5%AC%EA%B8%80ai/</loc>
     <lastmod>2025-03-13T10:33:32+09:00</lastmod>
