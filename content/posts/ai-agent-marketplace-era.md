@@ -9,7 +9,7 @@ cover: "https://www.nfx.com/_next/image?url=https%3A%2F%2Fcontent.nfx.com%2Fwp-c
 images:
   - 'https://www.nfx.com/_next/image?url=https%3A%2F%2Fcontent.nfx.com%2Fwp-content%2Fuploads%2F2025%2F02%2FBG-3.webp&w=1080&q=75'
 categories:
-  - '기술 트렌드'
+  - 'AI 트렌드'
 tags:
   - 'AI에이전트'
   - '디지털전환'

@@ -9,7 +9,7 @@ cover: https://i.ytimg.com/vi/Bj9BD2D3DzA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qp
 images:
   - https://i.ytimg.com/vi/Bj9BD2D3DzA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC0B33xAAvD_08i98Np5446Li9oIQ
 categories:
-  - AI 트렌드 & 이슈
+  - AI 트렌드
 tags:
   - AI해석가능성
   - AI내부작동
