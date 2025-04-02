@@ -47,16 +47,17 @@ OpenAI는 바로 이 지점에서 [GPT-4o의 새로운 가능성을 제시](http
 ![만화](https://images.ctfassets.net/kftzwdyauwt9/3x688zM9LzGQIfi7paBAP4/5dc71db62c4345b76b2c63424afb71c7/image__34_.png?w=1080&q=90&fm=webp)
 
 ```프롬프트
-magnetic poetry on a fridge in a mid century home:
+[미드센추리(mid century) 스타일 가정집 냉장고에 붙어 있는 자석 시(magnetic poetry)]
 
-Line 1: "A picture"
-Line 2: "is worth"
-Line 3: "a thousand words,"
-Line 4: "but sometimes"Large gapLine 5: "in the right place"
-Line 6: "can elevate"
-Line 7: "its meaning.
+첫 번째 줄: "A picture"
+두 번째 줄: "is worth"
+세 번째 줄: "a thousand words,"
+네 번째 줄: "but sometimes"
+다섯 번째 줄: "in the right place"
+여섯 번째 줄: "can elevate"
+일곱 번째 줄: "its meaning."
 
-"The man is holding the words "a few" in his right hand and "words" in his left.
+한 남자가 오른손에는 "a few" 라고 쓰인 (자석) 단어를, 왼손에는 "words" 라고 쓰인 (자석) 단어를 들고 있는 이미지를 그려줘.
 ```
 
 --- 
@@ -66,11 +67,21 @@ Line 7: "its meaning.
 
 ![만화](https://images.ctfassets.net/kftzwdyauwt9/6qMF89Gh1WqOVGrRSnzEIU/4e9013e2a0286bcdcde6d0160e39d5d8/ChatGPT_Image_Mar_24__2025__08_49_15_AM.png?w=1920&q=90&fm=webp)
 ```프롬프트
-Make an image of a four‑panel strip, with some padding around the border:
-A little snail is at the counter of a flashy car showroom. The salesman has leaned way over the desk to even see him.
-Close‑up on the snail looking very serious. He says, “I want your fastest sports car… and I want you to paint big letter ‘S’s on the doors, the hood and the roof.”
-The salesman is scratching his head. “Um… we can do that, but why the S’s?”
-Smash cut to a red blur roaring down the highway. The sports car is covered in giant S’s. People on the sidewalk are pointing and laughing: “WOW! LOOK AT THAT S‑CAR GO!”
+[이미지: 테두리에 약간의 여백이 있는 4컷 만화]
+
+컷 1:
+작은 달팽이 한 마리가 화려한 자동차 전시장 카운터 앞에 있습니다. 영업사원은 달팽이를 보려고 몸을 카운터 너머로 한참 숙이고 있습니다.
+컷 2:
+아주 진지한 표정의 달팽이를 클로즈업합니다. 달팽이가 말합니다:
+"여기서 가장 빠른 스포츠카로 주세요... 그리고 문짝이랑, 보닛이랑, 지붕에 커다란 'S' 글자를 페인트로 칠해주세요."
+컷 3:
+영업사원이 머리를 긁적입니다.
+"음... 그건 해 드릴 수 있습니다만, 왜 하필 'S'자인가요?"
+컷 4:
+장면 전환. 붉은색 스포츠카가 쏜살같이 고속도로를 질주합니다. 차는 온통 거대한 'S'자로 뒤덮여 있습니다. 인도에 있던 사람들이 손가락질하며 웃고 있습니다:
+"와! 저 에스카(S-car) 달리는 것 좀 봐!"
+
+식자: (S-CAR GO (에스카 고)는 달팽이를 뜻하는 프랑스어 'escargot(에스카르고)'와 발음이 비슷한 점을 이용한 언어유희입니다.)
 ```
 
 ---
@@ -81,8 +92,8 @@ Smash cut to a red blur roaring down the highway. The sports car is covered in g
 
 ![만화](https://images.ctfassets.net/kftzwdyauwt9/meLAgjNjjUVU9NWabRhYk/64fcebb83ff076661ad01c82295f9349/newtons2.png?w=1920&q=90&fm=webp)
 ```프롬프트
-an infographic explaining newton's prism experiment in great detail
-now generate a POV of a person drawing this diagram in their notebook, at a round cafe table in washington square park
+뉴턴의 프리즘 실험을 아주 자세히 설명하는 인포그래픽.
+이제 워싱턴 스퀘어 파크의 둥근 카페 테이블에서 노트에 이 다이어그램을 그리고 있는 사람의 1인칭 시점(POV)을 생성해 주세요.
 ```
 
 4.  **보고 배우는 능력, ‘인컨텍스트 학습’**:
