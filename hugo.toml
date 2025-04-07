@@ -1,7 +1,7 @@
-baseURL = 'https://koraiablog.github.io/'
+baseURL = 'https://blog.koraia.org'
 languageCode = 'ko-kr'
 defaultContentLanguage = "en"
-title = 'KORAIA'
+title = '한국인공지능협회 블로그'
 theme = "dream"
 enableRobotsTXT = true
 
