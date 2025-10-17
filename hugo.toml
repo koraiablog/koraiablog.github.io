@@ -6,6 +6,7 @@ theme = "dream"
 enableRobotsTXT = true
 
 [params]
+description = "한국인공지능협회의 공식 블로그입니다. AI 기술 동향, 최신 트렌드, 그리고 인공지능의 미래에 대한 인사이트를 공유합니다."
 images = ["https://file.miricanvas.com/design_thumb/2025/03/10/15/40/kqu7mcbl88r29r5c/thumb.jpg"]
 lightTheme = "emerald"
 darkTheme = "forest"
@@ -16,7 +17,7 @@ motto = "사단법인 한국인공지능협회"
 footerBottomText = "🌱 사단법인 한국인공지능협회"
 email = "info@koraia.org"
 siteStartYear = 2017
-favicon = "symbol.ico"
+favicon = "img/symbol.ico"
 collapseNavItems = ["posts", "categories", "tags"]
 showTableOfContents = true
 showSummaryCoverInPost = true

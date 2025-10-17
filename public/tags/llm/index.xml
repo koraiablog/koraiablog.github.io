@@ -15,12 +15,5 @@
       <guid>http://localhost:1313/posts/tracing-thoughts-language-model/</guid>
       <description>&lt;p&gt;우리는 매일 인공지능(AI) 챗봇과 번역기, 이미지 생성 도구 등을 사용하며 그 편리함에 익숙해지고 있습니다. 궁금한 점을 물으면 척척 대답해주고, 복잡한 문서를 요약해주거나, 멋진 그림까지 그려주니 정말 놀라울 따름이죠. 하지만 문득 이런 궁금증이 들 때가 있습니다. &amp;ldquo;이 AI는 도대체 어떻게 이렇게 사람처럼 말하고 행동하는 걸까?&amp;rdquo;, &amp;ldquo;정말로 우리처럼 &amp;lsquo;생각&amp;rsquo;이라는 걸 하는 걸까?&amp;rdquo; 하고 말입니다.&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>우리 주머니 속으로 들어온 AI</title>
-      <link>http://localhost:1313/posts/gemma-3/</link>
-      <pubDate>Thu, 13 Mar 2025 10:33:32 +0900</pubDate>
-      <guid>http://localhost:1313/posts/gemma-3/</guid>
-      <description>&lt;p&gt;인공지능 분야에 또 하나의 큰 물결이 찾아왔습니다. 구글이 최근 자사의 오픈소스 AI 모델 &amp;lsquo;젬마(Gemma)&amp;lsquo;의 차세대 버전인 &amp;lsquo;젬마 3(Gemma 3)&amp;lsquo;를 공개했기 때문인데요.&lt;/p&gt;&#xA;&lt;p&gt;첫 등장 이후 단 1년 만에 1억 건 이상의 다운로드와 6만 개 이상의 변형 모델을 만들어낸 젬마가 이제 더욱 강력한 성능으로 돌아왔습니다.&lt;/p&gt;&#xA;&lt;p&gt;이 소식이 우리의 일상에 어떤 변화를 가져올지, 함께 살펴보겠습니다.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
