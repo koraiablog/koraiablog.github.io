@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI에이전트 on 한국인공지능협회 블로그</title>
-    <link>https://blog.koraia.org/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</link>
+    <link>http://localhost:1313/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</link>
     <description>Recent content in AI에이전트 on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 24 Mar 2025 09:44:10 +0900</lastBuildDate>
-    <atom:link href="https://blog.koraia.org/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해</title>
-      <link>https://blog.koraia.org/posts/mcp/</link>
+      <link>http://localhost:1313/posts/mcp/</link>
       <pubDate>Mon, 24 Mar 2025 09:44:10 +0900</pubDate>
-      <guid>https://blog.koraia.org/posts/mcp/</guid>
+      <guid>http://localhost:1313/posts/mcp/</guid>
       <description>&lt;p&gt;AI가 당신의 데이터와 대화할 수 있다면 어떨까요? Model Context Protocol(MCP)이 바로 그 꿈을 현실로 만들고 있습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개</title>
-      <link>https://blog.koraia.org/posts/openai_agentsdk/</link>
+      <link>http://localhost:1313/posts/openai_agentsdk/</link>
       <pubDate>Wed, 12 Mar 2025 09:57:32 +0900</pubDate>
-      <guid>https://blog.koraia.org/posts/openai_agentsdk/</guid>
+      <guid>http://localhost:1313/posts/openai_agentsdk/</guid>
       <description>&lt;p&gt;2025년은 에이전트의 시대가 열리는 해가 될 것입니다. ChatGPT와 개발자 도구들이 단순히 질문에 답하는 것을 넘어, 실제 세상에서 여러분을 위해 직접 작업을 수행하는 모습을 보게 될 것입니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI 에이전트 시대, &#39;마켓플레이스&#39;만이 정답일까?</title>
-      <link>https://blog.koraia.org/posts/ai-agent-marketplace-era/</link>
+      <link>http://localhost:1313/posts/ai-agent-marketplace-era/</link>
       <pubDate>Mon, 10 Mar 2025 14:45:31 +0900</pubDate>
-      <guid>https://blog.koraia.org/posts/ai-agent-marketplace-era/</guid>
+      <guid>http://localhost:1313/posts/ai-agent-marketplace-era/</guid>
       <description>&lt;p&gt;바야흐로 AI 에이전트의 시대입니다. 단순한 챗봇이나 가상 비서를 넘어, 스스로 학습하고 판단하며 실제 업무를 자율적으로 처리하는 &amp;lsquo;디지털 직원&amp;rsquo; 개념의 AI 에이전트가 속속 등장하고 있습니다. 이는 단순한 기술 트렌드를 넘어, 기업 운영 방식 자체를 근본적으로 변화시킬 잠재력을 지니고 있습니다.&lt;/p&gt;</description>
     </item>
   </channel>

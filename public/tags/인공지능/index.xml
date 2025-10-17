@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>인공지능 on 한국인공지능협회 블로그</title>
-    <link>https://blog.koraia.org/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</link>
+    <link>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</link>
     <description>Recent content in 인공지능 on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 22 May 2025 10:19:40 +0900</lastBuildDate>
-    <atom:link href="https://blog.koraia.org/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI의 현재와 미래- 구글 I/O 2025에서 발표된 100가지 혁신!</title>
-      <link>https://blog.koraia.org/posts/google_io_25/</link>
+      <link>http://localhost:1313/posts/google_io_25/</link>
       <pubDate>Thu, 22 May 2025 10:19:40 +0900</pubDate>
-      <guid>https://blog.koraia.org/posts/google_io_25/</guid>
+      <guid>http://localhost:1313/posts/google_io_25/</guid>
       <description>&lt;p&gt;2025년 5월 20~21일, 이틀간 진행한 구글 I/O가 막을 내렸습니다. 이번 행사에서는 인공지능(AI) 분야의 획기적인 발전과 이것이 구글의 다양한 제품에 어떻게 적용되는지에 대한 수많은 발표가 있었습니다. 제미니(Gemini) 앱의 주요 업그레이드부터 생성형 AI 도구, 그리고 AI 모델 자체의 놀라운 진보까지, 혁신적인 내용들이 가득했습니다.&lt;/p&gt;&#xA;&lt;p&gt;이번 I/O 2025의 하이라이트 100가지를 알아보도록 하겠습니다.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>딥시크 on 한국인공지능협회 블로그</title>
-    <link>https://blog.koraia.org/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</link>
+    <link>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</link>
     <description>Recent content in 딥시크 on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Fri, 14 Mar 2025 09:42:45 +0900</lastBuildDate>
-    <atom:link href="https://blog.koraia.org/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>중국에 AI 육룡이 나르샤</title>
-      <link>https://blog.koraia.org/posts/six-little-dragons/</link>
+      <link>http://localhost:1313/posts/six-little-dragons/</link>
       <pubDate>Fri, 14 Mar 2025 09:42:45 +0900</pubDate>
-      <guid>https://blog.koraia.org/posts/six-little-dragons/</guid>
+      <guid>http://localhost:1313/posts/six-little-dragons/</guid>
       <description>&lt;p&gt;중국 항저우라는 도시에 대해 들어본 적 있나요? 상하이 근처에 자리 잡은 이 도시에 최근 별난 별명이 붙었어요.&lt;/p&gt;&#xA;&lt;p&gt;바로 &amp;lsquo;여섯 마리의 작은 용(Six Little Dragons)&amp;rsquo; 입니다.&lt;/p&gt;</description>
     </item>
   </channel>
