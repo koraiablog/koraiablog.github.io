@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="ko-kr"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개 | 한국인공지능협회 블로그</title>
+
+    
+  
+    <link href="/symbol.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="http://localhost:1313/posts/openai_agentsdk/" />
+
+
+
+<meta name="author" content="koraia" />
+<meta name="description" content="2025년은 에이전트의 시대가 열리는 해가 될 것입니다. ChatGPT와 개발자 도구들이 단순히 질문에 답하는 것을 넘어, 실제 세상에서 여러분을 위해 직접 작업을 수행하는 모습을 보게 될 것입니다.
+" />
+
+
+<meta name="keywords" content="AI에이전트,OpenAI">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="http://localhost:1313/posts/openai_agentsdk/">
+  <meta property="og:site_name" content="한국인공지능협회 블로그">
+  <meta property="og:title" content="OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개">
+  <meta property="og:description" content="2025년은 에이전트의 시대가 열리는 해가 될 것입니다. ChatGPT와 개발자 도구들이 단순히 질문에 답하는 것을 넘어, 실제 세상에서 여러분을 위해 직접 작업을 수행하는 모습을 보게 될 것입니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-12T09:57:32+09:00">
+    <meta property="article:modified_time" content="2025-03-12T09:57:32+09:00">
+    <meta property="article:tag" content="AI에이전트">
+    <meta property="article:tag" content="OpenAI">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/4QaBJvGYlSBY9iYMhWBN6I/c97e4a784aef38012d91e9a9cf2010c7/API_Agents_Hero_16.9.png?w=3840&amp;q=90&amp;fm=webp">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://images.ctfassets.net/kftzwdyauwt9/4QaBJvGYlSBY9iYMhWBN6I/c97e4a784aef38012d91e9a9cf2010c7/API_Agents_Hero_16.9.png?w=3840&amp;q=90&amp;fm=webp">
+  <meta name="twitter:title" content="OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개">
+  <meta name="twitter:description" content="2025년은 에이전트의 시대가 열리는 해가 될 것입니다. ChatGPT와 개발자 도구들이 단순히 질문에 답하는 것을 넘어, 실제 세상에서 여러분을 위해 직접 작업을 수행하는 모습을 보게 될 것입니다.">
+
+
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.svg" alt="미래를 여는 AI," />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+          미래를 여는 AI,
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">사단법인 한국인공지능협회</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+
+      
+
+      
+      
+      
+      
+
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="About">About</div>
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개">
+  <meta itemprop="description" content="2025년은 에이전트의 시대가 열리는 해가 될 것입니다. ChatGPT와 개발자 도구들이 단순히 질문에 답하는 것을 넘어, 실제 세상에서 여러분을 위해 직접 작업을 수행하는 모습을 보게 될 것입니다.">
+  <meta itemprop="datePublished" content="2025-03-12T09:57:32+09:00">
+  <meta itemprop="dateModified" content="2025-03-12T09:57:32+09:00">
+  <meta itemprop="wordCount" content="1327">
+  <meta itemprop="image" content="https://images.ctfassets.net/kftzwdyauwt9/4QaBJvGYlSBY9iYMhWBN6I/c97e4a784aef38012d91e9a9cf2010c7/API_Agents_Hero_16.9.png?w=3840&amp;q=90&amp;fm=webp">
+  <meta itemprop="keywords" content="AI에이전트,OpenAI">
+
+      <header>
+        <h1 itemprop="headline">OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2025-03-12T09:57:32&#43;09:00</span>
+          
+
+          | <span>7 minute read</span>
+
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="https://cdn-icons-png.flaticon.com/512/2674/2674067.png" alt="" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">koraia</span>
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=OpenAI,%20%ea%b0%9c%eb%b0%9c%ec%9e%90%eb%a5%bc%20%ec%9c%84%ed%95%9c%20%ea%b0%95%eb%a0%a5%ed%95%9c%20%ec%97%90%ec%9d%b4%ec%a0%84%ed%8a%b8%20%ed%88%b4%20%eb%8c%80%ea%b1%b0%20%ea%b3%b5%ea%b0%9c&amp;url=http://localhost:1313/posts/openai_agentsdk/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/openai_agentsdk/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="https://images.ctfassets.net/kftzwdyauwt9/4QaBJvGYlSBY9iYMhWBN6I/c97e4a784aef38012d91e9a9cf2010c7/API_Agents_Hero_16.9.png?w=3840&amp;q=90&amp;fm=webp" alt="OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개" />
+        
+
+        <p>2025년은 에이전트의 시대가 열리는 해가 될 것입니다. ChatGPT와 개발자 도구들이 단순히 질문에 답하는 것을 넘어, 실제 세상에서 여러분을 위해 직접 작업을 수행하는 모습을 보게 될 것입니다.</p>
+<h2 id="인공지능-이제는-대신-일하는-시대로">인공지능, 이제는 대신 일하는 시대로</h2>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/hciNKcLwSes?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<p>OpenAI의 케빈이 발표의 마지막에 남긴 이 한마디는 인공지능 기술의 미래를 보여주는 중요한 신호탄입니다. 지금까지 인공지능이 &lsquo;대화하는 비서&rsquo;였다면, 이제는 &lsquo;행동하는 비서&rsquo;로 진화하고 있는 것이죠.</p>
+<pre class="mermaid">gitGraph
+  commit id: "2023: 대화형 비서"
+  branch conversational
+  commit id: "정보 요청 (사용자)"
+  commit id: "정보 검색 (AI)"
+  commit id: "답변 제공 (AI)"
+  commit id: "사용자 후속 조치 (사용자)"
+  checkout main
+
+  commit id: "2025: 행동형 비서"
+  branch action_based
+  commit id: "정보 요청 (사용자)"
+  commit id: "상황 분석 (AI)"
+  commit id: "의사 결정 (AI)"
+  commit id: "실제 행동 수행 (AI)"
+  commit id: "결과 보고 (AI)"
+  commit id: "사용자 확인 (사용자)"
+  checkout main</pre>
+
+<p>쉽게 생각해보세요. 지금까지의 ChatGPT가 &ldquo;내일 날씨 어때?&ldquo;라는 질문에 &ldquo;내일은 비가 올 예정입니다&quot;라고 대답하는 수준이었다면, 앞으로는 &ldquo;내일 비가 올 예정이니 우산을 준비하고, 아침 회의 시간을 10분 늦추는 메일을 팀에 보냈습니다&quot;라고 말하며 실제로 그 일을 해낼 수 있게 된다는 의미입니다.</p>
+<h2 id="에이전트란-무엇일까요">&lsquo;에이전트&rsquo;란 무엇일까요?</h2>
+<p><img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202410/27/7c369332-74f2-4637-8891-6bb8a78cfb5d.jpg" alt="자비스">
+여기서 &lsquo;에이전트(Agent)&lsquo;란 무엇일까요? 영화 &lsquo;아이언맨&rsquo;의 자비스(JARVIS)를 떠올려보세요. 주인공 토니 스타크의 말을 듣고, 이해하고, 필요한 작업을 대신 수행해주는 인공지능이죠. OpenAI가 말하는 &lsquo;에이전트&rsquo;는 바로 이런 개념입니다. 사용자를 대신해 독립적으로 작업을 수행할 수 있는 인공지능 시스템인 것이죠.</p>
+<p>실생활에서는 이렇게 생각해볼 수 있습니다. 지금까지의 ChatGPT가 질문에 답변해주는 선생님 같은 존재였다면, 에이전트는 여러분의 비서가 되어 &ldquo;이번 주말 제주도 여행 계획 좀 세워줘&quot;라고 말하면 항공권 가격을 찾고, 날씨를 확인하고, 숙소를 추천하고, 심지어 예약까지 도와주는 존재입니다.</p>
+<h2 id="chatgpt에서-이미-만나본-에이전트들">ChatGPT에서 이미 만나본 에이전트들</h2>
+<p>사실 ChatGPT 플러스 사용자라면 이미 두 가지 에이전트 기능을 경험해봤을 수도 있습니다.</p>
+<p>첫 번째는 &lsquo;오퍼레이터(Operator)&lsquo;라는 기능입니다. 이 기능을 사용하면 ChatGPT가 여러분을 대신해 웹사이트를 방문하고, 정보를 검색하고, 심지어 간단한 작업(예: 이미지 다운로드, 텍스트 복사 등)까지 수행할 수 있습니다. 마치 여러분의 손이 되어 인터넷을 탐색하는 것과 같죠.</p>
+<p>두 번째는 &lsquo;딥 리서치(Deep Research)&lsquo;라는 기능입니다. 여러분이 &ldquo;인공지능이 일자리에 미치는 영향에 대해 연구해줘&quot;라고 요청하면, ChatGPT는 관련 자료를 찾고, 읽고, 분석하여 상세한 보고서를 만들어줍니다. 혼자서 일주일 동안 연구해야 할 내용을 15분 만에 정리해주는 셈이죠.</p>
+<p>OpenAI는 이런 기능들에 대한 사용자들의 반응이 매우 좋았다고 말합니다. 이제 이런 도구들을 일반 사용자뿐만 아니라, 개발자들도 자신만의 서비스에 쉽게 추가할 수 있도록 API(Application Programming Interface, 쉽게 말해 프로그램 간 소통 창구)를 통해 제공하기로 했습니다.</p>
+<h2 id="개발자들이-겪던-어려움은-무엇이었을까">개발자들이 겪던 어려움은 무엇이었을까?</h2>
+<p>여기서 잠깐, 개발자들이 지금까지 어떤 어려움을 겪었는지 이해해봅시다. 개발자들은 인공지능 기능을 자신의 앱이나 서비스에 추가하기 위해 여러 개의 복잡한 API를 조합해야 했습니다.</p>
+<p>이것은 마치 요리사가 맛있는 요리를 만들기 위해 여러 상점에서 재료를 사와서 직접 손질하고 조리해야 하는 것과 같습니다. 번거롭고, 시간도 많이 걸리고, 때로는 원하는 맛이 나지 않을 수도 있죠.</p>
+<p>OpenAI의 새로운 도구들은 이런 과정을 간소화합니다. 이제 개발자들은 곧바로 사용할 수 있는 &lsquo;반조리 식품&rsquo;이나 &lsquo;밀키트&rsquo;를 받는 셈입니다. 이를 통해 더 빠르고 안정적으로 AI 기능을 추가할 수 있게 되었습니다.</p>
+<h2 id="어떤-도구들이-공개되었나요">어떤 도구들이 공개되었나요?</h2>
+<p><img src="https://images.ctfassets.net/kftzwdyauwt9/7lMFExU623csx7EhYbPuJp/b78dea6c83804c173f29c829d6a5cc05/Screenshot_2025-03-11_at_10.51.21_AM.png?w=3840&amp;q=50&amp;fm=webp" alt="오픈AI 에이전트 SDK발표"></p>
+<p>OpenAI가 공개한 세 가지 도구를 좀 더 일상적인 예시로 설명해보겠습니다:</p>
+<h3 id="1-웹-검색-도구-web-search-tool">1. 웹 검색 도구 (Web Search Tool)</h3>
+<p><a href="https://platform.openai.com/docs/guides/tools-web-search?api-mode=chat" target="_blank">📺웹 검색 도구</a>
+는 인터넷에서 최신 정보를 찾아오는 역할을 합니다. 예를 들어, 여러분이 만든 여행 앱에서 &ldquo;오늘 서울 날씨는 어때?&ldquo;라고 물었을 때, 이 도구는 실시간으로 인터넷을 검색하여 최신 날씨 정보를 가져옵니다.</p>
+<p>일반 검색엔진과의 차이점은 무엇일까요? 이 도구는 단순히 검색 결과 링크만 제공하는 것이 아니라, 검색된 정보를 이해하고 분석하여 사용자의 질문에 직접적으로 답변합니다. 게다가 정보의 출처도 명확히 인용하여 신뢰성을 높입니다.</p>
+<h3 id="2-파일-검색-도구-file-search-tool">2. 파일 검색 도구 (File Search Tool)</h3>
+<p><a href="https://platform.openai.com/docs/guides/tools-file-search" target="_blank">📺파일 검색 도구</a>
+는 여러분의 개인 문서나 데이터에서 정보를 찾아주는 역할을 합니다. 예를 들어, 회사 내부 문서, 개인 노트, 계약서 등 수천 페이지의 문서에서 필요한 정보를 순식간에 찾아낼 수 있습니다.</p>
+<p>이것은 마치 수천 권의 책이 있는 도서관에서 사서가 여러분이 찾는 정확한 정보가 담긴 페이지를 바로 찾아주는 것과 같습니다. 게다가 이제는 다음과 같은 새로운 기능들도 추가되었습니다:</p>
+<ul>
+<li>메타데이터 필터링: 예를 들어, &ldquo;2023년에 작성된 마케팅 관련 문서만 찾아줘&quot;라고 요청할 수 있습니다.</li>
+<li>직접 검색 엔드포인트: 개발자들이 AI 모델을 거치지 않고도 저장된 문서를 직접 검색할 수 있게 해줍니다.</li>
+</ul>
+<h3 id="3-컴퓨터-사용-도구-computer-use-tool">3. 컴퓨터 사용 도구 (Computer Use Tool)</h3>
+<p><img src="https://cdn.openai.com/API/docs/images/cua_diagram.png" alt="3"></p>
+<p><a href="https://platform.openai.com/docs/guides/tools-computer-use" target="_blank">📺컴퓨터 사용 도구</a>
+는 컴퓨터 화면을 보고 마우스와 키보드를 사용할 수 있는 AI 에이전트입니다. 쉽게 말해, AI가 여러분의 컴퓨터를 직접 조작할 수 있게 해주는 것이죠.</p>
+<p>예를 들어, &ldquo;엑셀 파일에서 지난 달 매출 데이터를 추출해서 그래프로 만들어줘&quot;라고 요청하면, AI가 실제로 엑셀 프로그램을 열고, 데이터를 찾고, 그래프를 만드는 과정을 자동으로 수행할 수 있습니다.</p>
+<p>특히 이 도구는 오래된 프로그램이나 웹사이트처럼 API가 없는 시스템도 조작할 수 있어 매우 유용합니다. 여러분이 평소에 반복적으로 하는 지루한 컴퓨터 작업을 AI에게 맡길 수 있다고 생각해보세요!</p>
+<h2 id="새로운-responses-api란-무엇인가요">새로운 &lsquo;Responses API&rsquo;란 무엇인가요?</h2>
+<p>OpenAI는 이러한 도구들을 쉽게 사용할 수 있도록 &lsquo;Responses API&rsquo;라는 새로운 인터페이스를 발표했습니다. 이것이 왜 중요할까요?</p>
+<p>이전의 &lsquo;Chat Completions API&rsquo;는 텍스트 질문을 보내면 텍스트 답변만 받는 단순한 구조였습니다. 그러나 이제 AI는 텍스트뿐만 아니라 이미지를 보고, 소리를 듣고, 웹을 검색하고, 컴퓨터를 조작하는 등 다양한 작업을 수행할 수 있습니다.</p>
+<pre class="mermaid">graph TD
+  A[Chat Completions API] -->|텍스트 질문| B[텍스트 응답]
+  C[Responses API] -->|멀티모달 입력| D[다양한 작업 수행]
+  D --> E[웹 검색]
+  D --> F[파일 검색]
+  D --> G[컴퓨터 사용]
+  D --> H[텍스트 응답]</pre>
+
+<p>&lsquo;Responses API&rsquo;는 이런 복잡한 작업들을 한 번의 요청으로 처리할 수 있게 해줍니다. 예를 들어, 하나의 API 호출로 AI가 사용자의 취향을 파악하고(파일 검색), 관련 제품을 인터넷에서 찾고(웹 검색), 구매까지 도와주는(컴퓨터 사용) 복잡한 작업을 수행할 수 있게 된 것입니다.</p>
+<p>일상적인 예시로 설명하자면, 이전에는 요리사에게 &ldquo;밥 해줘&rdquo;, &ldquo;국 끓여줘&rdquo;, &ldquo;반찬 만들어줘&quot;라고 각각 따로 요청해야 했다면, 이제는 &ldquo;한식 식사 준비해줘&quot;라고 한 번만 부탁해도 모든 과정을 알아서 처리해주는 것과 같습니다.</p>
+<h2 id="복잡한-시스템을-위한-agents-sdk">복잡한 시스템을 위한 &lsquo;Agents SDK&rsquo;</h2>
+<p>여러 에이전트들이 협력해야 하는 더 복잡한 시스템을 위해 OpenAI는 &lsquo;Agents SDK&rsquo;(Software Development Kit, 소프트웨어 개발 도구모음)를 공개했습니다.</p>
+<pre class="mermaid">flowchart LR
+  User[사용자] <--> MainAgent[메인 에이전트]
+  MainAgent --> A[상품 추천 에이전트]
+  MainAgent --> B[고객 문의 응답 에이전트]
+  MainAgent --> C[결제 및 주문 처리 에이전트]
+  MainAgent --> D[환불 처리 에이전트]
+  
+  A --> MainAgent
+  B --> MainAgent
+  C --> MainAgent
+  D --> MainAgent
+  
+  style MainAgent fill:#f9d,stroke:#333,stroke-width:2px</pre>
+
+<p>이것은 어떤 의미일까요? 온라인 쇼핑몰을 예로 들어보겠습니다. 한 쇼핑몰에는 다양한 역할을 하는 여러 AI 에이전트가 필요할 수 있습니다:</p>
+<ul>
+<li>상품 추천 에이전트</li>
+<li>고객 문의 응답 에이전트</li>
+<li>결제 및 주문 처리 에이전트</li>
+<li>환불 처리 에이전트</li>
+</ul>
+<p>&lsquo;Agents SDK&rsquo;는 이런 여러 에이전트들이 서로 원활하게 소통하고 작업을 주고받을 수 있게 도와줍니다. 마치 회사 내 여러 부서가 유기적으로 협력하는 것과 같죠.</p>
+<pre class="mermaid">sequenceDiagram
+  participant 사용자
+  participant 메인에이전트
+  participant 상품추천에이전트
+  participant 환불처리에이전트
+  
+  사용자->>메인에이전트: "이 상품 추천해줘"
+  메인에이전트->>상품추천에이전트: 작업 전달
+  상품추천에이전트->>메인에이전트: 추천 정보 제공
+  메인에이전트->>사용자: 추천 상품 안내
+  
+  사용자->>메인에이전트: "지난주 주문 환불하고 싶어"
+  Note right of 메인에이전트: 핸드오프 발생
+  메인에이전트->>환불처리에이전트: 작업 전달
+  환불처리에이전트->>메인에이전트: 환불 처리 결과
+  메인에이전트->>사용자: 환불 처리 안내</pre>
+
+<p>특히 인상적인 기능은 &lsquo;핸드오프(Handoffs)&lsquo;로, 대화 중에 적절한 에이전트로 자연스럽게 전환할 수 있습니다. 예를 들어, 고객이 &ldquo;이 상품 추천해줘&quot;라고 물었다가 갑자기 &ldquo;지난주에 주문한 물건 환불하고 싶어&quot;라고 말하면, 자동으로 적절한 에이전트로 대화가 전환됩니다.</p>
+<h2 id="일반인의-삶은-어떻게-바뀔까요">일반인의 삶은 어떻게 바뀔까요?</h2>
+<p>이런 기술 발전이 일반인의 삶에 어떤 영향을 미칠까요? 몇 가지 가능한 시나리오를 상상해봅시다:</p>
+<pre class="mermaid">mindmap
+  root((AI 생활 변화))
+    (개인 비서의 대중화)
+      ::icon(fa fa-calendar)
+      [일정 관리]
+      [이메일 정리]
+      [정보 검색]
+      [예약 서비스]
+    (맞춤형 교육 도우미)
+      ::icon(fa fa-graduation-cap)
+      [개인별 학습 속도 조절]
+      [맞춤형 학습 자료]
+      [실시간 이해도 파악]
+      [개인화된 커리큘럼]
+    (건강 관리 코치)
+      ::icon(fa fa-heartbeat)
+      [건강 데이터 분석]
+      [맞춤형 식단 추천]
+      [운동 계획 수립]
+      [병원 예약 지원]
+    (디지털 격차 해소)
+      ::icon(fa fa-users)
+      [음성 인터페이스]
+      [복잡한 디지털 작업 지원]
+      [노인층 접근성 향상]
+      [기술 진입 장벽 낮춤]</pre>
+
+<ol>
+<li>
+<p><strong>개인 비서의 대중화</strong>: 지금까지 부자들만 누릴 수 있었던 개인 비서 서비스를 누구나 이용할 수 있게 됩니다. 일정 관리, 이메일 정리, 정보 검색, 예약 등 다양한 업무를 AI가 대신해줍니다.</p>
+</li>
+<li>
+<p><strong>맞춤형 교육 도우미</strong>: 학생마다 다른 학습 속도와 방식을 고려한 개인 교사가 생깁니다. &ldquo;수학 기초부터 다시 배우고 싶어&quot;라고 말하면, AI가 학생의 이해도를 파악하며 맞춤형 교육을 제공합니다.</p>
+</li>
+<li>
+<p><strong>건강 관리 코치</strong>: 사용자의 건강 데이터를 분석하고, 식단을 추천하고, 운동 계획을 세우고, 필요한 경우 병원 예약까지 도와주는 건강 관리 시스템이 가능해집니다.</p>
+</li>
+<li>
+<p><strong>디지털 격차 해소</strong>: 컴퓨터 사용이 어려운 노인이나 디지털 기기에 익숙하지 않은 사람들도 음성 명령만으로 복잡한 디지털 작업을 수행할 수 있게 됩니다.</p>
+</li>
+</ol>
+<h2 id="앞으로의-전망">앞으로의 전망</h2>
+<p><img src="https://images.unsplash.com/photo-1730829807477-783c91627941?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="2025년">
+OpenAI의 케빈이 말했듯이, &ldquo;2025년은 에이전트의 해&quot;가 될 전망입니다. 인공지능이 단순한 질문 답변을 넘어 실제 세상에서 구체적인 작업을 수행하는 방향으로 빠르게 발전하고 있습니다.</p>
+<p>물론 이런 변화가 모든 사람에게 긍정적인 것만은 아닐 수 있습니다. 일부 직업은 AI 에이전트로 대체될 가능성이 있으며, 개인정보 보호나 AI의 권한 범위 등 새로운 윤리적 문제도 생길 수 있습니다.</p>
+<p>하지만 역사적으로 보면, 새로운 기술은 항상 일부 일자리를 대체하면서도 새로운 형태의 일자리를 창출해왔습니다. AI 에이전트 시대에도 인간은 AI를 관리하고, 훈련하고, 감독하는 새로운 역할을 맡게 될 것입니다.</p>
+<p>OpenAI의 이번 발표는 AI 기술이 우리 일상과 비즈니스에 더 깊이 통합되는 미래의 시작점이 될 것입니다. 개발자들의 창의력과 OpenAI의 강력한 도구가 만나 어떤 혁신적인 서비스들이 탄생할지, 그 가능성은 무한해 보입니다.</p>
+<p>AI 에이전트와 함께하는 미래, 여러분은 어떤 일상을 꿈꾸시나요?</p>
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/gemma-3/" title="우리 주머니 속으로 들어온 AI">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Previous page</span>
+            <span class="max-w-48 truncate">우리 주머니 속으로 들어온 AI</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/ai-timeline/" title="인공지능의 여정: AI 역사 따라가기">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Next page</span>
+            <span class="max-w-48 truncate">인공지능의 여정: AI 역사 따라가기</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+    </article>
+  </div>
+
+  <div class="hidden lg:flex lg:flex-col lg:items-end">
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#인공지능-이제는-대신-일하는-시대로">인공지능, 이제는 대신 일하는 시대로</a></li>
+    <li><a href="#에이전트란-무엇일까요">&lsquo;에이전트&rsquo;란 무엇일까요?</a></li>
+    <li><a href="#chatgpt에서-이미-만나본-에이전트들">ChatGPT에서 이미 만나본 에이전트들</a></li>
+    <li><a href="#개발자들이-겪던-어려움은-무엇이었을까">개발자들이 겪던 어려움은 무엇이었을까?</a></li>
+    <li><a href="#어떤-도구들이-공개되었나요">어떤 도구들이 공개되었나요?</a>
+      <ul>
+        <li><a href="#1-웹-검색-도구-web-search-tool">1. 웹 검색 도구 (Web Search Tool)</a></li>
+        <li><a href="#2-파일-검색-도구-file-search-tool">2. 파일 검색 도구 (File Search Tool)</a></li>
+        <li><a href="#3-컴퓨터-사용-도구-computer-use-tool">3. 컴퓨터 사용 도구 (Computer Use Tool)</a></li>
+      </ul>
+    </li>
+    <li><a href="#새로운-responses-api란-무엇인가요">새로운 &lsquo;Responses API&rsquo;란 무엇인가요?</a></li>
+    <li><a href="#복잡한-시스템을-위한-agents-sdk">복잡한 시스템을 위한 &lsquo;Agents SDK&rsquo;</a></li>
+    <li><a href="#일반인의-삶은-어떻게-바뀔까요">일반인의 삶은 어떻게 바뀔까요?</a></li>
+    <li><a href="#앞으로의-전망">앞으로의 전망</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2025 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">1. 한국인공지능협회</div>
+
+        <div class="prose dark:prose-invert">
+          <h2 id="미션-mission">미션 (Mission)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능 시대, 문명의 기준을 세우는 것</strong><br>
+<em>AI age, Standardization of civilization</em></p>
+  </blockquote>
+
+<h2 id="비전-vision">비전 (Vision)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능의 민주화와 산업지능화 선도</strong><br>
+<em>Democratization of Artificial Intelligence and Leadership in Industrial Intelligence</em></p>
+  </blockquote>
+
+<h2 id="핵심전략-core-strategy">핵심전략 (Core Strategy)</h2>
+
+
+
+  <blockquote>
+    <p><strong>정보공유-인재양성-기업지원-시장창출로 선도적 인공지능 생태계 구축</strong><br>
+<em>Building a leading artificial intelligence ecosystem through information sharing, talent development, corporate support, and market creation</em></p>
+  </blockquote>
+
+<h2 id="행동-슬로건-slogan">행동 슬로건 (Slogan)</h2>
+
+
+
+  <blockquote>
+    <p><strong>시선은 미래를 향하고, 행동은 미래를 앞당긴다.</strong><br>
+<em>Our Eyes stares at the future &amp; Behavior moves-up the future</em></p>
+  </blockquote>
+
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">2. 설립배경</div>
+
+        <div class="prose dark:prose-invert">
+          <table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>법인명</strong></td>
+          <td style="text-align: left">사단법인 한국인공지능협회</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>법인형태</strong></td>
+          <td style="text-align: left">비영리법인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>창립총회</strong></td>
+          <td style="text-align: left">2017년 1월 임의단체 출범</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>사단법인 허가</strong></td>
+          <td style="text-align: left">2017년 6월 21일 (민법 제32조)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>주무부처</strong></td>
+          <td style="text-align: left">과학기술정보통신부</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>설립배경</strong></td>
+          <td style="text-align: left">인공지능 유관 정보, 인재, 기업, 시장 등의 교류와 연결을 통해서 인공지능 생태계를 선도</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="임원-및-회원사-현황">임원 및 회원사 현황</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>회장</strong></td>
+          <td style="text-align: left">김현철</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>임원</strong></td>
+          <td style="text-align: left">23인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>회원사</strong></td>
+          <td style="text-align: left">1,000여 인공지능 및 데이터 전문 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>협력사</strong></td>
+          <td style="text-align: left">인공지능 수요사 15,000여 곳</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격자</strong></td>
+          <td style="text-align: left">인공지능산업컨설턴트 등 20,000여명</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증사</strong></td>
+          <td style="text-align: left">217여 산업지능화 인증(AI+X Certificate) 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>전문가그룹</strong></td>
+          <td style="text-align: left">석박사, 공인자격자 중심의 산업계 인공지능 융합전문가</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="주요업무">주요업무</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>기업지원</strong></td>
+          <td style="text-align: left">회원사 커뮤니티 운영, 수요공급사매칭, 컨소시엄지원, 편람발간, 분과활동, 마케팅 및 수출지원 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인재육성</strong></td>
+          <td style="text-align: left">AI기초교육, AI직무전환 교육, 취업매칭, 일자리 창출사업 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증제도</strong></td>
+          <td style="text-align: left">AI기술 및 비즈니스 인증제 운영</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격제도</strong></td>
+          <td style="text-align: left">AI유관 8개 직무자격에 대한 시험운영 및 자격발급</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>정책지원</strong></td>
+          <td style="text-align: left">AI생태계 수요조사, 표준화 활동, 규제개선 등</td>
+      </tr>
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">3. 한국인공지능협회로의 초대</div>
+
+        <div class="prose dark:prose-invert">
+          
+
+
+  <blockquote>
+    <p>스스로 학습의 학습을 거듭하는 인공지능에 대한 이론적인 근거를 두고, 50년 전 수학자 어빙 존 굿은 **&ldquo;인공지능은 인류 최후의 발명품&rdquo;**이라는 말을 남겼습니다. 세월이 지나 현 시대를 맞이한 우리는 인공지능을 기술적 발명품을 넘어 문명 전반의 변화를 이끌어내는 일종의 시대정신으로 마주하고 있습니다. 인공지능에 대한 사회적 요구가 커지고 있는 지금이 되려 우리가 미진한 부분을 개혁하고 인간적인 가치를 추구하는 계기가 되지 않을까 싶습니다.</p>
+  </blockquote>
+
+<p>한국인공지능협회의 최초 설립정신은 인류사회가 겪는 문제를 인공지능이라는 주제로 해결해가는 <strong>주체자들(Changers)의 결성</strong>이었고, 그들의 연결을 국내외로 지속적으로 추진합니다. 협회는 회원을 지칭하는 브랜드인 <strong>체인저스(Changers)</strong> 라는 정체성을 기반으로 정책과 사업을 구성하여 대한민국 전 분야의 지능화에 기여하고 인공지능의 민주화를 선도합니다.</p>
+<p>한국인공지능협회는 그동안 <strong>1,000여 개의 인공지능 기업</strong>과 <strong>10만 명이 넘는 종사자</strong>를 대변하는 인공지능 생태계의 대표 단체로서의 역할을 성실히 수행해 왔습니다. 이제 우리는 한 걸음 더 나아가, 인공지능을 둘러싼 다양한 주제를 다룰 새로운 거버넌스를 신설하고, 그 거버넌스들 간의 유기적인 연계를 공고히 하여 설립정신을 더욱 발전시켜갑니다.</p>
+<p>이를 통해 한국인공지능협회는 단순한 산업 대표 단체를 넘어, <strong>&ldquo;인공지능 시대&quot;를 대표하는 단체</strong>로 우뚝서려 합니다.</p>
+<p>한국인공지능협회는 인공지능을 세상을 부양시키는 <strong>최상위 메타(Meta) 산업</strong>으로 규정하여 우리의 관점과 역할을 통합적으로 변모시켜 갑니다. 우리는 인공지능 기술이 산업에 닿는 범위, 디지털화 된 산업이 경제를 변화시키는 범위, 생산력이 확보된 경제가 문화를 자아내는 범위, 참여의 문화가 강한 개인을 만들어내는 모든 범위를 고민하여 <strong>문명의 기준을 만드는 최선두</strong>에 서겠습니다.</p>
+<p><em><strong>감사합니다.</strong></em></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">4. 부서별 직무소개</div>
+
+        <div class="prose dark:prose-invert">
+          <h3 id="비서실">비서실</h3>
+<ul>
+<li>회장 수행</li>
+<li>체인저스 관리</li>
+</ul>
+<h3 id="인공지능-정책원">인공지능 정책원</h3>
+<ul>
+<li>AI입법 및 정책 지원</li>
+<li>정책백서편찬 및 세미나</li>
+<li>국회·산·학·연·관 정책 네트워크</li>
+</ul>
+<h3 id="인공지능-이용자-진흥원">인공지능 이용자 진흥원</h3>
+<ul>
+<li>오픈소스 커뮤니티 활성화</li>
+<li>사회적 영향에 대한 모니터링</li>
+<li>민간자율AI윤리위원회 운영</li>
+</ul>
+<h3 id="인공지능-연수원">인공지능 연수원</h3>
+<ul>
+<li>최고위과정 운영</li>
+<li>AI리터러시 및 직무전환교육</li>
+<li>지역 아카데미 관리</li>
+<li>원우회 운영</li>
+</ul>
+<h3 id="ai직무자격센터">AI직무자격센터</h3>
+<ul>
+<li>자격제 운영</li>
+<li>공인교육기관지정</li>
+<li>인재매칭플랫폼 운영</li>
+</ul>
+<h3 id="ai시험인증센터">AI시험·인증센터</h3>
+<ul>
+<li>시험·인증제 운영</li>
+<li>인공지능 고영향 평가</li>
+<li>표준화 활동</li>
+</ul>
+<h3 id="데이터작업물-등록센터">데이터·작업물 등록센터</h3>
+<ul>
+<li>데이터·작업물 등록</li>
+<li>확인증 발부</li>
+</ul>
+<h3 id="경영지원팀">경영지원팀</h3>
+<ul>
+<li>인사/노무/복리후생</li>
+<li>재무/회계</li>
+<li>총무/임원수행</li>
+<li>홍보/언론관리</li>
+</ul>
+<h3 id="회원교류팀">회원교류팀</h3>
+<ul>
+<li>국제인공지능대전</li>
+<li>AI어워드&amp;기업인의 밤</li>
+<li>해외진출지원</li>
+<li>지회협력</li>
+</ul>
+<h3 id="회원사업팀">회원사업팀</h3>
+<ul>
+<li>AI시너지링크(수요·공급매칭)</li>
+<li>AI Startups(편람)</li>
+<li>정부사업 및 사업수행</li>
+</ul>
+<h3 id="임원단-분과">임원단 분과</h3>
+<ul>
+<li>해외펀드</li>
+<li>국제네트워크</li>
+<li>공공협력</li>
+<li>취약계층 교육확산</li>
+<li>여성 인공지능 전문가 양성</li>
+</ul>
+<h3 id="해외지회">해외지회</h3>
+<ul>
+<li>일본지회</li>
+</ul>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2025 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+  <script src="/js/grid.js"></script>
+
+
+
+
+<script src="/js/main.js"></script>
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "en" }).toFormat("yyyy. MM. dd.")
+    })
+  }
+</script>
+
+
+
+
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+    
+      <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+      </script>
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

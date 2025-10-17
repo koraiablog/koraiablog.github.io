@@ -4,7 +4,7 @@ date: 2025-04-01T13:56:30+09:00
 lastmod: 2025-04-01T13:56:30+09:00
 # author: Author Name
 # authorlink: https://author.site
-avatar: 'https://th.bing.com/th/id/OIG2.ElON94aSGdQKthn0Wj97?pid=ImgGn'
+avatar: 'https://cdn-icons-png.flaticon.com/512/3075/3075929.png'
 cover: https://media.wired.com/photos/67dc89adc5818a5731de3fca/master/w_2240,c_limit/GoogleAI_TopArt_Final_1.jpg
 images:
   - https://media.wired.com/photos/67dc89adc5818a5731de3fca/master/w_2240,c_limit/GoogleAI_TopArt_Final_1.jpg

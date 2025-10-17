@@ -4,7 +4,7 @@ date: 2025-05-22T10:19:40+09:00
 lastmod: 2025-05-22T10:19:40+09:00
 # author: Author Name
 # authorlink: https://author.site
-avatar: 'https://th.bing.com/th/id/OIG2.ElON94aSGdQKthn0Wj97?pid=ImgGn'
+avatar: 'https://cdn-icons-png.flaticon.com/512/3075/3075929.png'
 cover: https://io.google/2025/assets/images/io25-og-image.jpg
 images:
   - https://io.google/2025/assets/images/io25-og-image.jpg

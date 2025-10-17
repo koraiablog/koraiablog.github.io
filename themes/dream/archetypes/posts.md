@@ -4,7 +4,7 @@ date: {{ .Date }}
 lastmod: {{ .Date }}
 # author: Author Name
 # authorlink: https://author.site
-avatar: 'https://th.bing.com/th/id/OIG2.ElON94aSGdQKthn0Wj97?pid=ImgGn'
+avatar: 'https://cdn-icons-png.flaticon.com/512/3075/3075929.png'
 cover: /img/cover.jpg
 images:
   - /img/cover.jpg

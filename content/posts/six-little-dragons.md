@@ -3,7 +3,7 @@ title: 중국에 AI 육룡이 나르샤
 date: 2025-03-14T09:42:45+09:00
 lastmod: 2025-03-14T09:42:45+09:00
 #author: Author Name
-avatar: 'https://th.bing.com/th/id/OIG2.ElON94aSGdQKthn0Wj97?pid=ImgGn'
+avatar: 'https://cdn-icons-png.flaticon.com/512/3075/3075929.png'
 # authorlink: https://author.site
 cover: https://image5.sixthtone.com/image/5/86/587.jpg
 images:

@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ko-kr"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 I/O 2025 | 한국인공지능협회 블로그</title>
+
+    
+  
+    <link href="/symbol.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="http://localhost:1313/tags/%EA%B5%AC%EA%B8%80-i/o-2025/" />
+
+
+
+<meta name="author" content="koraia" />
+<meta name="description" content="" />
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="http://localhost:1313/tags/%EA%B5%AC%EA%B8%80-i/o-2025/">
+  <meta property="og:site_name" content="한국인공지능협회 블로그">
+  <meta property="og:title" content="구글 I/O 2025">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://file.miricanvas.com/design_thumb/2025/03/10/15/40/kqu7mcbl88r29r5c/thumb.jpg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://file.miricanvas.com/design_thumb/2025/03/10/15/40/kqu7mcbl88r29r5c/thumb.jpg">
+  <meta name="twitter:title" content="구글 I/O 2025">
+
+
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+     
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.svg" alt="미래를 여는 AI," />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+          미래를 여는 AI,
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">사단법인 한국인공지능협회</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+
+      
+
+      
+      
+      
+      
+
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="About">About</div>
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+
+
+<div class="flex flex-col md:flex-row mt-4">
+
+  <div class="md:basis-[200px] lg:basis-[300px] p-4 prose dark:prose-invert">
+    <h1 class="text-2xl">구글 I/O 2025</h1>
+    <p class="text-sm">2 articles</p>
+    <div class="flex flex-wrap gap-4 mt-6">
+      
+
+      
+      
+      <a href="/tags/ai-%EC%97%AD%EC%82%AC/" class="badge h-6 no-underline hover:badge-primary">
+        AI 역사
+      </a>
+      
+      
+      
+      <a href="/tags/ai%EA%B2%BD%EC%9F%81/" class="badge h-6 no-underline hover:badge-primary">
+        AI경쟁
+      </a>
+      
+      
+      
+      <a href="/tags/ai%EB%82%B4%EB%B6%80%EC%9E%91%EB%8F%99/" class="badge h-6 no-underline hover:badge-primary">
+        AI내부작동
+      </a>
+      
+      
+      
+      <a href="/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/" class="badge h-6 no-underline hover:badge-primary">
+        AI에이전트
+      </a>
+      
+      
+      
+      <a href="/tags/ai%ED%95%B4%EC%84%9D%EA%B0%80%EB%8A%A5%EC%84%B1/" class="badge h-6 no-underline hover:badge-primary">
+        AI해석가능성
+      </a>
+      
+      
+      
+      <a href="/tags/anthropic/" class="badge h-6 no-underline hover:badge-primary">
+        Anthropic
+      </a>
+      
+      
+      
+      <a href="/tags/gpt-4o/" class="badge h-6 no-underline hover:badge-primary">
+        GPT-4o
+      </a>
+      
+      
+      
+      <a href="/tags/gtc2025/" class="badge h-6 no-underline hover:badge-primary">
+        GTC2025
+      </a>
+      
+      
+      
+      <a href="/tags/llm/" class="badge h-6 no-underline hover:badge-primary">
+        LLM
+      </a>
+      
+      
+      
+      <a href="/tags/openai/" class="badge h-6 no-underline hover:badge-primary">
+        OpenAI
+      </a>
+      
+      
+      
+      <a href="/tags/%EA%B5%AC%EA%B8%80/" class="badge h-6 no-underline hover:badge-primary">
+        구글
+      </a>
+      
+      
+      
+      <span class="badge h-6 badge-primary">
+        구글 I/O 2025
+      </span>
+      
+      
+      
+      <a href="/tags/%EA%B5%AC%EA%B8%80ai/" class="badge h-6 no-underline hover:badge-primary">
+        구글AI
+      </a>
+      
+      
+      
+      <a href="/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/" class="badge h-6 no-underline hover:badge-primary">
+        디지털전환
+      </a>
+      
+      
+      
+      <a href="/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/" class="badge h-6 no-underline hover:badge-primary">
+        딥시크
+      </a>
+      
+      
+      
+      <a href="/tags/%EB%A7%88%EB%88%84%EC%8A%A4/" class="badge h-6 no-underline hover:badge-primary">
+        마누스
+      </a>
+      
+      
+      
+      <a href="/tags/%EB%B0%94%EB%93%9C/" class="badge h-6 no-underline hover:badge-primary">
+        바드
+      </a>
+      
+      
+      
+      <a href="/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1ai/" class="badge h-6 no-underline hover:badge-primary">
+        에이전틱AI
+      </a>
+      
+      
+      
+      <a href="/tags/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%83%9D%EC%84%B1%EC%84%B1/" class="badge h-6 no-underline hover:badge-primary">
+        이미지생성성
+      </a>
+      
+      
+      
+      <a href="/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/" class="badge h-6 no-underline hover:badge-primary">
+        인공지능
+      </a>
+      
+      
+      
+      <a href="/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%B0%9C%EC%A0%84%EC%82%AC/" class="badge h-6 no-underline hover:badge-primary">
+        인공지능 발전사
+      </a>
+      
+      
+      
+      <a href="/tags/%EC%A0%9C%EB%AF%B8%EB%82%98%EC%9D%B4/" class="badge h-6 no-underline hover:badge-primary">
+        제미나이
+      </a>
+      
+      
+      
+      <a href="/tags/%EC%A4%91%EA%B5%ADai/" class="badge h-6 no-underline hover:badge-primary">
+        중국AI
+      </a>
+      
+      
+    </div>
+  </div>
+  
+  <div class="divider divider-vertical md:divider-horizontal px-4 md:px-0"></div>
+  
+  <div class="flex-1">
+    
+
+    
+      <div class="dream-grid">
+        
+          <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+            <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/korea/">
+  
+  <figure>
+    
+    <img src="https://io.google/2025/assets/images/io25-og-image.jpg" alt="대한민국 AI G3 전략, 제가 한번 쉽고 깊이 있게 파헤쳐 봤는데요!" />
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">대한민국 AI G3 전략, 제가 한번 쉽고 깊이 있게 파헤쳐 봤는데요!</h2>
+
+    <p class="date text-base-content/60">
+    
+      <span data-format="luxon">2025-10-17T10:19:40&#43;09:00</span>
+    
+    </p>
+
+    <p>2025년 5월 20~21일, 이틀간 진행한 구글 I/O가 막을 내렸습니다. 이번 행사에서는 인공지능(AI) 분야의 획기적인 발전과 이것이 구글의 다양한 제품에 어떻게 적용되는지에 대한 수많은 발표가 있었습니다. 제미니(Gemini) 앱의 주요 업그레이드부터 생성형 AI 도구, 그리고 AI 모델 자체의 놀라운 진보까지, 혁신적인 내용들이 가득했습니다.</p>
+<p>이번 I/O 2025의 하이라이트 100가지를 알아보도록 하겠습니다.</p>
+
+    
+    <div class="card-actions justify-between items-center mt-4">
+      
+        <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="https://cdn-icons-png.flaticon.com/512/3075/3075929.png" alt="" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">koraia</span>
+  
+  </span>
+</div>
+
+      
+
+      <div class="flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1 minute read</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+          </div>
+        
+          <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+            <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/google_io_25/">
+  
+  <figure>
+    
+    <img src="https://io.google/2025/assets/images/io25-og-image.jpg" alt="AI의 현재와 미래- 구글 I/O 2025에서 발표된 100가지 혁신!" />
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">AI의 현재와 미래- 구글 I/O 2025에서 발표된 100가지 혁신!</h2>
+
+    <p class="date text-base-content/60">
+    
+      <span data-format="luxon">2025-05-22T10:19:40&#43;09:00</span>
+    
+    </p>
+
+    <p>2025년 5월 20~21일, 이틀간 진행한 구글 I/O가 막을 내렸습니다. 이번 행사에서는 인공지능(AI) 분야의 획기적인 발전과 이것이 구글의 다양한 제품에 어떻게 적용되는지에 대한 수많은 발표가 있었습니다. 제미니(Gemini) 앱의 주요 업그레이드부터 생성형 AI 도구, 그리고 AI 모델 자체의 놀라운 진보까지, 혁신적인 내용들이 가득했습니다.</p>
+<p>이번 I/O 2025의 하이라이트 100가지를 알아보도록 하겠습니다.</p>
+
+    
+    <div class="card-actions justify-between items-center mt-4">
+      
+        <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="https://cdn-icons-png.flaticon.com/512/3075/3075929.png" alt="" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">koraia</span>
+  
+  </span>
+</div>
+
+      
+
+      <div class="flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>20 minute read</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+          </div>
+        
+      </div>
+    
+
+    
+  </div>
+</div>
+
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2025 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">1. 한국인공지능협회</div>
+
+        <div class="prose dark:prose-invert">
+          <h2 id="미션-mission">미션 (Mission)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능 시대, 문명의 기준을 세우는 것</strong><br>
+<em>AI age, Standardization of civilization</em></p>
+  </blockquote>
+
+<h2 id="비전-vision">비전 (Vision)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능의 민주화와 산업지능화 선도</strong><br>
+<em>Democratization of Artificial Intelligence and Leadership in Industrial Intelligence</em></p>
+  </blockquote>
+
+<h2 id="핵심전략-core-strategy">핵심전략 (Core Strategy)</h2>
+
+
+
+  <blockquote>
+    <p><strong>정보공유-인재양성-기업지원-시장창출로 선도적 인공지능 생태계 구축</strong><br>
+<em>Building a leading artificial intelligence ecosystem through information sharing, talent development, corporate support, and market creation</em></p>
+  </blockquote>
+
+<h2 id="행동-슬로건-slogan">행동 슬로건 (Slogan)</h2>
+
+
+
+  <blockquote>
+    <p><strong>시선은 미래를 향하고, 행동은 미래를 앞당긴다.</strong><br>
+<em>Our Eyes stares at the future &amp; Behavior moves-up the future</em></p>
+  </blockquote>
+
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">2. 설립배경</div>
+
+        <div class="prose dark:prose-invert">
+          <table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>법인명</strong></td>
+          <td style="text-align: left">사단법인 한국인공지능협회</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>법인형태</strong></td>
+          <td style="text-align: left">비영리법인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>창립총회</strong></td>
+          <td style="text-align: left">2017년 1월 임의단체 출범</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>사단법인 허가</strong></td>
+          <td style="text-align: left">2017년 6월 21일 (민법 제32조)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>주무부처</strong></td>
+          <td style="text-align: left">과학기술정보통신부</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>설립배경</strong></td>
+          <td style="text-align: left">인공지능 유관 정보, 인재, 기업, 시장 등의 교류와 연결을 통해서 인공지능 생태계를 선도</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="임원-및-회원사-현황">임원 및 회원사 현황</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>회장</strong></td>
+          <td style="text-align: left">김현철</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>임원</strong></td>
+          <td style="text-align: left">23인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>회원사</strong></td>
+          <td style="text-align: left">1,000여 인공지능 및 데이터 전문 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>협력사</strong></td>
+          <td style="text-align: left">인공지능 수요사 15,000여 곳</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격자</strong></td>
+          <td style="text-align: left">인공지능산업컨설턴트 등 20,000여명</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증사</strong></td>
+          <td style="text-align: left">217여 산업지능화 인증(AI+X Certificate) 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>전문가그룹</strong></td>
+          <td style="text-align: left">석박사, 공인자격자 중심의 산업계 인공지능 융합전문가</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="주요업무">주요업무</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>기업지원</strong></td>
+          <td style="text-align: left">회원사 커뮤니티 운영, 수요공급사매칭, 컨소시엄지원, 편람발간, 분과활동, 마케팅 및 수출지원 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인재육성</strong></td>
+          <td style="text-align: left">AI기초교육, AI직무전환 교육, 취업매칭, 일자리 창출사업 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증제도</strong></td>
+          <td style="text-align: left">AI기술 및 비즈니스 인증제 운영</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격제도</strong></td>
+          <td style="text-align: left">AI유관 8개 직무자격에 대한 시험운영 및 자격발급</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>정책지원</strong></td>
+          <td style="text-align: left">AI생태계 수요조사, 표준화 활동, 규제개선 등</td>
+      </tr>
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">3. 한국인공지능협회로의 초대</div>
+
+        <div class="prose dark:prose-invert">
+          
+
+
+  <blockquote>
+    <p>스스로 학습의 학습을 거듭하는 인공지능에 대한 이론적인 근거를 두고, 50년 전 수학자 어빙 존 굿은 **&ldquo;인공지능은 인류 최후의 발명품&rdquo;**이라는 말을 남겼습니다. 세월이 지나 현 시대를 맞이한 우리는 인공지능을 기술적 발명품을 넘어 문명 전반의 변화를 이끌어내는 일종의 시대정신으로 마주하고 있습니다. 인공지능에 대한 사회적 요구가 커지고 있는 지금이 되려 우리가 미진한 부분을 개혁하고 인간적인 가치를 추구하는 계기가 되지 않을까 싶습니다.</p>
+  </blockquote>
+
+<p>한국인공지능협회의 최초 설립정신은 인류사회가 겪는 문제를 인공지능이라는 주제로 해결해가는 <strong>주체자들(Changers)의 결성</strong>이었고, 그들의 연결을 국내외로 지속적으로 추진합니다. 협회는 회원을 지칭하는 브랜드인 <strong>체인저스(Changers)</strong> 라는 정체성을 기반으로 정책과 사업을 구성하여 대한민국 전 분야의 지능화에 기여하고 인공지능의 민주화를 선도합니다.</p>
+<p>한국인공지능협회는 그동안 <strong>1,000여 개의 인공지능 기업</strong>과 <strong>10만 명이 넘는 종사자</strong>를 대변하는 인공지능 생태계의 대표 단체로서의 역할을 성실히 수행해 왔습니다. 이제 우리는 한 걸음 더 나아가, 인공지능을 둘러싼 다양한 주제를 다룰 새로운 거버넌스를 신설하고, 그 거버넌스들 간의 유기적인 연계를 공고히 하여 설립정신을 더욱 발전시켜갑니다.</p>
+<p>이를 통해 한국인공지능협회는 단순한 산업 대표 단체를 넘어, <strong>&ldquo;인공지능 시대&quot;를 대표하는 단체</strong>로 우뚝서려 합니다.</p>
+<p>한국인공지능협회는 인공지능을 세상을 부양시키는 <strong>최상위 메타(Meta) 산업</strong>으로 규정하여 우리의 관점과 역할을 통합적으로 변모시켜 갑니다. 우리는 인공지능 기술이 산업에 닿는 범위, 디지털화 된 산업이 경제를 변화시키는 범위, 생산력이 확보된 경제가 문화를 자아내는 범위, 참여의 문화가 강한 개인을 만들어내는 모든 범위를 고민하여 <strong>문명의 기준을 만드는 최선두</strong>에 서겠습니다.</p>
+<p><em><strong>감사합니다.</strong></em></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">4. 부서별 직무소개</div>
+
+        <div class="prose dark:prose-invert">
+          <h3 id="비서실">비서실</h3>
+<ul>
+<li>회장 수행</li>
+<li>체인저스 관리</li>
+</ul>
+<h3 id="인공지능-정책원">인공지능 정책원</h3>
+<ul>
+<li>AI입법 및 정책 지원</li>
+<li>정책백서편찬 및 세미나</li>
+<li>국회·산·학·연·관 정책 네트워크</li>
+</ul>
+<h3 id="인공지능-이용자-진흥원">인공지능 이용자 진흥원</h3>
+<ul>
+<li>오픈소스 커뮤니티 활성화</li>
+<li>사회적 영향에 대한 모니터링</li>
+<li>민간자율AI윤리위원회 운영</li>
+</ul>
+<h3 id="인공지능-연수원">인공지능 연수원</h3>
+<ul>
+<li>최고위과정 운영</li>
+<li>AI리터러시 및 직무전환교육</li>
+<li>지역 아카데미 관리</li>
+<li>원우회 운영</li>
+</ul>
+<h3 id="ai직무자격센터">AI직무자격센터</h3>
+<ul>
+<li>자격제 운영</li>
+<li>공인교육기관지정</li>
+<li>인재매칭플랫폼 운영</li>
+</ul>
+<h3 id="ai시험인증센터">AI시험·인증센터</h3>
+<ul>
+<li>시험·인증제 운영</li>
+<li>인공지능 고영향 평가</li>
+<li>표준화 활동</li>
+</ul>
+<h3 id="데이터작업물-등록센터">데이터·작업물 등록센터</h3>
+<ul>
+<li>데이터·작업물 등록</li>
+<li>확인증 발부</li>
+</ul>
+<h3 id="경영지원팀">경영지원팀</h3>
+<ul>
+<li>인사/노무/복리후생</li>
+<li>재무/회계</li>
+<li>총무/임원수행</li>
+<li>홍보/언론관리</li>
+</ul>
+<h3 id="회원교류팀">회원교류팀</h3>
+<ul>
+<li>국제인공지능대전</li>
+<li>AI어워드&amp;기업인의 밤</li>
+<li>해외진출지원</li>
+<li>지회협력</li>
+</ul>
+<h3 id="회원사업팀">회원사업팀</h3>
+<ul>
+<li>AI시너지링크(수요·공급매칭)</li>
+<li>AI Startups(편람)</li>
+<li>정부사업 및 사업수행</li>
+</ul>
+<h3 id="임원단-분과">임원단 분과</h3>
+<ul>
+<li>해외펀드</li>
+<li>국제네트워크</li>
+<li>공공협력</li>
+<li>취약계층 교육확산</li>
+<li>여성 인공지능 전문가 양성</li>
+</ul>
+<h3 id="해외지회">해외지회</h3>
+<ul>
+<li>일본지회</li>
+</ul>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2025 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+  <script src="/js/grid.js"></script>
+
+
+
+
+<script src="/js/main.js"></script>
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "en" }).toFormat("yyyy. MM. dd.")
+    })
+  }
+</script>
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

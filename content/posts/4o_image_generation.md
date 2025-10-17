@@ -4,7 +4,7 @@ date: 2025-03-27T10:33:25+09:00
 lastmod: 2025-03-27T10:33:25+09:00
 # author: Author Name
 # authorlink: https://author.site
-avatar: 'https://th.bing.com/th/id/OIG3.2WuRluIw719A8Lu3rj1W?w=1024&h=1024&rs=1&pid=ImgDetMain'
+avatar: 'https://cdn-icons-png.flaticon.com/512/2674/2674067.png'
 cover: /img/poster/1/koraia.png
 images:
   - /img/poster/1/koraia.png
