@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GTC2025 on 한국인공지능협회 블로그</title>
-    <link>http://localhost:1313/tags/gtc2025/</link>
+    <link>https://blog.koraia.org/tags/gtc2025/</link>
     <description>Recent content in GTC2025 on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 20 Mar 2025 09:38:09 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gtc2025/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.koraia.org/tags/gtc2025/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GTC2025 - 토큰 AI 혁명</title>
-      <link>http://localhost:1313/posts/gtc/</link>
+      <link>https://blog.koraia.org/posts/gtc/</link>
       <pubDate>Thu, 20 Mar 2025 09:38:09 +0900</pubDate>
-      <guid>http://localhost:1313/posts/gtc/</guid>
+      <guid>https://blog.koraia.org/posts/gtc/</guid>
       <description>&lt;p&gt;모든 위대한 혁명은 작고 단순한 요소에서 시작됩니다.&lt;/p&gt;&#xA;&lt;p&gt;문자는 알파벳에서, 건축물은 벽돌에서, 생명체는 세포에서 비롯되듯이, 인공지능(AI) 세계에도 기본적인 구성 요소가 존재합니다. 그것이 바로 토큰(Token)입니다.&#xA;토큰은 AI가 언어를 처리하는 데 사용하는 기본 단위로, 글자나 단어 또는 그 일부를 의미합니다. 인공지능이 텍스트를 이해하고 생성할 때 활용하는 이 기본 요소는 현대 AI 시스템의 핵심 구성 요소입니다. 엔비디아의 최고경영자 젠슨 황은 이러한 토큰을 &amp;ldquo;새로운 시대를 열어가는 핵심 조각&amp;quot;이라고 표현했습니다.&lt;/p&gt;&#xA;&lt;p&gt;젠슨 황의 말처럼, 토큰은 AI의 새로운 세계를 여는 열쇠 역할을 합니다. 이 기초적인 단위를 통해 AI는 우주 탐사 데이터 분석, 복잡한 과학적 정보 해석, 신약 개발, 그리고 미래 예측과 같은 고도로 복잡한 작업을 수행할 수 있게 되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;이처럼 토큰은 단순하지만 강력한 AI 혁명의 기반을 형성하고 있으며, 현대 인공지능 기술의 발전과 확장을 가능하게 하는 필수적인 요소입니다.&lt;/p&gt;</description>
     </item>
   </channel>

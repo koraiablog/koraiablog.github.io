@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>중국AI on 한국인공지능협회 블로그</title>
-    <link>http://localhost:1313/tags/%EC%A4%91%EA%B5%ADai/</link>
+    <link>https://blog.koraia.org/tags/%EC%A4%91%EA%B5%ADai/</link>
     <description>Recent content in 중국AI on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Fri, 14 Mar 2025 09:42:45 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%EC%A4%91%EA%B5%ADai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.koraia.org/tags/%EC%A4%91%EA%B5%ADai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>중국에 AI 육룡이 나르샤</title>
-      <link>http://localhost:1313/posts/six-little-dragons/</link>
+      <link>https://blog.koraia.org/posts/six-little-dragons/</link>
       <pubDate>Fri, 14 Mar 2025 09:42:45 +0900</pubDate>
-      <guid>http://localhost:1313/posts/six-little-dragons/</guid>
+      <guid>https://blog.koraia.org/posts/six-little-dragons/</guid>
       <description>&lt;p&gt;중국 항저우라는 도시에 대해 들어본 적 있나요? 상하이 근처에 자리 잡은 이 도시에 최근 별난 별명이 붙었어요.&lt;/p&gt;&#xA;&lt;p&gt;바로 &amp;lsquo;여섯 마리의 작은 용(Six Little Dragons)&amp;rsquo; 입니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>중국의 &#39;마누스(Manus)&#39;: AI 에이전트의 새로운 시대를 열다</title>
-      <link>http://localhost:1313/posts/china-manus-autonomous-ai-agent/</link>
+      <link>https://blog.koraia.org/posts/china-manus-autonomous-ai-agent/</link>
       <pubDate>Mon, 10 Mar 2025 16:54:20 +0900</pubDate>
-      <guid>http://localhost:1313/posts/china-manus-autonomous-ai-agent/</guid>
+      <guid>https://blog.koraia.org/posts/china-manus-autonomous-ai-agent/</guid>
       <description>&lt;p&gt;최근 중국이 AI 기술 분야에서 또 한 번의 혁신을 이루며 세계적 주목을 받고 있습니다. 딥시크(DeepSeek)가 LLM 분야에서 새로운 지평을 열었다면, 이번에는 &amp;lsquo;마누스(Manus)&amp;lsquo;가 AI 자율 에이전트 영역에서 새로운 충격을 가져다 주며 중국의 AI 기술력이 다시 한번 글로벌 무대에서 인정받고 있습니다.&lt;/p&gt;</description>
     </item>
   </channel>

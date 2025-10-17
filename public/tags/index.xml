@@ -2,171 +2,171 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 한국인공지능협회 블로그</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://blog.koraia.org/tags/</link>
     <description>Recent content in Tags on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 22 May 2025 10:19:40 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.koraia.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>구글 I/O 2025</title>
-      <link>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80-i/o-2025/</link>
+      <link>https://blog.koraia.org/tags/%EA%B5%AC%EA%B8%80-i/o-2025/</link>
       <pubDate>Thu, 22 May 2025 10:19:40 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80-i/o-2025/</guid>
+      <guid>https://blog.koraia.org/tags/%EA%B5%AC%EA%B8%80-i/o-2025/</guid>
       <description></description>
     </item>
     <item>
       <title>인공지능</title>
-      <link>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</link>
+      <link>https://blog.koraia.org/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</link>
       <pubDate>Thu, 22 May 2025 10:19:40 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</guid>
+      <guid>https://blog.koraia.org/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</guid>
       <description></description>
     </item>
     <item>
       <title>AI경쟁</title>
-      <link>http://localhost:1313/tags/ai%EA%B2%BD%EC%9F%81/</link>
+      <link>https://blog.koraia.org/tags/ai%EA%B2%BD%EC%9F%81/</link>
       <pubDate>Tue, 01 Apr 2025 13:56:30 +0900</pubDate>
-      <guid>http://localhost:1313/tags/ai%EA%B2%BD%EC%9F%81/</guid>
+      <guid>https://blog.koraia.org/tags/ai%EA%B2%BD%EC%9F%81/</guid>
       <description></description>
     </item>
     <item>
       <title>구글</title>
-      <link>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80/</link>
+      <link>https://blog.koraia.org/tags/%EA%B5%AC%EA%B8%80/</link>
       <pubDate>Tue, 01 Apr 2025 13:56:30 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80/</guid>
+      <guid>https://blog.koraia.org/tags/%EA%B5%AC%EA%B8%80/</guid>
       <description></description>
     </item>
     <item>
       <title>바드</title>
-      <link>http://localhost:1313/tags/%EB%B0%94%EB%93%9C/</link>
+      <link>https://blog.koraia.org/tags/%EB%B0%94%EB%93%9C/</link>
       <pubDate>Tue, 01 Apr 2025 13:56:30 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EB%B0%94%EB%93%9C/</guid>
+      <guid>https://blog.koraia.org/tags/%EB%B0%94%EB%93%9C/</guid>
       <description></description>
     </item>
     <item>
       <title>제미나이</title>
-      <link>http://localhost:1313/tags/%EC%A0%9C%EB%AF%B8%EB%82%98%EC%9D%B4/</link>
+      <link>https://blog.koraia.org/tags/%EC%A0%9C%EB%AF%B8%EB%82%98%EC%9D%B4/</link>
       <pubDate>Tue, 01 Apr 2025 13:56:30 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EC%A0%9C%EB%AF%B8%EB%82%98%EC%9D%B4/</guid>
+      <guid>https://blog.koraia.org/tags/%EC%A0%9C%EB%AF%B8%EB%82%98%EC%9D%B4/</guid>
       <description></description>
     </item>
     <item>
       <title>AI내부작동</title>
-      <link>http://localhost:1313/tags/ai%EB%82%B4%EB%B6%80%EC%9E%91%EB%8F%99/</link>
+      <link>https://blog.koraia.org/tags/ai%EB%82%B4%EB%B6%80%EC%9E%91%EB%8F%99/</link>
       <pubDate>Tue, 01 Apr 2025 10:41:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/ai%EB%82%B4%EB%B6%80%EC%9E%91%EB%8F%99/</guid>
+      <guid>https://blog.koraia.org/tags/ai%EB%82%B4%EB%B6%80%EC%9E%91%EB%8F%99/</guid>
       <description></description>
     </item>
     <item>
       <title>AI해석가능성</title>
-      <link>http://localhost:1313/tags/ai%ED%95%B4%EC%84%9D%EA%B0%80%EB%8A%A5%EC%84%B1/</link>
+      <link>https://blog.koraia.org/tags/ai%ED%95%B4%EC%84%9D%EA%B0%80%EB%8A%A5%EC%84%B1/</link>
       <pubDate>Tue, 01 Apr 2025 10:41:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/ai%ED%95%B4%EC%84%9D%EA%B0%80%EB%8A%A5%EC%84%B1/</guid>
+      <guid>https://blog.koraia.org/tags/ai%ED%95%B4%EC%84%9D%EA%B0%80%EB%8A%A5%EC%84%B1/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM</title>
-      <link>http://localhost:1313/tags/llm/</link>
+      <link>https://blog.koraia.org/tags/llm/</link>
       <pubDate>Tue, 01 Apr 2025 10:41:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/llm/</guid>
+      <guid>https://blog.koraia.org/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>GPT-4o</title>
-      <link>http://localhost:1313/tags/gpt-4o/</link>
+      <link>https://blog.koraia.org/tags/gpt-4o/</link>
       <pubDate>Thu, 27 Mar 2025 10:33:25 +0900</pubDate>
-      <guid>http://localhost:1313/tags/gpt-4o/</guid>
+      <guid>https://blog.koraia.org/tags/gpt-4o/</guid>
       <description></description>
     </item>
     <item>
       <title>OpenAI</title>
-      <link>http://localhost:1313/tags/openai/</link>
+      <link>https://blog.koraia.org/tags/openai/</link>
       <pubDate>Thu, 27 Mar 2025 10:33:25 +0900</pubDate>
-      <guid>http://localhost:1313/tags/openai/</guid>
+      <guid>https://blog.koraia.org/tags/openai/</guid>
       <description></description>
     </item>
     <item>
       <title>이미지생성성</title>
-      <link>http://localhost:1313/tags/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%83%9D%EC%84%B1%EC%84%B1/</link>
+      <link>https://blog.koraia.org/tags/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%83%9D%EC%84%B1%EC%84%B1/</link>
       <pubDate>Thu, 27 Mar 2025 10:33:25 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%83%9D%EC%84%B1%EC%84%B1/</guid>
+      <guid>https://blog.koraia.org/tags/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%83%9D%EC%84%B1%EC%84%B1/</guid>
       <description></description>
     </item>
     <item>
       <title>AI에이전트</title>
-      <link>http://localhost:1313/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</link>
+      <link>https://blog.koraia.org/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</link>
       <pubDate>Mon, 24 Mar 2025 09:44:10 +0900</pubDate>
-      <guid>http://localhost:1313/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</guid>
+      <guid>https://blog.koraia.org/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</guid>
       <description></description>
     </item>
     <item>
       <title>Anthropic</title>
-      <link>http://localhost:1313/tags/anthropic/</link>
+      <link>https://blog.koraia.org/tags/anthropic/</link>
       <pubDate>Mon, 24 Mar 2025 09:44:10 +0900</pubDate>
-      <guid>http://localhost:1313/tags/anthropic/</guid>
+      <guid>https://blog.koraia.org/tags/anthropic/</guid>
       <description></description>
     </item>
     <item>
       <title>디지털전환</title>
-      <link>http://localhost:1313/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/</link>
+      <link>https://blog.koraia.org/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/</link>
       <pubDate>Mon, 24 Mar 2025 09:44:10 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/</guid>
+      <guid>https://blog.koraia.org/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/</guid>
       <description></description>
     </item>
     <item>
       <title>GTC2025</title>
-      <link>http://localhost:1313/tags/gtc2025/</link>
+      <link>https://blog.koraia.org/tags/gtc2025/</link>
       <pubDate>Thu, 20 Mar 2025 09:38:09 +0900</pubDate>
-      <guid>http://localhost:1313/tags/gtc2025/</guid>
+      <guid>https://blog.koraia.org/tags/gtc2025/</guid>
       <description></description>
     </item>
     <item>
       <title>에이전틱AI</title>
-      <link>http://localhost:1313/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1ai/</link>
+      <link>https://blog.koraia.org/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1ai/</link>
       <pubDate>Thu, 20 Mar 2025 09:38:09 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1ai/</guid>
+      <guid>https://blog.koraia.org/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1ai/</guid>
       <description></description>
     </item>
     <item>
       <title>딥시크</title>
-      <link>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</link>
+      <link>https://blog.koraia.org/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</link>
       <pubDate>Fri, 14 Mar 2025 09:42:45 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</guid>
+      <guid>https://blog.koraia.org/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</guid>
       <description></description>
     </item>
     <item>
       <title>중국AI</title>
-      <link>http://localhost:1313/tags/%EC%A4%91%EA%B5%ADai/</link>
+      <link>https://blog.koraia.org/tags/%EC%A4%91%EA%B5%ADai/</link>
       <pubDate>Fri, 14 Mar 2025 09:42:45 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EC%A4%91%EA%B5%ADai/</guid>
+      <guid>https://blog.koraia.org/tags/%EC%A4%91%EA%B5%ADai/</guid>
       <description></description>
     </item>
     <item>
       <title>구글AI</title>
-      <link>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80ai/</link>
+      <link>https://blog.koraia.org/tags/%EA%B5%AC%EA%B8%80ai/</link>
       <pubDate>Thu, 13 Mar 2025 10:33:32 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80ai/</guid>
+      <guid>https://blog.koraia.org/tags/%EA%B5%AC%EA%B8%80ai/</guid>
       <description></description>
     </item>
     <item>
       <title>AI 역사</title>
-      <link>http://localhost:1313/tags/ai-%EC%97%AD%EC%82%AC/</link>
+      <link>https://blog.koraia.org/tags/ai-%EC%97%AD%EC%82%AC/</link>
       <pubDate>Tue, 11 Mar 2025 13:47:22 +0900</pubDate>
-      <guid>http://localhost:1313/tags/ai-%EC%97%AD%EC%82%AC/</guid>
+      <guid>https://blog.koraia.org/tags/ai-%EC%97%AD%EC%82%AC/</guid>
       <description></description>
     </item>
     <item>
       <title>인공지능 발전사</title>
-      <link>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%B0%9C%EC%A0%84%EC%82%AC/</link>
+      <link>https://blog.koraia.org/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%B0%9C%EC%A0%84%EC%82%AC/</link>
       <pubDate>Tue, 11 Mar 2025 13:47:22 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%B0%9C%EC%A0%84%EC%82%AC/</guid>
+      <guid>https://blog.koraia.org/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%B0%9C%EC%A0%84%EC%82%AC/</guid>
       <description></description>
     </item>
     <item>
       <title>마누스</title>
-      <link>http://localhost:1313/tags/%EB%A7%88%EB%88%84%EC%8A%A4/</link>
+      <link>https://blog.koraia.org/tags/%EB%A7%88%EB%88%84%EC%8A%A4/</link>
       <pubDate>Mon, 10 Mar 2025 16:54:20 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EB%A7%88%EB%88%84%EC%8A%A4/</guid>
+      <guid>https://blog.koraia.org/tags/%EB%A7%88%EB%88%84%EC%8A%A4/</guid>
       <description></description>
     </item>
   </channel>
