@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>인공지능 리포트 on 한국인공지능협회 블로그</title>
+    <link>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%A6%AC%ED%8F%AC%ED%8A%B8/</link>
+    <description>Recent content in 인공지능 리포트 on 한국인공지능협회 블로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 21 Oct 2025 14:21:40 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%A6%AC%ED%8F%AC%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>State of AI Report 2025 국문(번역) 보고서</title>
+      <link>http://localhost:1313/posts/state_of_ai_report_2025/</link>
+      <pubDate>Tue, 21 Oct 2025 14:21:40 +0900</pubDate>
+      <guid>http://localhost:1313/posts/state_of_ai_report_2025/</guid>
+      <description>&lt;p&gt;매년 AI 업계의 &#39;연말 결산&#39;이자 &#39;종합 건강검진표&#39; 로 불리는 &lt;strong&gt;&#39;State of AI Report&#39;&lt;/strong&gt; 2025년 8번째 에디션이 발표되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;이 보고서는 AI 분야의 저명한 투자자인 네이선 베나이치(Nathan Benaich)와 에어 스트리트 캐피털(Air Street Capital)이 발표하는 자료로, 전 세계 AI 개발자, 기업가, 투자자, 정책 담당자라면 누구나 주목하는 핵심 트렌드 분석 자료입니다.&lt;/p&gt;&#xA;&lt;p&gt;한 해 동안 AI 기술이 얼마나 발전했는지(연구), 기업들은 AI를 어떻게 활용하는지(산업), 각국 정부의 정책(정치), 그리고 AI의 잠재적 위험성(안전)까지, AI의 A부터 Z까지 6개 영역의 핵심을 짚어주기 때문이죠.&#xA;AI 시대를 살아가는 우리에게 이 보고서는 &#39;지금 우리가 어디쯤 와 있는지&#39; 알려주는 든든한 나침반 🧭 역할을 합니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

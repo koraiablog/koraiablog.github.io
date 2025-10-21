@@ -3,21 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/ai-%ED%8A%B8%EB%A0%8C%EB%93%9C/</loc>
-    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+    <lastmod>2025-10-21T14:21:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+    <lastmod>2025-10-21T14:21:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-10-21T14:21:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/state-of-ai-report/</loc>
+    <lastmod>2025-10-21T14:21:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/state_of_ai_report_2025/</loc>
+    <lastmod>2025-10-21T14:21:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-21T14:21:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%A6%AC%ED%8F%AC%ED%8A%B8/</loc>
+    <lastmod>2025-10-21T14:21:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-10-21T14:21:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/gpu-%ED%9A%A8%EC%9C%A8%ED%99%94/</loc>
     <lastmod>2025-10-21T09:45:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/llm/</loc>
-    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-10-21T09:45:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</loc>
@@ -30,9 +42,6 @@
     <lastmod>2025-10-21T09:45:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%EC%A4%91%EA%B5%AD/</loc>
-    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2025-10-21T09:45:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai-festa-%EC%B4%88%EA%B1%B0%EB%8C%80-ai-summit-2025/</loc>
