@@ -28,3 +28,12 @@ reorderShares = ["x", "facebook"]
 [params.experimental]
 jsDate = true
 jsDateFormat = "yyyy. MM. dd."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      typographer = false
+  [markup.highlight]
+    style = "monokai"

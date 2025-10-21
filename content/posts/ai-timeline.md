@@ -3,7 +3,7 @@ title: '인공지능의 여정: AI 역사 따라가기'
 date: 2025-03-11T13:47:22+09:00
 lastmod: 2025-03-11T13:47:22+09:00
 # author: Author Name
-avatar: 'https://cdn-icons-png.flaticon.com/512/2674/2674067.png'
+avatar: 'https://cdn-icons-png.flaticon.com/512/16683/16683419.png'
 # authorlink: https://author.site
 cover: '/img/poster/1/ai_history.png'
 images:

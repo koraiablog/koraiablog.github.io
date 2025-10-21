@@ -3,30 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/ai-%ED%8A%B8%EB%A0%8C%EB%93%9C/</loc>
-    <lastmod>2025-10-17T10:19:40+09:00</lastmod>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-10-17T10:19:40+09:00</lastmod>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gpu-%ED%9A%A8%EC%9C%A8%ED%99%94/</loc>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/llm/</loc>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-10-17T10:19:40+09:00</lastmod>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</loc>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/deepseek_ocr/</loc>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EB%B9%84%EC%A0%84-%ED%86%A0%ED%81%B0/</loc>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EC%A4%91%EA%B5%AD/</loc>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-10-21T09:45:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ai-festa-%EC%B4%88%EA%B1%B0%EB%8C%80-ai-summit-2025/</loc>
     <lastmod>2025-10-17T10:19:40+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80-i/o-2025/</loc>
+    <loc>http://localhost:1313/tags/%EA%B3%BC%ED%95%99%EA%B8%B0%EC%88%A0%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%B6%80/</loc>
+    <lastmod>2025-10-17T10:19:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EA%B5%AD%EA%B0%80%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EC%A0%84%EB%9E%B5%EC%9C%84%EC%9B%90%ED%9A%8C/</loc>
     <lastmod>2025-10-17T10:19:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/korea/</loc>
     <lastmod>2025-10-17T10:19:40+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</loc>
-    <lastmod>2025-10-17T10:19:40+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-17T10:19:40+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/google_io_25/</loc>
+    <lastmod>2025-05-22T10:19:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80-i/o-2025/</loc>
+    <lastmod>2025-05-22T10:19:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</loc>
     <lastmod>2025-05-22T10:19:40+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai%EA%B2%BD%EC%9F%81/</loc>
@@ -48,9 +75,6 @@
     <lastmod>2025-04-01T10:41:44+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai%ED%95%B4%EC%84%9D%EA%B0%80%EB%8A%A5%EC%84%B1/</loc>
-    <lastmod>2025-04-01T10:41:44+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/llm/</loc>
     <lastmod>2025-04-01T10:41:44+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/tracing-thoughts-language-model/</loc>
@@ -91,9 +115,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1ai/</loc>
     <lastmod>2025-03-20T09:38:09+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</loc>
-    <lastmod>2025-03-14T09:42:45+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%EC%A4%91%EA%B5%ADai/</loc>
     <lastmod>2025-03-14T09:42:45+09:00</lastmod>

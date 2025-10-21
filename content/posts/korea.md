@@ -4,15 +4,16 @@ date: 2025-10-17T10:19:40+09:00
 lastmod: 2025-10-17T10:19:40+09:00
 # author: Author Name
 # authorlink: https://author.site
-avatar: 'https://cdn-icons-png.flaticon.com/512/3075/3075929.png'
+avatar: 'https://cdn-icons-png.flaticon.com/512/2118/2118520.png'
 cover: https://cdn.netzeronews.kr/news/photo/202409/1503_6844_3731.jpg
 images:
   - https://cdn.netzeronews.kr/news/photo/202409/1503_6844_3731.jpg
 categories:
   - AI 트렌드
 tags:
-  - 구글 I/O 2025
-  - 인공지능
+  - AI Festa 초거대 AI Summit 2025
+  - 국가인공지능전략위원회
+  - 과학기술정보통신부
 nolastmod: true
 draft: false
 ---

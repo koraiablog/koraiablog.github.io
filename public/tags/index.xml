@@ -6,19 +6,75 @@
     <description>Recent content in Tags on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 17 Oct 2025 10:19:40 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 Oct 2025 09:45:40 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPU 효율화</title>
+      <link>http://localhost:1313/tags/gpu-%ED%9A%A8%EC%9C%A8%ED%99%94/</link>
+      <pubDate>Tue, 21 Oct 2025 09:45:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/gpu-%ED%9A%A8%EC%9C%A8%ED%99%94/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>http://localhost:1313/tags/llm/</link>
+      <pubDate>Tue, 21 Oct 2025 09:45:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>딥시크</title>
+      <link>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</link>
+      <pubDate>Tue, 21 Oct 2025 09:45:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>비전 토큰</title>
+      <link>http://localhost:1313/tags/%EB%B9%84%EC%A0%84-%ED%86%A0%ED%81%B0/</link>
+      <pubDate>Tue, 21 Oct 2025 09:45:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EB%B9%84%EC%A0%84-%ED%86%A0%ED%81%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>중국</title>
+      <link>http://localhost:1313/tags/%EC%A4%91%EA%B5%AD/</link>
+      <pubDate>Tue, 21 Oct 2025 09:45:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EC%A4%91%EA%B5%AD/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Festa 초거대 AI Summit 2025</title>
+      <link>http://localhost:1313/tags/ai-festa-%EC%B4%88%EA%B1%B0%EB%8C%80-ai-summit-2025/</link>
+      <pubDate>Fri, 17 Oct 2025 10:19:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/ai-festa-%EC%B4%88%EA%B1%B0%EB%8C%80-ai-summit-2025/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>과학기술정보통신부</title>
+      <link>http://localhost:1313/tags/%EA%B3%BC%ED%95%99%EA%B8%B0%EC%88%A0%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%B6%80/</link>
+      <pubDate>Fri, 17 Oct 2025 10:19:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EA%B3%BC%ED%95%99%EA%B8%B0%EC%88%A0%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%B6%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>국가인공지능전략위원회</title>
+      <link>http://localhost:1313/tags/%EA%B5%AD%EA%B0%80%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EC%A0%84%EB%9E%B5%EC%9C%84%EC%9B%90%ED%9A%8C/</link>
+      <pubDate>Fri, 17 Oct 2025 10:19:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EA%B5%AD%EA%B0%80%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EC%A0%84%EB%9E%B5%EC%9C%84%EC%9B%90%ED%9A%8C/</guid>
+      <description></description>
+    </item>
     <item>
       <title>구글 I/O 2025</title>
       <link>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80-i/o-2025/</link>
-      <pubDate>Fri, 17 Oct 2025 10:19:40 +0900</pubDate>
+      <pubDate>Thu, 22 May 2025 10:19:40 +0900</pubDate>
       <guid>http://localhost:1313/tags/%EA%B5%AC%EA%B8%80-i/o-2025/</guid>
       <description></description>
     </item>
     <item>
       <title>인공지능</title>
       <link>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</link>
-      <pubDate>Fri, 17 Oct 2025 10:19:40 +0900</pubDate>
+      <pubDate>Thu, 22 May 2025 10:19:40 +0900</pubDate>
       <guid>http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5/</guid>
       <description></description>
     </item>
@@ -62,13 +118,6 @@
       <link>http://localhost:1313/tags/ai%ED%95%B4%EC%84%9D%EA%B0%80%EB%8A%A5%EC%84%B1/</link>
       <pubDate>Tue, 01 Apr 2025 10:41:44 +0900</pubDate>
       <guid>http://localhost:1313/tags/ai%ED%95%B4%EC%84%9D%EA%B0%80%EB%8A%A5%EC%84%B1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LLM</title>
-      <link>http://localhost:1313/tags/llm/</link>
-      <pubDate>Tue, 01 Apr 2025 10:41:44 +0900</pubDate>
-      <guid>http://localhost:1313/tags/llm/</guid>
       <description></description>
     </item>
     <item>
@@ -125,13 +174,6 @@
       <link>http://localhost:1313/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1ai/</link>
       <pubDate>Thu, 20 Mar 2025 09:38:09 +0900</pubDate>
       <guid>http://localhost:1313/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8B%B1ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>딥시크</title>
-      <link>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</link>
-      <pubDate>Fri, 14 Mar 2025 09:42:45 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%EB%94%A5%EC%8B%9C%ED%81%AC/</guid>
       <description></description>
     </item>
     <item>

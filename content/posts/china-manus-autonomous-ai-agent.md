@@ -3,7 +3,7 @@ title: "중국의 '마누스(Manus)': AI 에이전트의 새로운 시대를 열
 date: 2025-03-10T16:54:20+09:00
 lastmod: 2025-03-10T16:54:20+09:00
 #author: Author Name
-avatar: 'https://cdn-icons-png.flaticon.com/512/2674/2674067.png'
+avatar: 'https://cdn-icons-png.flaticon.com/512/16683/16683419.png'
 # authorlink: https://author.site
 cover: "https://imageio.forbes.com/specials-images/imageserve/67cca5c3461df429b5111bfb/Manus-AI-s-introductory-video/960x0.jpg?format=jpg&width=1440"
 images:

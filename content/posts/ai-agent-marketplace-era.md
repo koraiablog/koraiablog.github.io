@@ -3,7 +3,7 @@ title: "AI 에이전트 시대, '마켓플레이스'만이 정답일까?"
 date: 2025-03-10T14:45:31+09:00
 # lastmod: 2025-03-10T14:45:31+09:00
 # author: Author Name
-avatar: 'https://cdn-icons-png.flaticon.com/512/2674/2674067.png'
+avatar: 'https://cdn-icons-png.flaticon.com/512/16683/16683419.png'
 # authorlink: https://author.site
 cover: "https://www.nfx.com/_next/image?url=https%3A%2F%2Fcontent.nfx.com%2Fwp-content%2Fuploads%2F2025%2F02%2FBG-3.webp&w=1080&q=75"
 images:

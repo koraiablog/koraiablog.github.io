@@ -6,14 +6,21 @@
     <description>Recent content on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 17 Oct 2025 10:19:40 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 Oct 2025 09:45:40 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱</title>
+      <link>http://localhost:1313/posts/deepseek_ocr/</link>
+      <pubDate>Tue, 21 Oct 2025 09:45:40 +0900</pubDate>
+      <guid>http://localhost:1313/posts/deepseek_ocr/</guid>
+      <description>&lt;p&gt;혹시 AI 챗봇에게 아주 긴 문서나 두꺼운 보고서를 주고 &amp;quot;이거 요약해 줘&amp;quot;라고 시켜본 적 있으신가요? &lt;br&gt;AI는 만능처럼 보이지만, 사실 텍스트가 길어질수록 AI도 우리처럼 엄청나게 지쳐버립니다. 텍스트를 처리하는 데 필요한 시간과 컴퓨터 자원(GPU)이 기하급수적으로 늘어나기 때문인데요.&lt;br&gt;&lt;/p&gt;&#xA;&lt;p&gt;이 문제를 해결하기 위해 DeepSeek-AI 연구팀이 마치 우리가 속독하듯이, &lt;br&gt;긴 텍스트 문서를 &lt;strong&gt;이미지&lt;/strong&gt;로 바꿔 압축하는 &#39;DeepSeek-OCR&#39;이라는 획기적인 기술을 개발했습니다. 이 방법 덕분에 AI는 문서를 훨씬 적은 데이터 조각만으로 처리할 수 있게 되어, 자원 소모를 최대 10분의 1까지 줄일 수 있게 되었어요&lt;/p&gt;</description>
+    </item>
     <item>
       <title>대한민국 AI G3 전략, 제가 한번 쉽고 깊이 있게 파헤쳐 봤는데요!</title>
       <link>http://localhost:1313/posts/korea/</link>
       <pubDate>Fri, 17 Oct 2025 10:19:40 +0900</pubDate>
       <guid>http://localhost:1313/posts/korea/</guid>
-      <description>&lt;p&gt;정말 중요하고 흥미로운 이야기를 해보려고 합니다. 최근 대한민국 정부가 우리나라의 미래를 걸고 ‘AI 세계 3대 강국(G3)으로 도약하겠다’는 아주 야심 찬 계획을 발표했는데요.&lt;/p&gt;&#xA;&lt;p&gt;이게 그냥 &amp;ldquo;우리 3등 할래요!&amp;rdquo; 하는 단순한 목표가 아니랍니다. 미국, 중국처럼 전 세계 AI 기술과 산업을 이끌어가는 진짜 &amp;lsquo;강대국(强國)&amp;lsquo;이 되겠다는 엄청난 포부를 밝힌 건데요.&lt;/p&gt;&#xA;&lt;p&gt;알파고가 등장한 지도 벌써 꽤 됐잖아요? 이제 AI는 우리 삶에서 빼놓을 수 없는, 국가의 생존이 걸린 문제가 되었어요. 그래서 이번 국가 전략이 어떤 의미를 갖는지, 우리에겐 어떤 기회가 될지, 또 넘어야 할 산은 무엇인지 제가 하나하나 자세히 분석해 드릴게요.&lt;/p&gt;</description>
+      <description>&lt;p&gt;정말 중요하고 흥미로운 이야기를 해보려고 합니다. 최근 대한민국 정부가 우리나라의 미래를 걸고 ‘AI 세계 3대 강국(G3)으로 도약하겠다’는 아주 야심 찬 계획을 발표했는데요.&lt;/p&gt;&#xA;&lt;p&gt;이게 그냥 &amp;quot;우리 3등 할래요!&amp;quot; 하는 단순한 목표가 아니랍니다. 미국, 중국처럼 전 세계 AI 기술과 산업을 이끌어가는 진짜 &#39;강대국(强國)&#39;이 되겠다는 엄청난 포부를 밝힌 건데요.&lt;/p&gt;&#xA;&lt;p&gt;알파고가 등장한 지도 벌써 꽤 됐잖아요? 이제 AI는 우리 삶에서 빼놓을 수 없는, 국가의 생존이 걸린 문제가 되었어요. 그래서 이번 국가 전략이 어떤 의미를 갖는지, 우리에겐 어떤 기회가 될지, 또 넘어야 할 산은 무엇인지 제가 하나하나 자세히 분석해 드릴게요.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI의 현재와 미래- 구글 I/O 2025에서 발표된 100가지 혁신!</title>
@@ -27,14 +34,14 @@
       <link>http://localhost:1313/posts/google-openai/</link>
       <pubDate>Tue, 01 Apr 2025 13:56:30 +0900</pubDate>
       <guid>http://localhost:1313/posts/google-openai/</guid>
-      <description>&lt;p&gt;혹시 2022년 겨울을 기억하시나요? 갑자기 등장한 챗GPT(ChatGPT)라는 이름의 인공지능 챗봇이 세상을 떠들썩하게 만들었죠. 마치 오랫동안 알고 지낸 친구처럼 자연스럽게 대화하고, 때로는 창의적인 글까지 써내는 모습에 많은 이들이 열광했습니다. 그런데 이 놀라운 기술의 등장은, 세계 최고의 기술 기업 중 하나인 구글에게는 그야말로 &amp;lsquo;핵폭탄급 충격&amp;rsquo;이었습니다. 오늘은 챗GPT 쇼크 이후 지난 2년간, 구글이라는 거대한 배가 AI라는 거친 파도 속에서 어떤 아슬아슬한 항해를 해왔는지, 그 숨겨진 이야기를 훨씬 더 깊이 들여다보려 합니다. 이 글을 통해, 우리가 편리하게 사용하는 AI 기술 뒤에 숨겨진 치열한 경쟁과 고민, 예상치 못한 실수와 극적인 반전들을 생생하게 느끼실 수 있을 겁니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;혹시 2022년 겨울을 기억하시나요? 갑자기 등장한 챗GPT(ChatGPT)라는 이름의 인공지능 챗봇이 세상을 떠들썩하게 만들었죠. 마치 오랫동안 알고 지낸 친구처럼 자연스럽게 대화하고, 때로는 창의적인 글까지 써내는 모습에 많은 이들이 열광했습니다. 그런데 이 놀라운 기술의 등장은, 세계 최고의 기술 기업 중 하나인 구글에게는 그야말로 &#39;핵폭탄급 충격&#39;이었습니다. 오늘은 챗GPT 쇼크 이후 지난 2년간, 구글이라는 거대한 배가 AI라는 거친 파도 속에서 어떤 아슬아슬한 항해를 해왔는지, 그 숨겨진 이야기를 훨씬 더 깊이 들여다보려 합니다. 이 글을 통해, 우리가 편리하게 사용하는 AI 기술 뒤에 숨겨진 치열한 경쟁과 고민, 예상치 못한 실수와 극적인 반전들을 생생하게 느끼실 수 있을 겁니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>인공지능의 마음속 엿보기, AI는 정말 &#39;생각&#39;을 할까?</title>
       <link>http://localhost:1313/posts/tracing-thoughts-language-model/</link>
       <pubDate>Tue, 01 Apr 2025 10:41:44 +0900</pubDate>
       <guid>http://localhost:1313/posts/tracing-thoughts-language-model/</guid>
-      <description>&lt;p&gt;우리는 매일 인공지능(AI) 챗봇과 번역기, 이미지 생성 도구 등을 사용하며 그 편리함에 익숙해지고 있습니다. 궁금한 점을 물으면 척척 대답해주고, 복잡한 문서를 요약해주거나, 멋진 그림까지 그려주니 정말 놀라울 따름이죠. 하지만 문득 이런 궁금증이 들 때가 있습니다. &amp;ldquo;이 AI는 도대체 어떻게 이렇게 사람처럼 말하고 행동하는 걸까?&amp;rdquo;, &amp;ldquo;정말로 우리처럼 &amp;lsquo;생각&amp;rsquo;이라는 걸 하는 걸까?&amp;rdquo; 하고 말입니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;우리는 매일 인공지능(AI) 챗봇과 번역기, 이미지 생성 도구 등을 사용하며 그 편리함에 익숙해지고 있습니다. 궁금한 점을 물으면 척척 대답해주고, 복잡한 문서를 요약해주거나, 멋진 그림까지 그려주니 정말 놀라울 따름이죠. 하지만 문득 이런 궁금증이 들 때가 있습니다. &amp;quot;이 AI는 도대체 어떻게 이렇게 사람처럼 말하고 행동하는 걸까?&amp;quot;, &amp;quot;정말로 우리처럼 &#39;생각&#39;이라는 걸 하는 걸까?&amp;quot; 하고 말입니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI 이미지 생성, &#39;표현의 한계&#39; 시대를 끝내다</title>
@@ -55,14 +62,14 @@
       <link>http://localhost:1313/posts/gtc/</link>
       <pubDate>Thu, 20 Mar 2025 09:38:09 +0900</pubDate>
       <guid>http://localhost:1313/posts/gtc/</guid>
-      <description>&lt;p&gt;모든 위대한 혁명은 작고 단순한 요소에서 시작됩니다.&lt;/p&gt;&#xA;&lt;p&gt;문자는 알파벳에서, 건축물은 벽돌에서, 생명체는 세포에서 비롯되듯이, 인공지능(AI) 세계에도 기본적인 구성 요소가 존재합니다. 그것이 바로 토큰(Token)입니다.&#xA;토큰은 AI가 언어를 처리하는 데 사용하는 기본 단위로, 글자나 단어 또는 그 일부를 의미합니다. 인공지능이 텍스트를 이해하고 생성할 때 활용하는 이 기본 요소는 현대 AI 시스템의 핵심 구성 요소입니다. 엔비디아의 최고경영자 젠슨 황은 이러한 토큰을 &amp;ldquo;새로운 시대를 열어가는 핵심 조각&amp;quot;이라고 표현했습니다.&lt;/p&gt;&#xA;&lt;p&gt;젠슨 황의 말처럼, 토큰은 AI의 새로운 세계를 여는 열쇠 역할을 합니다. 이 기초적인 단위를 통해 AI는 우주 탐사 데이터 분석, 복잡한 과학적 정보 해석, 신약 개발, 그리고 미래 예측과 같은 고도로 복잡한 작업을 수행할 수 있게 되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;이처럼 토큰은 단순하지만 강력한 AI 혁명의 기반을 형성하고 있으며, 현대 인공지능 기술의 발전과 확장을 가능하게 하는 필수적인 요소입니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;모든 위대한 혁명은 작고 단순한 요소에서 시작됩니다.&lt;/p&gt;&#xA;&lt;p&gt;문자는 알파벳에서, 건축물은 벽돌에서, 생명체는 세포에서 비롯되듯이, 인공지능(AI) 세계에도 기본적인 구성 요소가 존재합니다. 그것이 바로 토큰(Token)입니다.&#xA;토큰은 AI가 언어를 처리하는 데 사용하는 기본 단위로, 글자나 단어 또는 그 일부를 의미합니다. 인공지능이 텍스트를 이해하고 생성할 때 활용하는 이 기본 요소는 현대 AI 시스템의 핵심 구성 요소입니다. 엔비디아의 최고경영자 젠슨 황은 이러한 토큰을 &amp;quot;새로운 시대를 열어가는 핵심 조각&amp;quot;이라고 표현했습니다.&lt;/p&gt;&#xA;&lt;p&gt;젠슨 황의 말처럼, 토큰은 AI의 새로운 세계를 여는 열쇠 역할을 합니다. 이 기초적인 단위를 통해 AI는 우주 탐사 데이터 분석, 복잡한 과학적 정보 해석, 신약 개발, 그리고 미래 예측과 같은 고도로 복잡한 작업을 수행할 수 있게 되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;이처럼 토큰은 단순하지만 강력한 AI 혁명의 기반을 형성하고 있으며, 현대 인공지능 기술의 발전과 확장을 가능하게 하는 필수적인 요소입니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>중국에 AI 육룡이 나르샤</title>
       <link>http://localhost:1313/posts/six-little-dragons/</link>
       <pubDate>Fri, 14 Mar 2025 09:42:45 +0900</pubDate>
       <guid>http://localhost:1313/posts/six-little-dragons/</guid>
-      <description>&lt;p&gt;중국 항저우라는 도시에 대해 들어본 적 있나요? 상하이 근처에 자리 잡은 이 도시에 최근 별난 별명이 붙었어요.&lt;/p&gt;&#xA;&lt;p&gt;바로 &amp;lsquo;여섯 마리의 작은 용(Six Little Dragons)&amp;rsquo; 입니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;중국 항저우라는 도시에 대해 들어본 적 있나요? 상하이 근처에 자리 잡은 이 도시에 최근 별난 별명이 붙었어요.&lt;/p&gt;&#xA;&lt;p&gt;바로 &#39;여섯 마리의 작은 용(Six Little Dragons)&#39; 입니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개</title>
@@ -83,14 +90,14 @@
       <link>http://localhost:1313/posts/china-manus-autonomous-ai-agent/</link>
       <pubDate>Mon, 10 Mar 2025 16:54:20 +0900</pubDate>
       <guid>http://localhost:1313/posts/china-manus-autonomous-ai-agent/</guid>
-      <description>&lt;p&gt;최근 중국이 AI 기술 분야에서 또 한 번의 혁신을 이루며 세계적 주목을 받고 있습니다. 딥시크(DeepSeek)가 LLM 분야에서 새로운 지평을 열었다면, 이번에는 &amp;lsquo;마누스(Manus)&amp;lsquo;가 AI 자율 에이전트 영역에서 새로운 충격을 가져다 주며 중국의 AI 기술력이 다시 한번 글로벌 무대에서 인정받고 있습니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;최근 중국이 AI 기술 분야에서 또 한 번의 혁신을 이루며 세계적 주목을 받고 있습니다. 딥시크(DeepSeek)가 LLM 분야에서 새로운 지평을 열었다면, 이번에는 &#39;마누스(Manus)&#39;가 AI 자율 에이전트 영역에서 새로운 충격을 가져다 주며 중국의 AI 기술력이 다시 한번 글로벌 무대에서 인정받고 있습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI 에이전트 시대, &#39;마켓플레이스&#39;만이 정답일까?</title>
       <link>http://localhost:1313/posts/ai-agent-marketplace-era/</link>
       <pubDate>Mon, 10 Mar 2025 14:45:31 +0900</pubDate>
       <guid>http://localhost:1313/posts/ai-agent-marketplace-era/</guid>
-      <description>&lt;p&gt;바야흐로 AI 에이전트의 시대입니다. 단순한 챗봇이나 가상 비서를 넘어, 스스로 학습하고 판단하며 실제 업무를 자율적으로 처리하는 &amp;lsquo;디지털 직원&amp;rsquo; 개념의 AI 에이전트가 속속 등장하고 있습니다. 이는 단순한 기술 트렌드를 넘어, 기업 운영 방식 자체를 근본적으로 변화시킬 잠재력을 지니고 있습니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;바야흐로 AI 에이전트의 시대입니다. 단순한 챗봇이나 가상 비서를 넘어, 스스로 학습하고 판단하며 실제 업무를 자율적으로 처리하는 &#39;디지털 직원&#39; 개념의 AI 에이전트가 속속 등장하고 있습니다. 이는 단순한 기술 트렌드를 넘어, 기업 운영 방식 자체를 근본적으로 변화시킬 잠재력을 지니고 있습니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

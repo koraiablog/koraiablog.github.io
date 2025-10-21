@@ -3,7 +3,7 @@ title: OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개
 date: 2025-03-12T09:57:32+09:00
 lastmod: 2025-03-12T09:57:32+09:00
 #author: Author Name
-avatar: 'https://cdn-icons-png.flaticon.com/512/2674/2674067.png'
+avatar: 'https://cdn-icons-png.flaticon.com/512/16683/16683419.png'
 # authorlink: https://author.site
 cover: https://images.ctfassets.net/kftzwdyauwt9/4QaBJvGYlSBY9iYMhWBN6I/c97e4a784aef38012d91e9a9cf2010c7/API_Agents_Hero_16.9.png?w=3840&q=90&fm=webp
 images:

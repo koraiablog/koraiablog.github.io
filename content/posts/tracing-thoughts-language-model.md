@@ -4,7 +4,7 @@ date: 2025-04-01T10:41:44+09:00
 lastmod: 2025-04-01T10:41:44+09:00
 # author: Author Name
 # authorlink: https://author.site
-avatar: 'https://cdn-icons-png.flaticon.com/512/3075/3075929.png'
+avatar: 'https://cdn-icons-png.flaticon.com/512/2118/2118520.png'
 cover: https://i.ytimg.com/vi/Bj9BD2D3DzA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC0B33xAAvD_08i98Np5446Li9oIQ
 images:
   - https://i.ytimg.com/vi/Bj9BD2D3DzA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC0B33xAAvD_08i98Np5446Li9oIQ

@@ -4,7 +4,7 @@ date: 2025-03-20T09:38:09+09:00
 lastmod: 2025-03-20T09:38:09+09:00
 # author: Author Name
 # authorlink: https://author.site
-avatar: 'https://cdn-icons-png.flaticon.com/512/2674/2674067.png'
+avatar: 'https://cdn-icons-png.flaticon.com/512/16683/16683419.png'
 cover: https://www.radiofreemobile.com/wp-content/uploads/2025/03/GTC2025.jpg
 images:
   - https://www.radiofreemobile.com/wp-content/uploads/2025/03/GTC2025.jpg
