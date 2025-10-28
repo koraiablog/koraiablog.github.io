@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>디지털격차 on 한국인공지능협회 블로그</title>
+    <link>http://localhost:1313/tags/%EB%94%94%EC%A7%80%ED%84%B8%EA%B2%A9%EC%B0%A8/</link>
+    <description>Recent content in 디지털격차 on 한국인공지능협회 블로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 28 Oct 2025 11:18:40 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%EB%94%94%EC%A7%80%ED%84%B8%EA%B2%A9%EC%B0%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>요즘 AI, 누가 어떻게 쓰고 있을까? feat. 세계은행 보고서</title>
+      <link>http://localhost:1313/posts/worldbank_25/</link>
+      <pubDate>Tue, 28 Oct 2025 11:18:40 +0900</pubDate>
+      <guid>http://localhost:1313/posts/worldbank_25/</guid>
+      <description>&lt;p&gt;요즘 AI 이야기가 부쩍 늘었죠? ChatGPT와 같은 생성형 AI는 이제 기술 전문가뿐만 아니라 우리 주변의 동료, 친구, 가족의 대화에도 자연스럽게 등장합니다. 이 글은 막연하게 느끼던 AI의 인기를 실제 데이터로 확인하고 싶은 분, 그리고 전 세계 사람들은 AI를 어떻게 사용하고 있는지 궁금한 분들을 위한 안내서입니다. worldbank에서 &#39;Who on Earth Is Using Generative AI? Global Trends and Shifts in 2025&#39; 작성한 최신 데이터를 바탕으로 글로벌 AI 사용 현황에 대한 명확한 그림을 그리고, 미래 사회의 기회와 도전을 조망하는 데 필요한 핵심 통찰을 얻으실 수 있습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
