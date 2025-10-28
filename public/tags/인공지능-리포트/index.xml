@@ -6,14 +6,28 @@
     <description>Recent content in 인공지능 리포트 on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 21 Oct 2025 14:21:40 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 28 Oct 2025 11:18:40 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%A6%AC%ED%8F%AC%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>요즘 AI, 누가 어떻게 쓰고 있을까? feat. 세계은행 보고서</title>
+      <link>http://localhost:1313/posts/worldbank_25/</link>
+      <pubDate>Tue, 28 Oct 2025 11:18:40 +0900</pubDate>
+      <guid>http://localhost:1313/posts/worldbank_25/</guid>
+      <description>&lt;p&gt;요즘 AI 이야기가 부쩍 늘었죠? ChatGPT와 같은 생성형 AI는 이제 기술 전문가뿐만 아니라 우리 주변의 동료, 친구, 가족의 대화에도 자연스럽게 등장합니다. 이 글은 막연하게 느끼던 AI의 인기를 실제 데이터로 확인하고 싶은 분, 그리고 전 세계 사람들은 AI를 어떻게 사용하고 있는지 궁금한 분들을 위한 안내서입니다. worldbank에서 &#39;Who on Earth Is Using Generative AI? Global Trends and Shifts in 2025&#39; 작성한 최신 데이터를 바탕으로 글로벌 AI 사용 현황에 대한 명확한 그림을 그리고, 미래 사회의 기회와 도전을 조망하는 데 필요한 핵심 통찰을 얻으실 수 있습니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>State of AI Report 2025 국문(번역) 보고서</title>
       <link>http://localhost:1313/posts/state_of_ai_report_2025/</link>
       <pubDate>Tue, 21 Oct 2025 14:21:40 +0900</pubDate>
       <guid>http://localhost:1313/posts/state_of_ai_report_2025/</guid>
       <description>&lt;p&gt;매년 AI 업계의 &#39;연말 결산&#39;이자 &#39;종합 건강검진표&#39; 로 불리는 &lt;strong&gt;&#39;State of AI Report&#39;&lt;/strong&gt; 2025년 8번째 에디션이 발표되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;이 보고서는 AI 분야의 저명한 투자자인 네이선 베나이치(Nathan Benaich)와 에어 스트리트 캐피털(Air Street Capital)이 발표하는 자료로, 전 세계 AI 개발자, 기업가, 투자자, 정책 담당자라면 누구나 주목하는 핵심 트렌드 분석 자료입니다.&lt;/p&gt;&#xA;&lt;p&gt;한 해 동안 AI 기술이 얼마나 발전했는지(연구), 기업들은 AI를 어떻게 활용하는지(산업), 각국 정부의 정책(정치), 그리고 AI의 잠재적 위험성(안전)까지, AI의 A부터 Z까지 6개 영역의 핵심을 짚어주기 때문이죠.&#xA;AI 시대를 살아가는 우리에게 이 보고서는 &#39;지금 우리가 어디쯤 와 있는지&#39; 알려주는 든든한 나침반 🧭 역할을 합니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI, 대체 누가 쓰는 걸까? - 데이터로 보는 생성형 AI의 진짜 사용자들</title>
+      <link>http://localhost:1313/posts/worldbank_24/</link>
+      <pubDate>Wed, 28 Aug 2024 10:21:40 +0900</pubDate>
+      <guid>http://localhost:1313/posts/worldbank_24/</guid>
+      <description>&lt;h2 id=&#34;ai-시대의-궁금증-그래서-누가-쓰고-있나요&#34;&gt;AI 시대의 궁금증, &amp;quot;그래서 누가 쓰고 있나요?&amp;quot;&lt;/h2&gt;&#xA;&lt;p&gt;생성형 AI, 특히 ChatGPT의 등장은 단순한 기술적 발전을 넘어 우리 일상과 업무 방식을 근본적으로 바꾸고 있습니다. 상위 40개 생성형 AI 도구의 월간 총방문 횟수가 약 30억 회에 달한다는 사실은 이 기술이 얼마나 거대한 규모로 우리 삶에 스며들고 있는지 명확히 보여줍니다. 본 보고서는 단순한 유행 분석을 넘어, 월드뱅크의 최신 보고서(&amp;quot;Who on Earth Is Using Generative AI?&amp;quot;)에 담긴 데이터를 바탕으로 생성형 AI의 진짜 사용자는 누구이며, 어떻게 사용하고 있는지 심도 있게 탐색하고자 합니다. 이를 통해 독자 여러분께서 생성형 AI의 현주소를 객관적으로 파악하고 미래를 전망하는 데 실질적인 도움을 얻으실 수 있을 것입니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
