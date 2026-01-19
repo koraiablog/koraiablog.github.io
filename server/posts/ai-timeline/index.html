@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="ko-kr"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인공지능의 여정: AI 역사 따라가기 | 한국인공지능협회 블로그</title>
+
+    
+  
+    <link href="/img/symbol.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://blog.koraia.org/posts/ai-timeline/" />
+
+
+
+<meta name="author" content="koraia" />
+<meta name="description" content="Important
+기계가 정말 인간처럼 생각할 수 있을까요?
+" />
+
+
+<meta name="keywords" content="AI 역사,인공지능 발전사">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="https://blog.koraia.org/posts/ai-timeline/">
+  <meta property="og:site_name" content="한국인공지능협회 블로그">
+  <meta property="og:title" content="인공지능의 여정: AI 역사 따라가기">
+  <meta property="og:description" content="Important
+기계가 정말 인간처럼 생각할 수 있을까요?">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-11T13:47:22+09:00">
+    <meta property="article:modified_time" content="2025-03-11T13:47:22+09:00">
+    <meta property="article:tag" content="AI 역사">
+    <meta property="article:tag" content="인공지능 발전사">
+    <meta property="og:image" content="https://blog.koraia.org/h/img/poster/1/ai_history.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://blog.koraia.org/h/img/poster/1/ai_history.png">
+  <meta name="twitter:title" content="인공지능의 여정: AI 역사 따라가기">
+  <meta name="twitter:description" content="Important
+기계가 정말 인간처럼 생각할 수 있을까요?">
+
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.svg" alt="미래를 여는 AI," />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://blog.koraia.org/" class="text-lg font-semibold cursor-pointer">
+          미래를 여는 AI,
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">사단법인 한국인공지능협회</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+
+      
+
+      
+      
+      
+      
+
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="About">About</div>
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="인공지능의 여정: AI 역사 따라가기">
+  <meta itemprop="description" content="Important
+기계가 정말 인간처럼 생각할 수 있을까요?">
+  <meta itemprop="datePublished" content="2025-03-11T13:47:22+09:00">
+  <meta itemprop="dateModified" content="2025-03-11T13:47:22+09:00">
+  <meta itemprop="wordCount" content="1903">
+  <meta itemprop="image" content="https://blog.koraia.org/h/img/poster/1/ai_history.png">
+  <meta itemprop="keywords" content="AI 역사,인공지능 발전사">
+
+      <header>
+        <h1 itemprop="headline">인공지능의 여정: AI 역사 따라가기</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2025-03-11T13:47:22&#43;09:00</span>
+          
+
+          | <span>9 minute read</span>
+
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="https://cdn-icons-png.flaticon.com/512/16683/16683419.png" alt="" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">koraia</span>
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=%ec%9d%b8%ea%b3%b5%ec%a7%80%eb%8a%a5%ec%9d%98%20%ec%97%ac%ec%a0%95:%20AI%20%ec%97%ad%ec%82%ac%20%eb%94%b0%eb%9d%bc%ea%b0%80%ea%b8%b0&amp;url=https://blog.koraia.org/posts/ai-timeline/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://blog.koraia.org/posts/ai-timeline/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="/img/poster/1/ai_history.png" alt="인공지능의 여정: AI 역사 따라가기" />
+        
+
+        <blockquote class="dream-alert important">
+    <p class="heading">
+      <ion-icon name="sparkles-outline"></ion-icon>Important</p>
+    <p><strong>기계가 정말 인간처럼 생각할 수 있을까요?</strong></p>
+  </blockquote>
+
+<p><code>하단에서 '인공지능 타임라인 PDF'를 다운로드 하실 수 있습니다.</code></p>
+<hr>
+<h2 id="인공지능의-여정-ai-역사의-핵심-순간들"><strong>인공지능의 여정: AI 역사의 핵심 순간들</strong></h2>
+<p>&quot;기계가 생각할 수 있을까?&quot;</p>
+<p>SF 영화에나 나올 법한 이 질문이 과학자들 사이에서 진지하게 논의되기 시작했습니다. 당시로서는 허무맹랑하게 들릴 수 있었던 이 아이디어가, 인공지능이라는 거대한 모험의 서막을 열었습니다.</p>
+<p>인간의 뇌와 기계가 비슷한 원리로 작동할 수 있다는 대담한 가설은 과학자들의 상상력에 불을 지폈습니다. 그들은 &quot;인간의 지능을 금속과 전선으로 구현할 수 있을까?&quot;라는 궁극적인 도전에 뛰어들었고, 이는 오늘날 우리가 일상에서 경험하는 인공지능 기술의 씨앗이 되었습니다.</p>
+<p>지금부터 단순한 계산기에서 출발해 인간의 창의력까지 넘보는 현재의 AI에 이르기까지, 때로는 희망으로, 때로는 좌절로 가득했던 인공지능의 파란만장한 여정을 함께 따라가 보겠습니다.</p>
+<hr>
+<h3 id="1940년대-사이버네틱스와-인공지능의-싹"><strong>1940년대: 사이버네틱스와 인공지능의 싹</strong></h3>
+
+
+
+  <blockquote class="dream-alert note">
+    <p class="heading">
+      <ion-icon name="information-circle-outline"></ion-icon>Note</p>
+    <p><strong>사이버네틱스 Cybernetics</strong>는 생명체, 기계, 조직 등 다양한 시스템에서 통신과 제어의 원리를 연구하는 학문입니다.
+&quot;기계도 사람처럼 스스로 상태를 조절할 수 있을까?&quot;라는 질문에서 출발한 학문으로서, 예를 들어 우리 몸이 더우면 땀을 흘려 체온을 조절하듯, 기계도 외부 환경 변화에 스스로 반응하고 제어할 수 있다는 개념입니다.</p>
+  </blockquote>
+
+<h4 id="기계도-생각할-수-있을까"><strong>기계도 생각할 수 있을까?</strong></h4>
+<p>이러한 생각에 불을 지핀 인물은 1940년대 수학자 <strong>노버트 위너</strong>였습니다. 제2차 세계대전 당시, 그는 대공포 조준 시스템을 개발하고 있었습니다. 위너는 대공포가 적기의 움직임을 예측하고 추적하는 과정이, 마치 사람이 날아오는 공을 잡기 위해 뇌와 손의 움직임을 끊임없이 조절하는 방식과 매우 흡사하다는 사실을 발견했습니다.</p>
+<p>이처럼 기계와 생명체가 정보를 처리하며 스스로를 제어하는 원리를 탐구하는 학문이 바로 사이버네틱스입니다. 인간의 뇌와 신경계가 전기 신호로 작동하는 방식에서 영감을 얻어, 기계 역시 정보를 통해 학습하고 문제를 해결하는 '자동 조절 시스템'을 만들 수 있다는 가능성의 문을 연 것입니다.</p>
+<h4 id="사이버네틱스의-핵심-원리"><strong>사이버네틱스의 핵심 원리</strong></h4>
+<pre class="mermaid">flowchart LR
+    A[사람의 뇌] -->|모방| B[전자 신호]
+    B -->|연결| C[인공 신경망]
+    C -->|학습| D[문제 해결]
+    A -->|영감| E[자동 조절 시스템]
+    E -->|기계 발전| F[스스로 반응하는 기계]</pre>
+
+<p>사이버네틱스의 개념은 훗날 인공지능(AI)과 로봇 공학의 중요한 철학적, 기술적 토대가 되었습니다.</p>
+<hr>
+<h3 id="1950년대-인공지능의-탄생"><strong>1950년대: '인공지능'의 탄생</strong></h3>
+<p>1950년대는 오늘날 우리가 아는 컴퓨터의 기틀이 마련된 시기입니다. 이 시기, 천재 수학자 <strong>앨런 튜링</strong>은 &quot;기계가 생각할 수 있을까?&quot;라는 근본적인 질문을 던졌습니다.</p>
+<p>튜링은 이 질문을 증명하기 위해 <strong>튜링 테스트</strong>라는 독창적인 실험을 제안했습니다. 심사관이 보이지 않는 상대와 대화를 나눈 뒤, 그 상대가 인간인지 기계인지 구별할 수 없다면 그 기계는 '생각하는 능력'을 가졌다고 볼 수 있다는 아이디어였습니다.</p>
+
+
+
+  <blockquote class="dream-alert tip">
+    <p class="heading">
+      <ion-icon name="bulb-outline"></ion-icon>Tip</p>
+    <p>튜링 테스트는 AI의 지능을 가늠하는 중요한 척도가 되었습니다. 오늘날 우리가 ChatGPT 같은 AI와 나누는 대화 역시 이 테스트의 현대적인 버전이라고 볼 수 있죠.</p>
+  </blockquote>
+
+<p>이 시기에 처음으로 '인공지능'이라는 개념이 구체적인 형태를 갖추기 시작했습니다. 과학자들은 단순한 계산 기계를 넘어, 인간처럼 사고하고 학습하는 기계를 만들겠다는 원대한 꿈을 꾸었습니다.</p>
+<p>물론 당시 컴퓨터의 연산 능력은 오늘날 스마트폰과 비교할 수 없을 정도로 미미했습니다. 하지만 과학자들의 꿈은 하드웨어의 한계를 훌쩍 뛰어넘고 있었습니다. 마치 라이트 형제가 처음 만든 비행기로 하늘을 날았을 때, 그들의 꿈은 이미 달을 향하고 있었던 것처럼 말입니다.</p>
+<p><img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdTt8P6%2FbtsgGiD6qrJ%2FFK3JZuTkU7cxyiBKXVuUjk%2Fimg.jpg" alt="다트머스회의"></p>
+<p>1956년 <strong>다트머스 회의</strong>는 마치 슈퍼히어로 영화에서 어벤저스가 처음 결성되는 장면과 같았습니다. 존 매카시, 마빈 민스키, 클로드 섀넌 등 당대 최고의 석학들이 모여 '인공지능(Artificial Intelligence)'이라는 새로운 연구 분야를 공식적으로 출범시켰습니다.</p>
+<hr>
+<h3 id="1960-70년대-뜨거운-낙관과-차가운-현실"><strong>1960-70년대: 뜨거운 낙관과 차가운 현실</strong></h3>
+<p>1960년대는 AI를 향한 뜨거운 낙관론이 지배하던 시대였습니다. 과학자들은 10년 안에 인간 수준의 AI가 개발될 것이라고 자신했습니다.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ELIZA_conversation.jpg" alt="일라이자"></p>
+
+
+
+  <blockquote class="dream-alert important">
+    <p class="heading">
+      <ion-icon name="sparkles-outline"></ion-icon>Important</p>
+    <p><strong>일라이자 ELIZA</strong>는 최초의 챗봇으로, 오늘날 AI 챗봇의 시초라 할 수 있습니다. 단순한 키워드에 반응하는 수준이었지만, 많은 사람들이 실제 인간과 대화하는 듯한 착각에 빠졌다는 사실은 놀라운 점이었습니다.</p>
+  </blockquote>
+
+<p>하지만 이내 초기의 낙관론은 차가운 현실의 벽에 부딪혔습니다. 언어 번역이나 물체 인식처럼 인간에게는 너무나 쉬운 과제들이 컴퓨터에게는 극복하기 어려운 난제였습니다. 어린아이는 고양이와 개를 쉽게 구별하지만, 이 직관적인 능력을 기계에 가르치는 것은 상상 이상으로 복잡한 문제임이 드러났습니다.</p>
+<p>실제로 당시 MIT에서는 여름 한 철 프로젝트로 컴퓨터에 시각을 부여하려 했지만, 이 과제는 무려 50년이 넘도록 풀리지 않는 숙제가 되었습니다.</p>
+<hr>
+<h3 id="1980년대-전문가의-시대와-ai의-겨울"><strong>1980년대: 전문가의 시대와 AI의 겨울</strong></h3>
+<p>1980년대는 AI가 연구실을 넘어 비즈니스 현장으로 진출을 시도한 시기였습니다. 특히 <strong>전문가 시스템 Expert System</strong>이라 불리는 기술이 큰 주목을 받았습니다.</p>
+<p>전문가 시스템이란, 특정 분야 전문가의 지식과 경험을 '만약 A라면, B를 하라(IF A, THEN B)'와 같은 수많은 규칙 형태로 컴퓨터에 입력한 프로그램이었습니다.</p>
+<p>예를 들어, 의사가 환자의 증상을 진단하는 과정을 모방한 시스템이 있었습니다. 환자가 &quot;열이 있고 목이 아프다&quot;고 입력하면, 시스템은 규칙에 따라 &quot;감기일 확률이 높습니다&quot;라고 판단하는 식이었습니다.</p>
+<pre class="mermaid">graph TD
+    A[증상 입력] --> B{발열이 있는가?}
+    B -->|예| C{기침이 있는가?}
+    B -->|아니오| D{두통이 있는가?}
+    C -->|예| E[감기 가능성]
+    C -->|아니오| F[다른 질병 확인]
+    D -->|예| G[스트레스 가능성]
+    D -->|아니오| H[다른 증상 확인]</pre>
+
+<p>당시 혈액 감염병 진단 시스템이었던 'MYCIN'은 전문의 수준의 정확도를 보였고, 컴퓨터 부품 호환성을 검사하는 'XCON'은 매년 수백만 달러의 비용을 절감하며 실용성을 입증했습니다.</p>
+<p>하지만 전문가 시스템은 명확한 한계를 가지고 있었습니다. 바로 새로운 지식과 변화하는 상황에 유연하게 대처하지 못한다는 점이었습니다. 이미 알려진 질병은 잘 진단했지만, 신종 질병 앞에서는 무용지물이었습니다. 모든 규칙을 수작업으로 만들고 유지하는 데 엄청난 비용과 시간이 드는 것도 문제였습니다.</p>
+
+
+
+  <blockquote class="dream-alert warning">
+    <p class="heading">
+      <ion-icon name="warning-outline"></ion-icon>Warning</p>
+    <p>1980년대 후반, 전문가 시스템의 한계가 명백해지면서 AI에 대한 열광은 급격히 식어갔습니다. 기대에 미치지 못한 성과에 기업들은 투자를 철회했고 정부 지원도 끊겼습니다. 이렇게 AI 연구에 대한 자금과 관심이 모두 얼어붙은 시기를 <strong>AI의 겨울 AI Winter</strong>이라고 부릅니다.</p>
+  </blockquote>
+
+<hr>
+<h3 id="1990년대-조용한-혁명의-시대"><strong>1990년대: 조용한 혁명의 시대</strong></h3>
+<p>1990년대는 AI가 화려한 스포트라이트에서 벗어나, 조용하지만 내실을 다진 시기였습니다. 길었던 'AI 겨울'이 끝나갈 무렵, 과학자들은 새로운 접근법을 모색하기 시작했습니다.</p>
+<ul>
+<li><strong>패러다임의 전환: 규칙에서 데이터로</strong></li>
+</ul>
+<p>이 시기의 가장 중요한 변화는 AI 연구의 패러다임 전환이었습니다. 모든 규칙을 인간이 직접 프로그래밍하는 대신, 컴퓨터가 방대한 데이터 속에서 스스로 패턴과 규칙을 학습하는 <strong>머신러닝</strong> 방식이 부상했습니다.</p>
+<p>이는 아이를 가르치는 방식의 변화와 같았습니다. 과거에는 &quot;고양이는 귀가 뾰족하고 수염이 있어&quot;라고 규칙을 일일이 알려주었다면, 이제는 수천 장의 고양이 사진을 보여주고 컴퓨터가 스스로 '고양이의 특징'을 터득하게 하는 방식으로 바뀐 것입니다.</p>
+<pre class="mermaid">graph LR
+  A[규칙 기반] -->|전환| B[데이터 기반 학습]
+  B -->|발전| C[통계적 머신러닝]
+  C -->|적용| D[실제 문제 해결]
+  D -->|성공| E[음성 인식/컴퓨터 비전]</pre>
+
+
+
+
+  <blockquote class="dream-alert important">
+    <p class="heading">
+      <ion-icon name="sparkles-outline"></ion-icon>Important</p>
+    <p>1997년, IBM이 개발한 슈퍼컴퓨터 <strong>딥블루</strong>가 당시 세계 체스 챔피언 가리 카스파로프를 꺾은 사건은 AI 역사에 한 획을 그었습니다. 이 사건은 AI의 잠재력을 대중에게 확실히 각인시켰습니다. 하지만 이 승리는 AI가 정상에 올랐다는 의미가 아니라, 더 높은 정상을 향한 베이스캠프를 구축했다는 상징적 사건이었습니다. 체스는 규칙이 명확한 게임이었기에, 진정한 인간의 지능을 모방하기까지는 아직 갈 길이 멀었습니다.</p>
+  </blockquote>
+
+<p>1990년대는 겉으로 화려하지 않았지만, 이 시기에 축적된 조용한 연구들이 훗날 AI가 폭발적으로 성장하는 단단한 토대가 되었습니다. 오랜 시간 땅속에서 뿌리를 내리던 대나무가 어느 날 갑자기 하늘로 솟아오르듯, AI 기술은 이 시기에 심어진 씨앗 덕분에 2000년대 이후 급격히 성장할 수 있었습니다.</p>
+<hr>
+<h3 id="2000년대-빅데이터-ai를-깨우다"><strong>2000년대: 빅데이터, AI를 깨우다</strong></h3>
+<p>2000년대는 인터넷의 폭발적인 성장과 함께 데이터의 홍수 시대가 열렸습니다. 웹사이트, 이메일, 온라인 커뮤니티에 쌓인 막대한 양의 데이터는 AI, 특히 머신러닝 연구에 강력한 연료가 되었습니다. 우리가 검색하고, 클릭하고, '좋아요'를 누르는 모든 행동이 AI를 위한 귀중한 학습 자료가 된 것입니다.</p>
+<pre class="mermaid">graph TD
+    A[빅데이터 수집] --> B[데이터 전처리]
+    B --> C[알고리즘 적용]
+    C --> D[패턴 학습]
+    D --> E[예측 & 추천]
+    E --> F[사용자 피드백]
+    F --> A</pre>
+
+<p>구글, 아마존, 페이스북과 같은 빅테크 기업들은 머신러닝을 비즈니스의 핵심 동력으로 삼았습니다. 이들은 사용자 데이터를 분석해 더 정교한 서비스를 제공했습니다. 아마존이 당신이 본 상품을 바탕으로 다른 상품을 추천해주고, 넷플릭스가 당신의 시청 기록을 분석해 좋아할 만한 영화를 제안하는 것이 대표적인 예입니다.</p>
+<p>이 과정에서 서비스가 고도화될수록 더 많은 사용자가 모이고, 이는 다시 더 많은 데이터 축적으로 이어져 AI 알고리즘을 더욱 똑똑하게 만드는 선순환 구조가 만들어졌습니다.</p>
+<p>2006년, <strong>제프리 힌튼</strong> 교수가 발표한 심층 신뢰 신경망(DBN) 관련 연구는 오랫동안 정체되어 있던 인공 신경망 연구에 돌파구를 마련하며 <strong>딥러닝</strong> 혁명의 서막을 열었습니다. 그의 연구는 컴퓨터가 인간의 두뇌처럼 여러 층의 인공 뉴런을 통해 복잡한 데이터를 학습하는 방법을 획기적으로 개선했습니다.</p>
+<p>이 시기, AI는 인간의 언어를 이해하고 해석하는 능력에서도 큰 진전을 보였습니다.</p>
+<p>특히 2011년, IBM의 AI 시스템 <strong>왓슨</strong>이 미국의 유명 퀴즈쇼 '제퍼디!'에서 인간 챔피언들을 꺾고 우승한 사건은 세상을 놀라게 했습니다. 왓슨은 자연어로 된 복잡하고 미묘한 질문의 의도를 파악하고, 방대한 지식 데이터베이스에서 정확한 답을 찾아내는 능력을 선보였습니다.</p>
+<p>2000년대에 축적된 빅데이터와 딥러닝 기술의 발전은 2010년대 AI 혁명의 무대를 완벽하게 준비했습니다. 마치 오랜 기간 이어진 무대 뒤 리허설이 끝나고, 마침내 화려한 본공연의 막이 오를 순간이 다가오고 있었던 셈입니다.</p>
+<hr>
+<h3 id="2010년대-딥러닝-혁명의-불을-붙이다"><strong>2010년대: 딥러닝, 혁명의 불을 붙이다</strong></h3>
+<p>2010년대는 AI 역사에 있어 진정한 혁명이 시작된 시기였습니다. 특히 2012년과 2016년의 두 사건은 AI의 패러다임을 완전히 바꾸고 그 잠재력을 전 세계에 각인시켰습니다.</p>
+<p>2012년, 제프리 힌튼 교수 연구팀이 개발한 딥러닝 모델 <strong>알렉스넷 AlexNet</strong>이 세계 최대 이미지 인식 대회(ILSVRC)에서 압도적인 성적으로 우승했습니다. 이전 모델들의 오류율을 10% 이상 극적으로 낮춘 이 성과는 AI 연구의 주도권이 전통적인 머신러닝에서 딥러닝으로 넘어가는 결정적인 계기가 되었습니다.</p>
+
+
+
+  <blockquote class="dream-alert tip">
+    <p class="heading">
+      <ion-icon name="bulb-outline"></ion-icon>Tip</p>
+    <p><strong>머신러닝과 딥러닝, 차이가 뭘까요?</strong>
+피자를 예로 들어보죠. <strong>머신러닝</strong>은 사람이 &quot;피자는 둥글고, 치즈가 있고, 토핑이 있다&quot;와 같은 특징을 미리 알려주면, 컴퓨터가 그 특징을 기반으로 학습하는 방식입니다. 반면 <strong>딥러닝</strong>은 컴퓨터가 수많은 피자 사진을 스스로 보면서 '피자다움'의 특징을 직접 찾아내고 학습하는, 보다 인간의 뇌와 가까운 방식입니다.</p>
+  </blockquote>
+
+<p>2016년 3월, 구글 딥마인드가 개발한 <strong>알파고 AlphaGo</strong>와 세계 최정상 바둑 기사 이세돌 9단의 대국은 전 세계의 이목을 집중시켰습니다. 무한에 가까운 경우의 수 때문에 컴퓨터가 정복하기 가장 어려운 영역으로 여겨졌던 바둑에서, 알파고는 4승 1패라는 충격적인 승리를 거두었습니다.</p>
+<p>이 대결은 AI가 인류의 예상을 10년 이상 앞질러 인간 최고수를 넘어선 역사적인 순간이었습니다. 이 사건을 계기로 AI는 더 이상 먼 미래의 기술이 아닌, 우리 눈앞의 현실로 다가왔습니다.</p>
+<pre class="mermaid">timeline
+    title AI 능력의 진화
+    1997 : 체스 정복
+           : IBM 딥블루, 가리 카스파로프 격파
+    2011 : 퀴즈 정복
+           : IBM 왓슨, 제퍼디! 챔피언 격파
+    2016 : 바둑 정복
+           : 알파고, 이세돌 9단 격파
+    2018 : 언어 이해의 도약
+           : BERT, 자연어 처리 혁신
+    2022- : 창의적 생성의 시대
+           : ChatGPT, DALL-E 등 생성형 AI 혁명</pre>
+
+<hr>
+<h3 id="2020년대-생성형-ai-일상으로-스며들다"><strong>2020년대: 생성형 AI, 일상으로 스며들다</strong></h3>
+<p>인류 역사의 물줄기가 바뀌는 순간은 종종 예고 없이 찾아옵니다. 2020년대 초, 전 세계가 팬데믹(COVID-19)의 혼란에 빠져 있을 때, AI는 조용하지만 거대한 혁명의 문턱을 넘고 있었습니다.</p>
+<p><img src="https://images.unsplash.com/photo-1676299081847-824916de030a?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI 생성 이미지 예시"></p>
+<p>2020년, OpenAI는 1,750억 개의 매개변수(파라미터)를 갖춘 거대 언어 모델 <strong>GPT-3</strong>를 공개했습니다. 이 모델은 인간처럼 자연스러운 글을 쓰고, 질문에 답하며, 심지어 시를 짓는 능력으로 세상을 놀라게 했지만, 이것은 시작에 불과했습니다.</p>
+
+
+
+  <blockquote class="dream-alert note">
+    <p class="heading">
+      <ion-icon name="information-circle-outline"></ion-icon>Note</p>
+    <p>2022년 11월, 하나의 채팅봇이 조용히 인터넷에 공개되었습니다. <strong>ChatGPT</strong>라 불린 이 서비스는 출시 단 5일 만에 사용자 100만 명, 2개월 만에 1억 명을 돌파했습니다. 넷플릭스가 3.5년, 페이스북이 4.5년 걸렸던 기록을 ChatGPT는 눈 깜짝할 사이에 갈아치운 것입니다.</p>
+  </blockquote>
+
+<p>이는 단순히 성공적인 기술 제품의 등장을 넘어, 인류가 AI를 인식하고 활용하는 방식 자체를 바꾸는 전환점이 되었습니다.</p>
+<pre class="mermaid">graph LR
+  A[GPT-3 출시] --> B[ChatGPT 등장]
+  B --> C[이미지 생성 AI 확산]
+  C --> D[동영상 생성 AI 등장]
+  D --> E[일상 속 AI로 정착]</pre>
+
+<p>&quot;AI가 내 일자리를 빼앗을까?&quot; 2023년, 이 질문은 전 세계 직장인들의 화두가 되었습니다. 변호사들은 AI가 작성한 법률 문서에, 프로그래머들은 AI가 짜주는 코드에, 작가들은 AI가 쓴 소설에 경외와 불안을 동시에 느꼈습니다. 우리가 인간 고유의 영역이라 믿었던 <strong>창의성</strong>의 성벽이 허물어지기 시작한 것입니다.</p>
+<p>같은 해, <strong>DALL-E, 미드저니(Midjourney), 스테이블 디퓨전(Stable Diffusion)</strong> 같은 이미지 생성 AI들은 예술계를 뒤흔들었습니다. 몇 초 만에 '르네상스 화풍으로 그려진 우주비행사'를 그려내는 이 기술들은 예술의 정의와 창작자의 역할에 대한 근본적인 질문을 던졌습니다.</p>
+<p>2024년 초, 구글의 <strong>제미나이 Gemini</strong>와 OpenAI의 <strong>소라 Sora</strong>는 AI의 경계를 또 한 번 확장했습니다. 특히 소라는 간단한 텍스트 설명만으로 최대 60초 길이의 영화 같은 영상을 만들어내며, 상상이 곧 현실이 되는 시대가 멀지 않았음을 보여주었습니다.</p>
+<p>이 모든 눈부신 발전 속에서 사회는 AI에 대한 기대와 두려움 사이에서 흔들렸습니다. 일론 머스크를 비롯한 기술 리더들이 AI 개발의 일시 중단을 촉구하는 공개서한에 서명한 것은, 인류가 자신의 창조물에 대해 얼마나 깊이 고뇌하고 있는지를 보여주는 상징적인 사건이었습니다.</p>
+<p>2020년대의 AI 혁명은 증기기관이 산업혁명을, 인터넷이 정보혁명을 이끌었듯, <strong>지능 혁명</strong>의 시대를 열고 있습니다. 이 혁명의 끝은 아직 보이지 않지만, 한 가지 확실한 것은 우리가 인간과 기계의 관계를 재정의하는 역사적 순간의 한복판에 서 있다는 사실입니다.</p>
+<p>미래의 역사가들은 2020년대를 이렇게 기록할지도 모릅니다. 인류가 처음으로 자신의 지능을 넘어설 수 있는 존재를 창조하기 시작한 시대, 그리고 이렇게 질문을 던질 것입니다.</p>
+<p><strong>&quot;그들은 자신들이 무엇을 만들고 있는지 진정으로 알고 있었을까?&quot;</strong></p>
+<hr>
+<h2 id="미래를-향한-도전-ai와-인류의-공존"><strong>미래를 향한 도전: AI와 인류의 공존</strong></h2>
+<p>AI 발전의 역사는 높은 기대와 깊은 좌절, 그리고 다시 찾아온 혁신이 반복되는 롤러코스터와 같았습니다.</p>
+<p>오늘날 우리는 이전 세대는 상상조차 할 수 없었던 AI의 시대에 살고 있습니다. 스마트폰 속 비서에게 날씨를 묻고, AI가 추천한 영화를 보며, 스스로 움직이는 자동차를 목격하고 있습니다.</p>
+<p>AI의 미래는 어디로 향할까요? 인간의 모든 지적 능력을 뛰어넘는 <strong>범용 인공지능 AGI</strong>은 등장할까요? AI는 인간의 창의성과 감성을 온전히 이해할 수 있을까요? 이 질문들에 대한 답은 아직 누구도 알지 못합니다.</p>
+<p>하지만 한 가지는 분명합니다. 1940년대 사이버네틱스에서 시작된 위대한 여정은 지금도 계속되고 있으며, 우리는 그 흥미진진한 이야기의 중심에 서 있습니다. AI의 발전은 단순한 기술의 진보를 넘어, 인간 지능의 본질과 우리 자신에 대한 이해를 깊게 하는 거울과도 같습니다.</p>
+<p>이제 기술의 발전과 함께 인간의 가치를 지키며, AI를 인류의 현명한 파트너로 만들어갈 지혜가 그 어느 때보다 필요한 시점입니다.</p>
+<hr>
+<p><a href="/file/History_of_AI_Poster.pdf">🎁 History Of AI PDF 다운로드</a>
+</p>
+<p><a href="https://koraia.org/default/mp4/sub6.php?sub=06?sub=06" target="_blank">🎁 The Road to AGI 2015 - 2025 타임라인 살펴보기</a>
+</p>
+<hr>
+<p><a href="https://stibee.com/api/v1.0/emails/share/G7PhqMG7hDdtfiy3Cy_jN8dPfHr2j_c" target="_blank">🚀 여러분의 적극적인 참여를 기다리고 있습니다.</a>
+</p>
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/openai_agentsdk/" title="OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Previous page</span>
+            <span class="max-w-48 truncate">OpenAI, 개발자를 위한 강력한 에이전트 툴 대거 공개</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/china-manus-autonomous-ai-agent/" title="중국의 &#39;마누스(Manus)&#39;: AI 에이전트의 새로운 시대를 열다">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Next page</span>
+            <span class="max-w-48 truncate">중국의 &#39;마누스(Manus)&#39;: AI 에이전트의 새로운 시대를 열다</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+    </article>
+  </div>
+
+  <div class="hidden lg:flex lg:flex-col lg:items-end">
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#인공지능의-여정-ai-역사의-핵심-순간들"><strong>인공지능의 여정: AI 역사의 핵심 순간들</strong></a>
+      <ul>
+        <li><a href="#1940년대-사이버네틱스와-인공지능의-싹"><strong>1940년대: 사이버네틱스와 인공지능의 싹</strong></a></li>
+        <li><a href="#1950년대-인공지능의-탄생"><strong>1950년대: '인공지능'의 탄생</strong></a></li>
+        <li><a href="#1960-70년대-뜨거운-낙관과-차가운-현실"><strong>1960-70년대: 뜨거운 낙관과 차가운 현실</strong></a></li>
+        <li><a href="#1980년대-전문가의-시대와-ai의-겨울"><strong>1980년대: 전문가의 시대와 AI의 겨울</strong></a></li>
+        <li><a href="#1990년대-조용한-혁명의-시대"><strong>1990년대: 조용한 혁명의 시대</strong></a></li>
+        <li><a href="#2000년대-빅데이터-ai를-깨우다"><strong>2000년대: 빅데이터, AI를 깨우다</strong></a></li>
+        <li><a href="#2010년대-딥러닝-혁명의-불을-붙이다"><strong>2010년대: 딥러닝, 혁명의 불을 붙이다</strong></a></li>
+        <li><a href="#2020년대-생성형-ai-일상으로-스며들다"><strong>2020년대: 생성형 AI, 일상으로 스며들다</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#미래를-향한-도전-ai와-인류의-공존"><strong>미래를 향한 도전: AI와 인류의 공존</strong></a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">1. 한국인공지능협회</div>
+
+        <div class="prose dark:prose-invert">
+          <h2 id="미션-mission">미션 (Mission)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능 시대, 문명의 기준을 세우는 것</strong><br>
+<em>AI age, Standardization of civilization</em></p>
+  </blockquote>
+
+<h2 id="비전-vision">비전 (Vision)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능의 민주화와 산업지능화 선도</strong><br>
+<em>Democratization of Artificial Intelligence and Leadership in Industrial Intelligence</em></p>
+  </blockquote>
+
+<h2 id="핵심전략-core-strategy">핵심전략 (Core Strategy)</h2>
+
+
+
+  <blockquote>
+    <p><strong>정보공유-인재양성-기업지원-시장창출로 선도적 인공지능 생태계 구축</strong><br>
+<em>Building a leading artificial intelligence ecosystem through information sharing, talent development, corporate support, and market creation</em></p>
+  </blockquote>
+
+<h2 id="행동-슬로건-slogan">행동 슬로건 (Slogan)</h2>
+
+
+
+  <blockquote>
+    <p><strong>시선은 미래를 향하고, 행동은 미래를 앞당긴다.</strong><br>
+<em>Our Eyes stares at the future &amp; Behavior moves-up the future</em></p>
+  </blockquote>
+
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">2. 설립배경</div>
+
+        <div class="prose dark:prose-invert">
+          <table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>법인명</strong></td>
+          <td style="text-align: left">사단법인 한국인공지능협회</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>법인형태</strong></td>
+          <td style="text-align: left">비영리법인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>창립총회</strong></td>
+          <td style="text-align: left">2017년 1월 임의단체 출범</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>사단법인 허가</strong></td>
+          <td style="text-align: left">2017년 6월 21일 (민법 제32조)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>주무부처</strong></td>
+          <td style="text-align: left">과학기술정보통신부</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>설립배경</strong></td>
+          <td style="text-align: left">인공지능 유관 정보, 인재, 기업, 시장 등의 교류와 연결을 통해서 인공지능 생태계를 선도</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="임원-및-회원사-현황">임원 및 회원사 현황</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>회장</strong></td>
+          <td style="text-align: left">김현철</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>임원</strong></td>
+          <td style="text-align: left">32인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>회원사</strong></td>
+          <td style="text-align: left">1,000여 인공지능 및 데이터 전문 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>협력사</strong></td>
+          <td style="text-align: left">인공지능 수요사 15,000여 곳</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격자</strong></td>
+          <td style="text-align: left">인공지능산업컨설턴트 등 20,000여명</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증사</strong></td>
+          <td style="text-align: left">217여 산업지능화 인증(AI+X Certificate) 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>전문가그룹</strong></td>
+          <td style="text-align: left">석박사, 공인자격자 중심의 산업계 인공지능 융합전문가</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="주요업무">주요업무</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>기업지원</strong></td>
+          <td style="text-align: left">회원사 커뮤니티 운영, 수요공급사매칭, 컨소시엄지원, 편람발간, 분과활동, 마케팅 및 수출지원 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인재육성</strong></td>
+          <td style="text-align: left">AI기초교육, AI직무전환 교육, 취업매칭, 일자리 창출사업 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증제도</strong></td>
+          <td style="text-align: left">AI기술 및 비즈니스 인증제 운영</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격제도</strong></td>
+          <td style="text-align: left">AI유관 8개 직무자격에 대한 시험운영 및 자격발급</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>정책지원</strong></td>
+          <td style="text-align: left">AI생태계 수요조사, 표준화 활동, 규제개선 등</td>
+      </tr>
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">3. 한국인공지능협회로의 초대</div>
+
+        <div class="prose dark:prose-invert">
+          
+
+
+  <blockquote>
+    <p>스스로 학습의 학습을 거듭하는 인공지능에 대한 이론적인 근거를 두고, 50년 전 수학자 어빙 존 굿은 **&quot;인공지능은 인류 최후의 발명품&quot;**이라는 말을 남겼습니다. 세월이 지나 현 시대를 맞이한 우리는 인공지능을 기술적 발명품을 넘어 문명 전반의 변화를 이끌어내는 일종의 시대정신으로 마주하고 있습니다. 인공지능에 대한 사회적 요구가 커지고 있는 지금이 되려 우리가 미진한 부분을 개혁하고 인간적인 가치를 추구하는 계기가 되지 않을까 싶습니다.</p>
+  </blockquote>
+
+<p>한국인공지능협회의 최초 설립정신은 인류사회가 겪는 문제를 인공지능이라는 주제로 해결해가는 <strong>주체자들(Changers)의 결성</strong>이었고, 그들의 연결을 국내외로 지속적으로 추진합니다. 협회는 회원을 지칭하는 브랜드인 <strong>체인저스(Changers)</strong> 라는 정체성을 기반으로 정책과 사업을 구성하여 대한민국 전 분야의 지능화에 기여하고 인공지능의 민주화를 선도합니다.</p>
+<p>한국인공지능협회는 그동안 <strong>1,000여 개의 인공지능 기업</strong>과 <strong>10만 명이 넘는 종사자</strong>를 대변하는 인공지능 생태계의 대표 단체로서의 역할을 성실히 수행해 왔습니다. 이제 우리는 한 걸음 더 나아가, 인공지능을 둘러싼 다양한 주제를 다룰 새로운 거버넌스를 신설하고, 그 거버넌스들 간의 유기적인 연계를 공고히 하여 설립정신을 더욱 발전시켜갑니다.</p>
+<p>이를 통해 한국인공지능협회는 단순한 산업 대표 단체를 넘어, <strong>&quot;인공지능 시대&quot;를 대표하는 단체</strong>로 우뚝서려 합니다.</p>
+<p>한국인공지능협회는 인공지능을 세상을 부양시키는 <strong>최상위 메타(Meta) 산업</strong>으로 규정하여 우리의 관점과 역할을 통합적으로 변모시켜 갑니다. 우리는 인공지능 기술이 산업에 닿는 범위, 디지털화 된 산업이 경제를 변화시키는 범위, 생산력이 확보된 경제가 문화를 자아내는 범위, 참여의 문화가 강한 개인을 만들어내는 모든 범위를 고민하여 <strong>문명의 기준을 만드는 최선두</strong>에 서겠습니다.</p>
+<p><em><strong>감사합니다.</strong></em></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">4. 부서별 직무소개</div>
+
+        <div class="prose dark:prose-invert">
+          <h3 id="비서실">비서실</h3>
+<ul>
+<li>회장 수행</li>
+<li>체인저스 관리</li>
+</ul>
+<h3 id="인공지능-정책원">인공지능 정책원</h3>
+<ul>
+<li>AI입법 및 정책 지원</li>
+<li>정책백서편찬 및 세미나</li>
+<li>국회·산·학·연·관 정책 네트워크</li>
+</ul>
+<h3 id="인공지능-이용자-진흥원">인공지능 이용자 진흥원</h3>
+<ul>
+<li>오픈소스 커뮤니티 활성화</li>
+<li>사회적 영향에 대한 모니터링</li>
+<li>민간자율AI윤리위원회 운영</li>
+</ul>
+<h3 id="인공지능-연수원">인공지능 연수원</h3>
+<ul>
+<li>최고위과정 운영</li>
+<li>AI리터러시 및 직무전환교육</li>
+<li>지역 아카데미 관리</li>
+<li>원우회 운영</li>
+</ul>
+<h3 id="ai직무자격센터">AI직무자격센터</h3>
+<ul>
+<li>자격제 운영</li>
+<li>공인교육기관지정</li>
+<li>인재매칭플랫폼 운영</li>
+</ul>
+<h3 id="ai시험인증센터">AI시험·인증센터</h3>
+<ul>
+<li>시험·인증제 운영</li>
+<li>인공지능 고영향 평가</li>
+<li>표준화 활동</li>
+</ul>
+<h3 id="데이터작업물-등록센터">데이터·작업물 등록센터</h3>
+<ul>
+<li>데이터·작업물 등록</li>
+<li>확인증 발부</li>
+</ul>
+<h3 id="경영지원팀">경영지원팀</h3>
+<ul>
+<li>인사/노무/복리후생</li>
+<li>재무/회계</li>
+<li>총무/임원수행</li>
+<li>홍보/언론관리</li>
+</ul>
+<h3 id="회원교류팀">회원교류팀</h3>
+<ul>
+<li>국제인공지능대전</li>
+<li>AI어워드&amp;기업인의 밤</li>
+<li>해외진출지원</li>
+<li>지회협력</li>
+</ul>
+<h3 id="회원사업팀">회원사업팀</h3>
+<ul>
+<li>AI시너지링크(수요·공급매칭)</li>
+<li>AI Startups(편람)</li>
+<li>정부사업 및 사업수행</li>
+</ul>
+<h3 id="임원단-분과">임원단 분과</h3>
+<ul>
+<li>해외펀드</li>
+<li>국제네트워크</li>
+<li>공공협력</li>
+<li>취약계층 교육확산</li>
+<li>여성 인공지능 전문가 양성</li>
+</ul>
+<h3 id="해외지회">해외지회</h3>
+<ul>
+<li>일본지회</li>
+</ul>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "en" }).toFormat("yyyy. MM. dd.")
+    })
+  }
+</script>
+
+
+
+
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+    
+      <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+      </script>
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

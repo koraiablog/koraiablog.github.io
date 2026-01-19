@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>디지털전환 on 한국인공지능협회 블로그</title>
+    <link>https://blog.koraia.org/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/</link>
+    <description>Recent content in 디지털전환 on 한국인공지능협회 블로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 24 Mar 2025 09:44:10 +0900</lastBuildDate>
+    <atom:link href="https://blog.koraia.org/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해</title>
+      <link>https://blog.koraia.org/posts/mcp/</link>
+      <pubDate>Mon, 24 Mar 2025 09:44:10 +0900</pubDate>
+      <guid>https://blog.koraia.org/posts/mcp/</guid>
+      <description>&lt;p&gt;AI가 당신의 데이터와 대화할 수 있다면 어떨까요? Model Context Protocol(MCP)이 바로 그 꿈을 현실로 만들고 있습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI 에이전트 시대, &#39;마켓플레이스&#39;만이 정답일까?</title>
+      <link>https://blog.koraia.org/posts/ai-agent-marketplace-era/</link>
+      <pubDate>Mon, 10 Mar 2025 14:45:31 +0900</pubDate>
+      <guid>https://blog.koraia.org/posts/ai-agent-marketplace-era/</guid>
+      <description>&lt;p&gt;바야흐로 AI 에이전트의 시대입니다. 단순한 챗봇이나 가상 비서를 넘어, 스스로 학습하고 판단하며 실제 업무를 자율적으로 처리하는 &#39;디지털 직원&#39; 개념의 AI 에이전트가 속속 등장하고 있습니다. 이는 단순한 기술 트렌드를 넘어, 기업 운영 방식 자체를 근본적으로 변화시킬 잠재력을 지니고 있습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

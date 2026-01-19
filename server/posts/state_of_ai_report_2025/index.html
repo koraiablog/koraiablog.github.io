@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="ko-kr"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of AI Report 2025 국문(번역) 보고서 | 한국인공지능협회 블로그</title>
+
+    
+  
+    <link href="/img/symbol.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://blog.koraia.org/posts/state_of_ai_report_2025/" />
+
+
+
+<meta name="author" content="koraia" />
+<meta name="description" content="매년 AI 업계의 &#39;연말 결산&#39;이자 &#39;종합 건강검진표&#39; 로 불리는 &#39;State of AI Report&#39; 2025년 8번째 에디션이 발표되었습니다.
+이 보고서는 AI 분야의 저명한 투자자인 네이선 베나이치(Nathan Benaich)와 에어 스트리트 캐피털(Air Street Capital)이 발표하는 자료로, 전 세계 AI 개발자, 기업가, 투자자, 정책 담당자라면 누구나 주목하는 핵심 트렌드 분석 자료입니다.
+한 해 동안 AI 기술이 얼마나 발전했는지(연구), 기업들은 AI를 어떻게 활용하는지(산업), 각국 정부의 정책(정치), 그리고 AI의 잠재적 위험성(안전)까지, AI의 A부터 Z까지 6개 영역의 핵심을 짚어주기 때문이죠. AI 시대를 살아가는 우리에게 이 보고서는 &#39;지금 우리가 어디쯤 와 있는지&#39; 알려주는 든든한 나침반 🧭 역할을 합니다.
+" />
+
+
+<meta name="keywords" content="인공지능 리포트,State of AI Report">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="https://blog.koraia.org/posts/state_of_ai_report_2025/">
+  <meta property="og:site_name" content="한국인공지능협회 블로그">
+  <meta property="og:title" content="State of AI Report 2025 국문(번역) 보고서">
+  <meta property="og:description" content="매년 AI 업계의 &#39;연말 결산&#39;이자 &#39;종합 건강검진표&#39; 로 불리는 &#39;State of AI Report&#39; 2025년 8번째 에디션이 발표되었습니다.
+이 보고서는 AI 분야의 저명한 투자자인 네이선 베나이치(Nathan Benaich)와 에어 스트리트 캐피털(Air Street Capital)이 발표하는 자료로, 전 세계 AI 개발자, 기업가, 투자자, 정책 담당자라면 누구나 주목하는 핵심 트렌드 분석 자료입니다.
+한 해 동안 AI 기술이 얼마나 발전했는지(연구), 기업들은 AI를 어떻게 활용하는지(산업), 각국 정부의 정책(정치), 그리고 AI의 잠재적 위험성(안전)까지, AI의 A부터 Z까지 6개 영역의 핵심을 짚어주기 때문이죠. AI 시대를 살아가는 우리에게 이 보고서는 &#39;지금 우리가 어디쯤 와 있는지&#39; 알려주는 든든한 나침반 🧭 역할을 합니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-21T14:21:40+09:00">
+    <meta property="article:modified_time" content="2025-10-21T14:21:40+09:00">
+    <meta property="article:tag" content="인공지능 리포트">
+    <meta property="article:tag" content="State of AI Report">
+    <meta property="og:image" content="https://raw.githubusercontent.com/guessKoraia/guessKoraia.github.io/refs/heads/main/koraia_main_popup/stateofai_cover.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/guessKoraia/guessKoraia.github.io/refs/heads/main/koraia_main_popup/stateofai_cover.png">
+  <meta name="twitter:title" content="State of AI Report 2025 국문(번역) 보고서">
+  <meta name="twitter:description" content="매년 AI 업계의 &#39;연말 결산&#39;이자 &#39;종합 건강검진표&#39; 로 불리는 &#39;State of AI Report&#39; 2025년 8번째 에디션이 발표되었습니다.
+이 보고서는 AI 분야의 저명한 투자자인 네이선 베나이치(Nathan Benaich)와 에어 스트리트 캐피털(Air Street Capital)이 발표하는 자료로, 전 세계 AI 개발자, 기업가, 투자자, 정책 담당자라면 누구나 주목하는 핵심 트렌드 분석 자료입니다.
+한 해 동안 AI 기술이 얼마나 발전했는지(연구), 기업들은 AI를 어떻게 활용하는지(산업), 각국 정부의 정책(정치), 그리고 AI의 잠재적 위험성(안전)까지, AI의 A부터 Z까지 6개 영역의 핵심을 짚어주기 때문이죠. AI 시대를 살아가는 우리에게 이 보고서는 &#39;지금 우리가 어디쯤 와 있는지&#39; 알려주는 든든한 나침반 🧭 역할을 합니다.">
+
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.svg" alt="미래를 여는 AI," />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://blog.koraia.org/" class="text-lg font-semibold cursor-pointer">
+          미래를 여는 AI,
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">사단법인 한국인공지능협회</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+
+      
+
+      
+      
+      
+      
+
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="About">About</div>
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="State of AI Report 2025 국문(번역) 보고서">
+  <meta itemprop="description" content="매년 AI 업계의 &#39;연말 결산&#39;이자 &#39;종합 건강검진표&#39; 로 불리는 &#39;State of AI Report&#39; 2025년 8번째 에디션이 발표되었습니다.
+이 보고서는 AI 분야의 저명한 투자자인 네이선 베나이치(Nathan Benaich)와 에어 스트리트 캐피털(Air Street Capital)이 발표하는 자료로, 전 세계 AI 개발자, 기업가, 투자자, 정책 담당자라면 누구나 주목하는 핵심 트렌드 분석 자료입니다.
+한 해 동안 AI 기술이 얼마나 발전했는지(연구), 기업들은 AI를 어떻게 활용하는지(산업), 각국 정부의 정책(정치), 그리고 AI의 잠재적 위험성(안전)까지, AI의 A부터 Z까지 6개 영역의 핵심을 짚어주기 때문이죠. AI 시대를 살아가는 우리에게 이 보고서는 &#39;지금 우리가 어디쯤 와 있는지&#39; 알려주는 든든한 나침반 🧭 역할을 합니다.">
+  <meta itemprop="datePublished" content="2025-10-21T14:21:40+09:00">
+  <meta itemprop="dateModified" content="2025-10-21T14:21:40+09:00">
+  <meta itemprop="wordCount" content="385">
+  <meta itemprop="image" content="https://raw.githubusercontent.com/guessKoraia/guessKoraia.github.io/refs/heads/main/koraia_main_popup/stateofai_cover.png">
+  <meta itemprop="keywords" content="인공지능 리포트,State of AI Report">
+
+      <header>
+        <h1 itemprop="headline">State of AI Report 2025 국문(번역) 보고서</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2025-10-21T14:21:40&#43;09:00</span>
+          
+
+          | <span>2 minute read</span>
+
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="https://cdn-icons-png.flaticon.com/512/16683/16683419.png" alt="" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">koraia</span>
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=State%20of%20AI%20Report%202025%20%ea%b5%ad%eb%ac%b8%28%eb%b2%88%ec%97%ad%29%20%eb%b3%b4%ea%b3%a0%ec%84%9c&amp;url=https://blog.koraia.org/posts/state_of_ai_report_2025/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://blog.koraia.org/posts/state_of_ai_report_2025/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="https://raw.githubusercontent.com/guessKoraia/guessKoraia.github.io/refs/heads/main/koraia_main_popup/stateofai_cover.png" alt="State of AI Report 2025 국문(번역) 보고서" />
+        
+
+        <p>매년 AI 업계의 '연말 결산'이자 '종합 건강검진표' 로 불리는 <strong>'State of AI Report'</strong> 2025년 8번째 에디션이 발표되었습니다.</p>
+<p>이 보고서는 AI 분야의 저명한 투자자인 네이선 베나이치(Nathan Benaich)와 에어 스트리트 캐피털(Air Street Capital)이 발표하는 자료로, 전 세계 AI 개발자, 기업가, 투자자, 정책 담당자라면 누구나 주목하는 핵심 트렌드 분석 자료입니다.</p>
+<p>한 해 동안 AI 기술이 얼마나 발전했는지(연구), 기업들은 AI를 어떻게 활용하는지(산업), 각국 정부의 정책(정치), 그리고 AI의 잠재적 위험성(안전)까지, AI의 A부터 Z까지 6개 영역의 핵심을 짚어주기 때문이죠.
+AI 시대를 살아가는 우리에게 이 보고서는 '지금 우리가 어디쯤 와 있는지' 알려주는 든든한 나침반 🧭 역할을 합니다.</p>
+<p>이에 사단법인 한국인공지능협회가 'State of AI Report 2025'의 국문 번역본을 준비했습니다. 더 많은 분이 AI의 현재를 명확히 이해하고, 각자의 자리에서 미래를 준비하는 데 도움을 받으셨으면 좋겠습니다.</p>
+<hr>
+<h2 id="2025년-ai의-핵심-변화-추론의-해">2025년 AI의 핵심 변화: '추론의 해'</h2>
+<p>2024년이 '통합의 해'였다면, 2025년은 단연 '추론의 해(Year of Reasoning)'로 평가됩니다.</p>
+<p>주요 연구소들은 강화학습과 검증 가능한 추론 방식을 결합해, 스스로 <strong>계획하고, 반성하며, 자기수정이 가능한 모델</strong>을 구현해냈습니다. 이 모델들은 장기적 목표를 단계적으로 수행하는 능력을 갖추며 AI의 작동 시간을 확장시키고 있습니다.</p>
+<h2 id="폭발적인-상업화와-생산성-급상승">폭발적인 상업화와 생산성 급상승</h2>
+<p>AI의 경제적 실체가 본격화되며 기업 매출이 폭발적으로 증가하고 있습니다.</p>
+<ul>
+<li><strong>매출:</strong> AI 기업의 연 매출은 200억 달러에 근접했습니다.</li>
+<li><strong>가성비:</strong> 가격 대비 성능은 6~8개월마다 두 배로 개선되고 있습니다.</li>
+<li><strong>도입률:</strong> 미국 기업의 44%가 AI 도구를 구매하며(작년 5% 대비 급상승), 평균 계약액은 53만 달러에 달합니다.</li>
+<li><strong>실무자 사용:</strong> 1,200명 이상의 AI 실무자 중 95%가 업무나 일상에서 AI를 사용하고, 76%는 개인 비용으로 구독 중입니다.</li>
+</ul>
+<p>AI는 더 이상 단순한 기술이 아닌, 경제의 핵심 생산 시스템으로 기능하며 에너지 시장, 자본 흐름, 정책 체계를 재편하고 있습니다.</p>
+<h2 id="산업-인프라와-지정학의-전면전">산업 인프라와 지정학의 전면전</h2>
+<p>AI 산업화 시대가 개막했습니다. Stargate와 같은 멀티 기가와트급 데이터센터가 등장하며, <strong>전력과 토지가 GPU만큼 중요</strong>한 자원이 되었습니다.</p>
+<ul>
+<li><strong>국가 경쟁:</strong> 미국, UAE, 중국이 전력·GPU·토지 확보를 위한 대규모 인프라 경쟁을 펼치고 있습니다.</li>
+<li><strong>중국의 약진:</strong> OpenAI가 근소하게 선두를 유지 중이나, 중국(DeepSeek, Qwen 등)이 GPT-5급 성능을 달성하며 메타를 제치고 '오픈 가중치(Open-weight)' 생태계의 주도권을 잡았습니다. 🏃‍♂️</li>
+<li><strong>유럽의 난항:</strong> 유럽은 AI 법(AI Act) 시행에 난항을 겪으며 뒤처지는 양상입니다.</li>
+</ul>
+<hr>
+<h2 id="state-of-ai-report-2025-번역-다운로드-">State of AI Report 2025 번역 다운로드 📄</h2>
+<p>이 외에도 전 세계 AI 전문가 1,200명이 실제 AI를 어떻게 쓰고 있는지에 대한 생생한 설문조사 결과 등, AI의 현재를 파악할 수 있는 풍부한 내용이 가득 담겨 있습니다.</p>
+<p>'State of AI Report 2025' 국문 번역본 전문은 아래 링크에서 바로 확인하실 수 있습니다. 꼼꼼히 읽어보시고, 2025년 AI 트렌드를 꽉 잡으시길 바랍니다!</p>
+<ul>
+<li><a href="https://drive.google.com/uc?export=download&amp;id=1PY2AzOVT9KzQPgUCUjeQh_Do09XbuxSe" target="_blank"><strong>State of AI Report 2025 번역본 다운로드</strong></a>
+</li>
+<li><a href="https://drive.google.com/uc?export=download&amp;id=1PcqG7jde1tDURTwB6G7g_h1xLOHPhwP8" target="_blank"><strong>State of AI Report 2025 번역본_발표자료 포함 다운로드</strong></a>
+</li>
+<li><a href="https://report.koraia.org/" target="_blank"><strong>협회 전문자료실 바로가기</strong></a>
+</li>
+<li><a href="https://www.stateof.ai/" target="_blank"><strong>[원문] stateof.ai 사이트 바로가기</strong></a>
+</li>
+</ul>
+
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/worldbank_25/" title="요즘 AI, 누가 어떻게 쓰고 있을까? feat. 세계은행 보고서">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Previous page</span>
+            <span class="max-w-48 truncate">요즘 AI, 누가 어떻게 쓰고 있을까? feat. 세계은행 보고서</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/deepseek_ocr/" title="딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Next page</span>
+            <span class="max-w-48 truncate">딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+    </article>
+  </div>
+
+  <div class="hidden lg:flex lg:flex-col lg:items-end">
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#2025년-ai의-핵심-변화-추론의-해">2025년 AI의 핵심 변화: '추론의 해'</a></li>
+    <li><a href="#폭발적인-상업화와-생산성-급상승">폭발적인 상업화와 생산성 급상승</a></li>
+    <li><a href="#산업-인프라와-지정학의-전면전">산업 인프라와 지정학의 전면전</a></li>
+    <li><a href="#state-of-ai-report-2025-번역-다운로드-">State of AI Report 2025 번역 다운로드 📄</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">1. 한국인공지능협회</div>
+
+        <div class="prose dark:prose-invert">
+          <h2 id="미션-mission">미션 (Mission)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능 시대, 문명의 기준을 세우는 것</strong><br>
+<em>AI age, Standardization of civilization</em></p>
+  </blockquote>
+
+<h2 id="비전-vision">비전 (Vision)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능의 민주화와 산업지능화 선도</strong><br>
+<em>Democratization of Artificial Intelligence and Leadership in Industrial Intelligence</em></p>
+  </blockquote>
+
+<h2 id="핵심전략-core-strategy">핵심전략 (Core Strategy)</h2>
+
+
+
+  <blockquote>
+    <p><strong>정보공유-인재양성-기업지원-시장창출로 선도적 인공지능 생태계 구축</strong><br>
+<em>Building a leading artificial intelligence ecosystem through information sharing, talent development, corporate support, and market creation</em></p>
+  </blockquote>
+
+<h2 id="행동-슬로건-slogan">행동 슬로건 (Slogan)</h2>
+
+
+
+  <blockquote>
+    <p><strong>시선은 미래를 향하고, 행동은 미래를 앞당긴다.</strong><br>
+<em>Our Eyes stares at the future &amp; Behavior moves-up the future</em></p>
+  </blockquote>
+
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">2. 설립배경</div>
+
+        <div class="prose dark:prose-invert">
+          <table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>법인명</strong></td>
+          <td style="text-align: left">사단법인 한국인공지능협회</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>법인형태</strong></td>
+          <td style="text-align: left">비영리법인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>창립총회</strong></td>
+          <td style="text-align: left">2017년 1월 임의단체 출범</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>사단법인 허가</strong></td>
+          <td style="text-align: left">2017년 6월 21일 (민법 제32조)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>주무부처</strong></td>
+          <td style="text-align: left">과학기술정보통신부</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>설립배경</strong></td>
+          <td style="text-align: left">인공지능 유관 정보, 인재, 기업, 시장 등의 교류와 연결을 통해서 인공지능 생태계를 선도</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="임원-및-회원사-현황">임원 및 회원사 현황</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>회장</strong></td>
+          <td style="text-align: left">김현철</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>임원</strong></td>
+          <td style="text-align: left">32인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>회원사</strong></td>
+          <td style="text-align: left">1,000여 인공지능 및 데이터 전문 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>협력사</strong></td>
+          <td style="text-align: left">인공지능 수요사 15,000여 곳</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격자</strong></td>
+          <td style="text-align: left">인공지능산업컨설턴트 등 20,000여명</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증사</strong></td>
+          <td style="text-align: left">217여 산업지능화 인증(AI+X Certificate) 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>전문가그룹</strong></td>
+          <td style="text-align: left">석박사, 공인자격자 중심의 산업계 인공지능 융합전문가</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="주요업무">주요업무</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>기업지원</strong></td>
+          <td style="text-align: left">회원사 커뮤니티 운영, 수요공급사매칭, 컨소시엄지원, 편람발간, 분과활동, 마케팅 및 수출지원 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인재육성</strong></td>
+          <td style="text-align: left">AI기초교육, AI직무전환 교육, 취업매칭, 일자리 창출사업 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증제도</strong></td>
+          <td style="text-align: left">AI기술 및 비즈니스 인증제 운영</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격제도</strong></td>
+          <td style="text-align: left">AI유관 8개 직무자격에 대한 시험운영 및 자격발급</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>정책지원</strong></td>
+          <td style="text-align: left">AI생태계 수요조사, 표준화 활동, 규제개선 등</td>
+      </tr>
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">3. 한국인공지능협회로의 초대</div>
+
+        <div class="prose dark:prose-invert">
+          
+
+
+  <blockquote>
+    <p>스스로 학습의 학습을 거듭하는 인공지능에 대한 이론적인 근거를 두고, 50년 전 수학자 어빙 존 굿은 **&quot;인공지능은 인류 최후의 발명품&quot;**이라는 말을 남겼습니다. 세월이 지나 현 시대를 맞이한 우리는 인공지능을 기술적 발명품을 넘어 문명 전반의 변화를 이끌어내는 일종의 시대정신으로 마주하고 있습니다. 인공지능에 대한 사회적 요구가 커지고 있는 지금이 되려 우리가 미진한 부분을 개혁하고 인간적인 가치를 추구하는 계기가 되지 않을까 싶습니다.</p>
+  </blockquote>
+
+<p>한국인공지능협회의 최초 설립정신은 인류사회가 겪는 문제를 인공지능이라는 주제로 해결해가는 <strong>주체자들(Changers)의 결성</strong>이었고, 그들의 연결을 국내외로 지속적으로 추진합니다. 협회는 회원을 지칭하는 브랜드인 <strong>체인저스(Changers)</strong> 라는 정체성을 기반으로 정책과 사업을 구성하여 대한민국 전 분야의 지능화에 기여하고 인공지능의 민주화를 선도합니다.</p>
+<p>한국인공지능협회는 그동안 <strong>1,000여 개의 인공지능 기업</strong>과 <strong>10만 명이 넘는 종사자</strong>를 대변하는 인공지능 생태계의 대표 단체로서의 역할을 성실히 수행해 왔습니다. 이제 우리는 한 걸음 더 나아가, 인공지능을 둘러싼 다양한 주제를 다룰 새로운 거버넌스를 신설하고, 그 거버넌스들 간의 유기적인 연계를 공고히 하여 설립정신을 더욱 발전시켜갑니다.</p>
+<p>이를 통해 한국인공지능협회는 단순한 산업 대표 단체를 넘어, <strong>&quot;인공지능 시대&quot;를 대표하는 단체</strong>로 우뚝서려 합니다.</p>
+<p>한국인공지능협회는 인공지능을 세상을 부양시키는 <strong>최상위 메타(Meta) 산업</strong>으로 규정하여 우리의 관점과 역할을 통합적으로 변모시켜 갑니다. 우리는 인공지능 기술이 산업에 닿는 범위, 디지털화 된 산업이 경제를 변화시키는 범위, 생산력이 확보된 경제가 문화를 자아내는 범위, 참여의 문화가 강한 개인을 만들어내는 모든 범위를 고민하여 <strong>문명의 기준을 만드는 최선두</strong>에 서겠습니다.</p>
+<p><em><strong>감사합니다.</strong></em></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">4. 부서별 직무소개</div>
+
+        <div class="prose dark:prose-invert">
+          <h3 id="비서실">비서실</h3>
+<ul>
+<li>회장 수행</li>
+<li>체인저스 관리</li>
+</ul>
+<h3 id="인공지능-정책원">인공지능 정책원</h3>
+<ul>
+<li>AI입법 및 정책 지원</li>
+<li>정책백서편찬 및 세미나</li>
+<li>국회·산·학·연·관 정책 네트워크</li>
+</ul>
+<h3 id="인공지능-이용자-진흥원">인공지능 이용자 진흥원</h3>
+<ul>
+<li>오픈소스 커뮤니티 활성화</li>
+<li>사회적 영향에 대한 모니터링</li>
+<li>민간자율AI윤리위원회 운영</li>
+</ul>
+<h3 id="인공지능-연수원">인공지능 연수원</h3>
+<ul>
+<li>최고위과정 운영</li>
+<li>AI리터러시 및 직무전환교육</li>
+<li>지역 아카데미 관리</li>
+<li>원우회 운영</li>
+</ul>
+<h3 id="ai직무자격센터">AI직무자격센터</h3>
+<ul>
+<li>자격제 운영</li>
+<li>공인교육기관지정</li>
+<li>인재매칭플랫폼 운영</li>
+</ul>
+<h3 id="ai시험인증센터">AI시험·인증센터</h3>
+<ul>
+<li>시험·인증제 운영</li>
+<li>인공지능 고영향 평가</li>
+<li>표준화 활동</li>
+</ul>
+<h3 id="데이터작업물-등록센터">데이터·작업물 등록센터</h3>
+<ul>
+<li>데이터·작업물 등록</li>
+<li>확인증 발부</li>
+</ul>
+<h3 id="경영지원팀">경영지원팀</h3>
+<ul>
+<li>인사/노무/복리후생</li>
+<li>재무/회계</li>
+<li>총무/임원수행</li>
+<li>홍보/언론관리</li>
+</ul>
+<h3 id="회원교류팀">회원교류팀</h3>
+<ul>
+<li>국제인공지능대전</li>
+<li>AI어워드&amp;기업인의 밤</li>
+<li>해외진출지원</li>
+<li>지회협력</li>
+</ul>
+<h3 id="회원사업팀">회원사업팀</h3>
+<ul>
+<li>AI시너지링크(수요·공급매칭)</li>
+<li>AI Startups(편람)</li>
+<li>정부사업 및 사업수행</li>
+</ul>
+<h3 id="임원단-분과">임원단 분과</h3>
+<ul>
+<li>해외펀드</li>
+<li>국제네트워크</li>
+<li>공공협력</li>
+<li>취약계층 교육확산</li>
+<li>여성 인공지능 전문가 양성</li>
+</ul>
+<h3 id="해외지회">해외지회</h3>
+<ul>
+<li>일본지회</li>
+</ul>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "en" }).toFormat("yyyy. MM. dd.")
+    })
+  }
+</script>
+
+
+
+
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

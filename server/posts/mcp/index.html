@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ko-kr"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해 | 한국인공지능협회 블로그</title>
+
+    
+  
+    <link href="/img/symbol.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://blog.koraia.org/posts/mcp/" />
+
+
+
+<meta name="author" content="koraia" />
+<meta name="description" content="AI가 당신의 데이터와 대화할 수 있다면 어떨까요? Model Context Protocol(MCP)이 바로 그 꿈을 현실로 만들고 있습니다.
+" />
+
+
+<meta name="keywords" content="AI에이전트,디지털전환,Anthropic">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="https://blog.koraia.org/posts/mcp/">
+  <meta property="og:site_name" content="한국인공지능협회 블로그">
+  <meta property="og:title" content="AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해">
+  <meta property="og:description" content="AI가 당신의 데이터와 대화할 수 있다면 어떨까요? Model Context Protocol(MCP)이 바로 그 꿈을 현실로 만들고 있습니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-24T09:44:10+09:00">
+    <meta property="article:modified_time" content="2025-03-24T09:44:10+09:00">
+    <meta property="article:tag" content="AI에이전트">
+    <meta property="article:tag" content="디지털전환">
+    <meta property="article:tag" content="Anthropic">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1601467450590-8c3d11cde2fd?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1601467450590-8c3d11cde2fd?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+  <meta name="twitter:title" content="AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해">
+  <meta name="twitter:description" content="AI가 당신의 데이터와 대화할 수 있다면 어떨까요? Model Context Protocol(MCP)이 바로 그 꿈을 현실로 만들고 있습니다.">
+
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.svg" alt="미래를 여는 AI," />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://blog.koraia.org/" class="text-lg font-semibold cursor-pointer">
+          미래를 여는 AI,
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">사단법인 한국인공지능협회</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+
+      
+
+      
+      
+      
+      
+
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="About">About</div>
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해">
+  <meta itemprop="description" content="AI가 당신의 데이터와 대화할 수 있다면 어떨까요? Model Context Protocol(MCP)이 바로 그 꿈을 현실로 만들고 있습니다.">
+  <meta itemprop="datePublished" content="2025-03-24T09:44:10+09:00">
+  <meta itemprop="dateModified" content="2025-03-24T09:44:10+09:00">
+  <meta itemprop="wordCount" content="1881">
+  <meta itemprop="image" content="https://images.unsplash.com/photo-1601467450590-8c3d11cde2fd?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+  <meta itemprop="keywords" content="AI에이전트,디지털전환,Anthropic">
+
+      <header>
+        <h1 itemprop="headline">AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2025-03-24T09:44:10&#43;09:00</span>
+          
+
+          | <span>9 minute read</span>
+
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="https://cdn-icons-png.flaticon.com/512/16683/16683419.png" alt="" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">koraia</span>
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=AI%ec%9d%98%20%ed%86%b5%ed%95%a9%20%ed%91%9c%ec%a4%80%ec%9d%84%20%ec%97%b4%eb%8b%a4%20MCP%28Model%20Context%20Protocol%29%ec%9d%98%20%ec%9d%b4%ed%95%b4&amp;url=https://blog.koraia.org/posts/mcp/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://blog.koraia.org/posts/mcp/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="https://images.unsplash.com/photo-1601467450590-8c3d11cde2fd?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해" />
+        
+
+        <p>AI가 당신의 데이터와 대화할 수 있다면 어떨까요? Model Context Protocol(MCP)이 바로 그 꿈을 현실로 만들고 있습니다.</p>
+<h2 id="-ai-세상의-새로운-소통-표준-mcp가-등장하다">🌟 AI 세상의 새로운 소통 표준, MCP가 등장하다</h2>
+<p>스마트폰 충전기의 변화를 기억하시나요? 예전에는 휴대폰 브랜드마다 충전 케이블이 제각각이었지만, 지금은 대부분 USB-C 타입으로 통일되고 있습니다. 이런 표준화 덕분에 어느 충전기든 빌려쓸 수 있고, 새 기기를 구매해도 기존 케이블을 그대로 사용할 수 있게 되었죠. 이런 표준화가 가져온 편리함을 AI 세계에서도 누릴 수 있다면 어떨까요?</p>
+<p>Anthropic에서 개발한 'MCP(Model Context Protocol)'는 바로 이런 필요성에 응답하여 등장했습니다. MCP는 AI 모델, 특히 대규모 언어 모델(LLM)이 외부 시스템과 데이터를 주고받는 방식을 표준화하는 오픈 프로토콜입니다. Anthropic은 이를 &quot;AI 애플리케이션을 위한 USB-C 포트와 같다&quot;고 비유했는데, 이는 매우 적절한 표현입니다. 마치 USB 포트가 다양한 기기를 컴퓨터에 연결하듯, MCP는 AI 모델이 다양한 도구와 데이터베이스에 일관된 방식으로 연결할 수 있게 해주는 범용 커넥터인 셈이죠.</p>
+<h2 id="-mcp-왜-지금-필요한가요">🔍 MCP, 왜 지금 필요한가요?</h2>
+<p>현재 AI 개발 현장을 들여다보면, 많은 개발자들이 각자 다른 환경과 데이터 소스를 연결하기 위해 '일회성 통합'을 만드느라 진땀을 흘리고 있습니다. 이는 마치 가전제품마다 다른 형태의 전원 플러그를 사용해야 하는 것처럼 비효율적이고 번거로운 상황입니다.</p>
+<h3 id="실제-상황으로-이해하기">실제 상황으로 이해하기</h3>
+<p>가령 한 회사가 고객 서비스 챗봇을 개발한다고 상상해 봅시다. 이 챗봇은 다음과 같은 다양한 정보에 접근해야 합니다:</p>
+<ul>
+<li>구글 드라이브에 저장된 제품 매뉴얼</li>
+<li>Slack에 올라온 고객 피드백</li>
+<li>회사 내부 CRM 시스템의 고객 데이터</li>
+<li>GitHub의 기술 문서와 이슈 트래커</li>
+</ul>
+<p>기존 방식에서는 개발팀이 각 플랫폼마다 개별적인 연결 방식(API 연동)을 개발해야 했습니다. 그리고 새로운 데이터 소스가 추가될 때마다 또 다른 연결 방식을 만들어야 했죠. 이는 마치 새 가전제품을 살 때마다 새로운 형태의 콘센트를 벽에 설치해야 하는 것과 같은 비효율성을 초래합니다.</p>
+<p>MCP는 이런 문제를 해결하기 위해 &quot;모든 연결을 위한 하나의 표준&quot;을 제공합니다. 이를 통해 AI 모델은 Google Drive 문서, Slack 메시지, 공식 API 문서, 내부 데이터베이스 등 다양한 외부 데이터 소스에 일관된 방식으로 접근할 수 있게 됩니다. 마치 모든 가전제품이 표준화된 콘센트에 꽂히는 것처럼 말이죠.</p>
+<h2 id="-mcp는-어떻게-작동하나요">💻 MCP는 어떻게 작동하나요?</h2>
+<p>MCP의 작동 방식을 더 깊이 이해하기 위해 실제 비즈니스 상황을 상상해 볼까요? 한 마케팅 회사에서 AI 어시스턴트를 사용해 다양한 데이터 소스에서 마케팅 인사이트를 도출하고 싶다고 가정해 봅시다.</p>
+<pre class="mermaid">sequenceDiagram
+    participant 마케팅담당자
+    participant AI모델
+    participant MCP호스트
+    participant MCP클라이언트
+    participant MCP서버
+    participant 외부데이터(다양한 소스)
+    
+    마케팅담당자->>AI모델: "최근 소셜미디어 캠페인의 성과를 분석하고<br/>고객 피드백과 함께 인사이트를 제공해줘"
+    AI모델->>MCP호스트: 외부 데이터 필요성 인식
+    MCP호스트->>MCP클라이언트: 서버 연결 요청
+    MCP클라이언트->>MCP서버: 기능 탐색 요청
+    MCP서버->>MCP클라이언트: 사용 가능한 도구/리소스 목록 제공
+    Note over MCP클라이언트,MCP서버: Google Analytics, Slack, CRM, SNS API 등
+    MCP클라이언트->>AI모델: 사용 가능한 도구/리소스 정보 전달
+    AI모델->>MCP클라이언트: 소셜미디어 데이터 및 고객 피드백 요청
+    MCP클라이언트->>MCP서버: 다중 데이터 소스 접근 요청
+    MCP서버->>외부데이터(다양한 소스): 데이터 요청
+    외부데이터(다양한 소스)->>MCP서버: 통합 데이터 제공
+    MCP서버->>MCP클라이언트: 통합 데이터 전달
+    MCP클라이언트->>AI모델: 컨텍스트가 풍부한 데이터 제공
+    AI모델->>마케팅담당자: 심층 분석 및 인사이트 제공</pre>
+
+<p>이 다이어그램에서 볼 수 있듯이, MCP는 다음과 같은 단계로 작동합니다:</p>
+<h3 id="1-기능-탐색-discovery">1. 기능 탐색 (Discovery)</h3>
+<p>사용자가 &quot;최근 소셜미디어 캠페인의 성과를 분석하고 고객 피드백과 함께 인사이트를 제공해줘&quot;라는 질문을 던지면, AI 모델은 이 질문을 처리하기 위해 외부 데이터가 필요하다고 판단합니다. 이때 MCP 클라이언트는 서버에 &quot;당신이 제공할 수 있는 기능이 무엇인가요?&quot;라고 물어봅니다. 서버는 &quot;Google Analytics 데이터 접근, Slack 대화 검색, CRM 고객 데이터 조회, SNS API 연결&quot; 등의 기능 목록을 제공합니다.</p>
+<p>이는 마치 여러분이 처음 방문한 식당에서 메뉴판을 받아보는 것과 같습니다. 메뉴판을 보고 나서야 어떤 음식을 주문할 수 있는지 알게 되죠.</p>
+<h3 id="2-증강된-프롬프팅-enhanced-prompting">2. 증강된 프롬프팅 (Enhanced Prompting)</h3>
+<p>이제 AI 모델은 사용자의 질문과 서버에서 제공받은 기능 목록을 함께 고려합니다. 이 과정에서 AI는 &quot;이 질문에 답하기 위해서는 Google Analytics의 캠페인 데이터와 Slack의 고객 피드백이 필요하겠구나&quot;라고 판단할 수 있습니다.</p>
+<p>이는 여러분이 메뉴판을 보고 &quot;오늘 점심으로는 샐러드와 스테이크가 좋겠다&quot;고 결정하는 것과 유사합니다.</p>
+<h3 id="3-도구리소스-선택-tool-selection">3. 도구/리소스 선택 (Tool Selection)</h3>
+<p>AI 모델은 필요한 도구들을 선택하고 MCP 클라이언트에게 &quot;Google Analytics에서 최근 30일간의 소셜미디어 캠페인 데이터와 Slack에서 관련 고객 피드백을 가져와주세요&quot;라고 요청합니다.</p>
+<p>이는 식당에서 웨이터에게 주문을 하는 것과 같습니다. &quot;샐러드와 미디움 레어로 구운 스테이크 주세요&quot;라고 말하는 것처럼요.</p>
+<h3 id="4-서버-실행-server-execution">4. 서버 실행 (Server Execution)</h3>
+<p>MCP 클라이언트는 AI 모델의 요청을 받아 MCP 서버에 전달합니다. 서버는 여러 외부 데이터 소스에 접근하여 필요한 데이터를 수집합니다. Google Analytics에서는 캠페인 성과 지표를, Slack에서는 고객 피드백 메시지를 가져옵니다.</p>
+<p>이는 웨이터가 주방에 가서 요리사에게 주문을 전달하고, 요리사가 필요한 재료를 모아 요리를 준비하는 과정과 비슷합니다.</p>
+<h3 id="5-응답-생성-response-generation">5. 응답 생성 (Response Generation)</h3>
+<p>수집된 데이터는 MCP 서버에서 MCP 클라이언트를 통해 AI 모델에게 전달됩니다. AI 모델은 이 풍부한 컨텍스트를 바탕으로 캠페인 성과와 고객 피드백을 연결하여 심층적인 인사이트를 생성합니다.</p>
+<p>&quot;Instagram 캠페인은 18-24세 사용자 층에서 높은 참여율을 보였으며, 이 연령대의 고객들은 특히 제품의 지속가능성에 대해 긍정적인 피드백을 남겼습니다. 반면, Facebook 캠페인은 35-44세 사용자 층에서 전환율이 높았지만, 가격 정책에 대한 우려가 여러 차례 언급되었습니다.&quot;</p>
+<p>이는 웨이터가 완성된 요리를 여러분의 테이블에 가져다주는 것과 같습니다.</p>
+<h2 id="-전통적인-api와-mcp의-차이점">📊 전통적인 API와 MCP의 차이점</h2>
+<p>MCP의 혁신성을 더 잘 이해하기 위해 기존의 API 통합 방식과 비교해 볼까요?</p>
+<pre class="mermaid">mindmap
+  root((API vs MCP))
+    전통적인 API
+      모놀리식 구조
+        하나의 큰 시스템이 모든 기능 처리
+      정적인 통합
+        미리 코딩된 특정 기능만 가능
+      요청-응답 방식
+        단방향 통신 위주
+      확장 난이도 높음
+        새로운 기능 추가 시 전체 시스템 영향
+      컨텍스트 제한적
+        상황 이해 능력 부족
+      오류 전파 위험
+        한 부분 오류가 전체에 영향
+    MCP
+      마이크로서비스 아키텍처
+        작고 독립적인 서비스들의 협력
+      동적 도구 발견
+        런타임에 사용 가능한 기능 탐색
+      양방향 실시간 통신
+        풍부한 상호작용 가능
+      유연한 확장
+        개별 서비스 독립적 수정 가능
+      내장된 컨텍스트 처리
+        AI의 상황 이해 강화
+      오류 격리
+        한 서비스 오류가 다른 서비스에 영향 없음</pre>
+
+<h3 id="구체적인-예시로-차이점-이해하기">구체적인 예시로 차이점 이해하기</h3>
+<p>실제 사용 사례를 통해 이 차이점을 살펴봅시다. 한 기업이 고객 서비스 챗봇을 개발하고 있다고 가정해 보겠습니다:</p>
+<p><strong>전통적인 API 방식</strong>:</p>
+<ol>
+<li>개발자는 각 시스템(CRM, 지식 베이스, 주문 시스템 등)에 대한 별도의 API 통합을 구축해야 합니다.</li>
+<li>각 API는 고유한 인증 방식, 데이터 형식, 오류 처리 방식을 가지고 있어 복잡성이 증가합니다.</li>
+<li>새로운 시스템이 추가될 때마다 새로운 통합 작업이 필요합니다.</li>
+<li>챗봇은 미리 프로그래밍된 작업만 수행할 수 있으며, 예상치 못한 질문이나 작업에 유연하게 대응하기 어렵습니다.</li>
+</ol>
+<p><strong>MCP 방식</strong>:</p>
+<ol>
+<li>개발자는 각 시스템에 대한 MCP 서버를 구축하거나 기존 서버를 사용합니다.</li>
+<li>챗봇의 AI 모델은 MCP를 통해 사용 가능한 모든 도구와 리소스를 동적으로 발견합니다.</li>
+<li>사용자 질문에 따라 AI 모델은 적절한 도구를 선택하여 정보를 검색하고 작업을 수행합니다.</li>
+<li>새로운 시스템이 추가되면 해당 MCP 서버를 연결하기만 하면 됩니다.</li>
+<li>챗봇은 기존에 경험하지 못한 질문이나 작업에도 더 유연하게 대응할 수 있습니다.</li>
+</ol>
+<p>이러한 접근 방식의 차이는 마치 고정된 메뉴만 제공하는 패스트푸드점과, 재료와 조리법을 동적으로 조합하여 고객 취향에 맞는 요리를 제공하는 맞춤형 레스토랑의 차이와 같습니다.</p>
+<h2 id="-mcp가-가져올-업계-변화">🚀 MCP가 가져올 업계 변화</h2>
+<p>MCP가 널리 채택된다면, AI 개발 환경과 사용자 경험은 어떻게 변화할까요? 몇 가지 중요한 변화를 구체적인 사례와 함께 살펴보겠습니다:</p>
+<h3 id="1-개발-속도와-효율성의-혁명적-향상">1. 개발 속도와 효율성의 혁명적 향상</h3>
+<p><strong>현재 상황</strong>: 한 금융 기술 스타트업이 AI 기반 재무 관리 앱을 개발하고 있습니다. 이 앱은 사용자의 은행 계좌, 투자 포트폴리오, 세금 정보, 지출 패턴 등 다양한 데이터 소스에 접근해야 합니다. 개발팀은 각 금융 기관과 서비스마다 별도의 API 통합을 개발해야 하며, 이 작업에만 6개월이 소요될 것으로 예상됩니다.</p>
+<p><strong>MCP 적용 후</strong>: 주요 금융 기관과 서비스가 MCP 서버를 제공하기 시작하면, 개발팀은 표준화된 방식으로 이들을 연결할 수 있습니다. 기존 MCP 컴포넌트를 재사용하고 플러그 앤 플레이 방식으로 통합함으로써 개발 기간을 6개월에서 6주로 단축할 수 있습니다. 또한, 새로운 금융 서비스가 출시될 때마다 해당 MCP 서버를 추가하기만 하면 됩니다.</p>
+<h3 id="2-컨텍스트-인식이-강화된-ai-경험">2. 컨텍스트 인식이 강화된 AI 경험</h3>
+<p><strong>현재 상황</strong>: 대기업의 직원들이 내부 지식 베이스를 검색하기 위해 AI 비서를 사용하고 있습니다. 하지만 AI는 2023년에 훈련된 데이터만 알고 있어, 회사의 최신 제품 출시, 조직 변경, 정책 업데이트 등에 대해 알지 못합니다. 직원들은 종종 오래된 정보를 받고 혼란을 겪습니다.</p>
+<p><strong>MCP 적용 후</strong>: AI 비서는 MCP를 통해 회사의 SharePoint, Confluence, Slack, 이메일 아카이브, HR 시스템 등에 실시간으로 접근할 수 있습니다. 직원이 &quot;새로운 육아휴직 정책이 어떻게 되나요?&quot;라고 물으면, AI는 최신 HR 문서를 검색하고 최근 업데이트된 정책 정보를 정확하게 제공할 수 있습니다. 사내 지식이 업데이트될 때마다 AI의 응답도 자동으로 최신 상태를 유지합니다.</p>
+<h3 id="3-보안과-확장성의-균형">3. 보안과 확장성의 균형</h3>
+<p><strong>현재 상황</strong>: 의료 서비스 제공업체가 환자 데이터에 접근하는 AI 진단 보조 도구를 개발하고 있습니다. 개발팀은 데이터 보안과 개인정보 보호를 위해 엄격한 접근 통제를 구현해야 하지만, 동시에 다양한 의료 시스템과 통합해야 하는 과제에 직면해 있습니다. 이로 인해 개발이 지연되고 비용이 증가합니다.</p>
+<p><strong>MCP 적용 후</strong>: MCP의 내장된 보안 메커니즘은 연결 격리와 세분화된 권한 관리를 제공합니다. 의료 서비스 제공업체는 MCP를 통해 환자 데이터에 대한 접근을 안전하게 제어하면서도, 다양한 의료 시스템과 쉽게 통합할 수 있습니다. 새로운 의료 기기나 진단 도구가 추가될 때마다 해당 MCP 서버를 연결하기만 하면 됩니다. 이는 보안을 유지하면서도 시스템을 유연하게 확장할 수 있게 해줍니다.</p>
+<h2 id="-mcp의-실제-활용-사례">🌐 MCP의 실제 활용 사례</h2>
+<p>MCP는 이미 다양한 산업과 사용 사례에서 적용되고 있습니다. 구체적인 예시를 통해 그 잠재력을 살펴보겠습니다:</p>
+<h3 id="1-소프트웨어-개발-워크플로우-혁신">1. 소프트웨어 개발 워크플로우 혁신</h3>
+<p><strong>시나리오</strong>: 한 소프트웨어 회사의 개발팀은 코드 리뷰와 품질 관리에 많은 시간을 소비하고 있습니다. 특히 대규모 Pull Request(PR)를 검토하는 일은 시간이 많이 걸리고 중요한 이슈를 놓치기 쉽습니다.</p>
+<p><strong>MCP 활용</strong>: 이 회사는 다음과 같은 MCP 기반 워크플로우를 구축했습니다:</p>
+<ul>
+<li>GitHub MCP 서버를 통해 PR 세부 정보와 변경된 파일을 가져옵니다.</li>
+<li>Claude Desktop 애플리케이션이 MCP를 통해 코드 변경 사항을 분석합니다.</li>
+<li>AI는 코드 품질, 잠재적 버그, 보안 취약점 등을 식별하고 PR 리뷰 요약과 제안을 생성합니다.</li>
+<li>Notion MCP 서버를 통해 리뷰 내용을 팀의 문서 저장소에 자동으로 저장합니다.</li>
+</ul>
+<p><strong>결과</strong>: 이 워크플로우는 코드 리뷰 시간을 60% 단축하고, 중요한 이슈 감지율을 40% 향상시켰습니다. 개발자들은 반복적인 리뷰 작업에서 벗어나 창의적인 문제 해결에 더 집중할 수 있게 되었습니다.</p>
+<h3 id="2-의료-연구-가속화">2. 의료 연구 가속화</h3>
+<p><strong>시나리오</strong>: 한 의학 연구 기관은 방대한 의학 문헌, 임상 시험 데이터, 유전체 데이터베이스를 분석하여 새로운 치료법을 발견하려고 합니다. 이 데이터는 서로 다른 시스템에 분산되어 있어 통합적인 분석이 어렵습니다.</p>
+<p><strong>MCP 활용</strong>: 연구 기관은 다음과 같은 MCP 솔루션을 구축했습니다:</p>
+<ul>
+<li>PubMed MCP 서버를 통해 최신 의학 문헌에 접근합니다.</li>
+<li>임상 시험 데이터베이스 MCP 서버를 통해 진행 중인 연구 데이터를 조회합니다.</li>
+<li>유전체 데이터베이스 MCP 서버를 통해 유전자 변이와 질병 연관성 데이터를 분석합니다.</li>
+<li>AI는 이 모든 소스에서 얻은 정보를 통합하여 새로운 치료 가능성을 제안합니다.</li>
+</ul>
+<p><strong>결과</strong>: 연구자들은 이전에는 몇 개월이 걸렸을 통합 분석을 며칠 만에 수행할 수 있게 되었습니다. 이로 인해 희귀 질환에 대한 새로운 치료법 후보를 몇 가지 발견했으며, 연구 속도가 크게 향상되었습니다.</p>
+<h3 id="3-개인화된-교육-경험">3. 개인화된 교육 경험</h3>
+<p><strong>시나리오</strong>: 온라인 교육 플랫폼은 학생들에게 맞춤형 학습 경험을 제공하고자 합니다. 각 학생의 학습 스타일, 진도, 강점과 약점에 따라 콘텐츠를 조정해야 합니다.</p>
+<p><strong>MCP 활용</strong>: 교육 플랫폼은 다음과 같은 MCP 생태계를 구축했습니다:</p>
+<ul>
+<li>학습 관리 시스템(LMS) MCP 서버를 통해 학생의 진도와 성과 데이터에 접근합니다.</li>
+<li>콘텐츠 저장소 MCP 서버를 통해 다양한 형식(비디오, 텍스트, 퀴즈 등)의 교육 자료에 접근합니다.</li>
+<li>평가 엔진 MCP 서버를 통해 학생의 이해도를 실시간으로 평가합니다.</li>
+<li>AI 튜터는 이러한 데이터 소스를 활용하여 각 학생에게 최적화된 학습 경로를 생성합니다.</li>
+</ul>
+<p><strong>결과</strong>: 학생들은 자신의 학습 속도와 스타일에 맞춘 개인화된 교육 경험을 받게 되었습니다. 학습 성과가 평균 25% 향상되었고, 플랫폼 만족도도 크게 증가했습니다.</p>
+<h2 id="-mcp의-미래와-발전-방향">🔮 MCP의 미래와 발전 방향</h2>
+<p>MCP는 아직 초기 단계이지만, 그 잠재력은 매우 큽니다. 앞으로 어떤 방향으로 발전할지 살펴보겠습니다:</p>
+<h3 id="1-산업별-특화-mcp-생태계">1. 산업별 특화 MCP 생태계</h3>
+<p>다양한 산업(의료, 금융, 법률, 교육 등)에 특화된 MCP 서버와 도구가 등장할 것입니다. 예를 들어, 의료 분야에서는 전자 건강 기록(EHR), 의료 영상, 약물 데이터베이스 등에 특화된 MCP 서버가 개발될 수 있습니다. 이는 각 산업의 특수한 요구사항과 규제를 충족하면서도 AI 통합을 간소화할 것입니다.</p>
+<h3 id="2-mcp-마켓플레이스와-에코시스템">2. MCP 마켓플레이스와 에코시스템</h3>
+<p>개발자들이 자신의 MCP 서버와 도구를 공유하고 판매할 수 있는 마켓플레이스가 등장할 것입니다. 이는 WordPress 플러그인 마켓플레이스나 모바일 앱 스토어와 유사한 생태계를 형성할 것입니다. 개발자들은 자신의 특화된 MCP 솔루션을 개발하여 수익을 창출하고, 사용자들은 필요에 맞는 도구를 쉽게 찾아 설치할 수 있을 것입니다.</p>
+<h3 id="3-분산형-ai-네트워크">3. 분산형 AI 네트워크</h3>
+<p>장기적으로 MCP는 분산형 AI 네트워크의 기반이 될 수 있습니다. 다양한 AI 모델, 데이터 소스, 도구가 MCP를 통해 상호 연결되어 협력적으로 문제를 해결하는 네트워크가 형성될 수 있습니다. 이는 인터넷이 컴퓨터들을 연결했듯이, AI 시스템들을 연결하는 &quot;AI 인터넷&quot;의 시작이 될 수 있습니다.</p>
+<h3 id="4-국제-표준화">4. 국제 표준화</h3>
+<p>MCP가 성숙함에 따라 국제 표준화 기구(ISO, IEEE 등)에서 공식 표준으로 채택될 가능성이 있습니다. 이는 다양한 벤더와 플랫폼 간의 상호운용성을 보장하고, MCP의 광범위한 채택을 촉진할 것입니다.</p>
+<h2 id="-마치며-mcp-ai의-새로운-인프라">💭 마치며: MCP, AI의 새로운 인프라</h2>
+<p>인터넷이 HTTP를 통해 표준화되어 전 세계를 연결했듯이, AI 세계도 MCP와 같은 표준화된 프로토콜을 통해 더욱 연결되고 통합될 것입니다. 이는 개발자들에게는 더 효율적인 개발 환경을, 사용자들에게는 더 정확하고 맥락을 이해하는 AI 경험을 제공할 것입니다.</p>
+<p>마치 USB 포트가 컴퓨터와 주변기기를 쉽게 연결해주듯이, MCP는 AI와 데이터 세계를 연결하는 범용 포트가 될 것입니다. 이러한 표준화된 연결은 AI 기술의 발전과 확산을 더욱 가속화할 것이며, 우리 모두가 AI의 혜택을 더 쉽게 누릴 수 있는 미래를 열어갈 것입니다.</p>
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/4o_image_generation/" title="AI 이미지 생성, &#39;표현의 한계&#39; 시대를 끝내다">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Previous page</span>
+            <span class="max-w-48 truncate">AI 이미지 생성, &#39;표현의 한계&#39; 시대를 끝내다</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/gtc/" title="GTC2025 - 토큰 AI 혁명">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Next page</span>
+            <span class="max-w-48 truncate">GTC2025 - 토큰 AI 혁명</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+    </article>
+  </div>
+
+  <div class="hidden lg:flex lg:flex-col lg:items-end">
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-ai-세상의-새로운-소통-표준-mcp가-등장하다">🌟 AI 세상의 새로운 소통 표준, MCP가 등장하다</a></li>
+    <li><a href="#-mcp-왜-지금-필요한가요">🔍 MCP, 왜 지금 필요한가요?</a>
+      <ul>
+        <li><a href="#실제-상황으로-이해하기">실제 상황으로 이해하기</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mcp는-어떻게-작동하나요">💻 MCP는 어떻게 작동하나요?</a>
+      <ul>
+        <li><a href="#1-기능-탐색-discovery">1. 기능 탐색 (Discovery)</a></li>
+        <li><a href="#2-증강된-프롬프팅-enhanced-prompting">2. 증강된 프롬프팅 (Enhanced Prompting)</a></li>
+        <li><a href="#3-도구리소스-선택-tool-selection">3. 도구/리소스 선택 (Tool Selection)</a></li>
+        <li><a href="#4-서버-실행-server-execution">4. 서버 실행 (Server Execution)</a></li>
+        <li><a href="#5-응답-생성-response-generation">5. 응답 생성 (Response Generation)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-전통적인-api와-mcp의-차이점">📊 전통적인 API와 MCP의 차이점</a>
+      <ul>
+        <li><a href="#구체적인-예시로-차이점-이해하기">구체적인 예시로 차이점 이해하기</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mcp가-가져올-업계-변화">🚀 MCP가 가져올 업계 변화</a>
+      <ul>
+        <li><a href="#1-개발-속도와-효율성의-혁명적-향상">1. 개발 속도와 효율성의 혁명적 향상</a></li>
+        <li><a href="#2-컨텍스트-인식이-강화된-ai-경험">2. 컨텍스트 인식이 강화된 AI 경험</a></li>
+        <li><a href="#3-보안과-확장성의-균형">3. 보안과 확장성의 균형</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mcp의-실제-활용-사례">🌐 MCP의 실제 활용 사례</a>
+      <ul>
+        <li><a href="#1-소프트웨어-개발-워크플로우-혁신">1. 소프트웨어 개발 워크플로우 혁신</a></li>
+        <li><a href="#2-의료-연구-가속화">2. 의료 연구 가속화</a></li>
+        <li><a href="#3-개인화된-교육-경험">3. 개인화된 교육 경험</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mcp의-미래와-발전-방향">🔮 MCP의 미래와 발전 방향</a>
+      <ul>
+        <li><a href="#1-산업별-특화-mcp-생태계">1. 산업별 특화 MCP 생태계</a></li>
+        <li><a href="#2-mcp-마켓플레이스와-에코시스템">2. MCP 마켓플레이스와 에코시스템</a></li>
+        <li><a href="#3-분산형-ai-네트워크">3. 분산형 AI 네트워크</a></li>
+        <li><a href="#4-국제-표준화">4. 국제 표준화</a></li>
+      </ul>
+    </li>
+    <li><a href="#-마치며-mcp-ai의-새로운-인프라">💭 마치며: MCP, AI의 새로운 인프라</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">1. 한국인공지능협회</div>
+
+        <div class="prose dark:prose-invert">
+          <h2 id="미션-mission">미션 (Mission)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능 시대, 문명의 기준을 세우는 것</strong><br>
+<em>AI age, Standardization of civilization</em></p>
+  </blockquote>
+
+<h2 id="비전-vision">비전 (Vision)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능의 민주화와 산업지능화 선도</strong><br>
+<em>Democratization of Artificial Intelligence and Leadership in Industrial Intelligence</em></p>
+  </blockquote>
+
+<h2 id="핵심전략-core-strategy">핵심전략 (Core Strategy)</h2>
+
+
+
+  <blockquote>
+    <p><strong>정보공유-인재양성-기업지원-시장창출로 선도적 인공지능 생태계 구축</strong><br>
+<em>Building a leading artificial intelligence ecosystem through information sharing, talent development, corporate support, and market creation</em></p>
+  </blockquote>
+
+<h2 id="행동-슬로건-slogan">행동 슬로건 (Slogan)</h2>
+
+
+
+  <blockquote>
+    <p><strong>시선은 미래를 향하고, 행동은 미래를 앞당긴다.</strong><br>
+<em>Our Eyes stares at the future &amp; Behavior moves-up the future</em></p>
+  </blockquote>
+
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">2. 설립배경</div>
+
+        <div class="prose dark:prose-invert">
+          <table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>법인명</strong></td>
+          <td style="text-align: left">사단법인 한국인공지능협회</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>법인형태</strong></td>
+          <td style="text-align: left">비영리법인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>창립총회</strong></td>
+          <td style="text-align: left">2017년 1월 임의단체 출범</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>사단법인 허가</strong></td>
+          <td style="text-align: left">2017년 6월 21일 (민법 제32조)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>주무부처</strong></td>
+          <td style="text-align: left">과학기술정보통신부</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>설립배경</strong></td>
+          <td style="text-align: left">인공지능 유관 정보, 인재, 기업, 시장 등의 교류와 연결을 통해서 인공지능 생태계를 선도</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="임원-및-회원사-현황">임원 및 회원사 현황</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>회장</strong></td>
+          <td style="text-align: left">김현철</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>임원</strong></td>
+          <td style="text-align: left">32인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>회원사</strong></td>
+          <td style="text-align: left">1,000여 인공지능 및 데이터 전문 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>협력사</strong></td>
+          <td style="text-align: left">인공지능 수요사 15,000여 곳</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격자</strong></td>
+          <td style="text-align: left">인공지능산업컨설턴트 등 20,000여명</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증사</strong></td>
+          <td style="text-align: left">217여 산업지능화 인증(AI+X Certificate) 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>전문가그룹</strong></td>
+          <td style="text-align: left">석박사, 공인자격자 중심의 산업계 인공지능 융합전문가</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="주요업무">주요업무</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>기업지원</strong></td>
+          <td style="text-align: left">회원사 커뮤니티 운영, 수요공급사매칭, 컨소시엄지원, 편람발간, 분과활동, 마케팅 및 수출지원 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인재육성</strong></td>
+          <td style="text-align: left">AI기초교육, AI직무전환 교육, 취업매칭, 일자리 창출사업 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증제도</strong></td>
+          <td style="text-align: left">AI기술 및 비즈니스 인증제 운영</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격제도</strong></td>
+          <td style="text-align: left">AI유관 8개 직무자격에 대한 시험운영 및 자격발급</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>정책지원</strong></td>
+          <td style="text-align: left">AI생태계 수요조사, 표준화 활동, 규제개선 등</td>
+      </tr>
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">3. 한국인공지능협회로의 초대</div>
+
+        <div class="prose dark:prose-invert">
+          
+
+
+  <blockquote>
+    <p>스스로 학습의 학습을 거듭하는 인공지능에 대한 이론적인 근거를 두고, 50년 전 수학자 어빙 존 굿은 **&quot;인공지능은 인류 최후의 발명품&quot;**이라는 말을 남겼습니다. 세월이 지나 현 시대를 맞이한 우리는 인공지능을 기술적 발명품을 넘어 문명 전반의 변화를 이끌어내는 일종의 시대정신으로 마주하고 있습니다. 인공지능에 대한 사회적 요구가 커지고 있는 지금이 되려 우리가 미진한 부분을 개혁하고 인간적인 가치를 추구하는 계기가 되지 않을까 싶습니다.</p>
+  </blockquote>
+
+<p>한국인공지능협회의 최초 설립정신은 인류사회가 겪는 문제를 인공지능이라는 주제로 해결해가는 <strong>주체자들(Changers)의 결성</strong>이었고, 그들의 연결을 국내외로 지속적으로 추진합니다. 협회는 회원을 지칭하는 브랜드인 <strong>체인저스(Changers)</strong> 라는 정체성을 기반으로 정책과 사업을 구성하여 대한민국 전 분야의 지능화에 기여하고 인공지능의 민주화를 선도합니다.</p>
+<p>한국인공지능협회는 그동안 <strong>1,000여 개의 인공지능 기업</strong>과 <strong>10만 명이 넘는 종사자</strong>를 대변하는 인공지능 생태계의 대표 단체로서의 역할을 성실히 수행해 왔습니다. 이제 우리는 한 걸음 더 나아가, 인공지능을 둘러싼 다양한 주제를 다룰 새로운 거버넌스를 신설하고, 그 거버넌스들 간의 유기적인 연계를 공고히 하여 설립정신을 더욱 발전시켜갑니다.</p>
+<p>이를 통해 한국인공지능협회는 단순한 산업 대표 단체를 넘어, <strong>&quot;인공지능 시대&quot;를 대표하는 단체</strong>로 우뚝서려 합니다.</p>
+<p>한국인공지능협회는 인공지능을 세상을 부양시키는 <strong>최상위 메타(Meta) 산업</strong>으로 규정하여 우리의 관점과 역할을 통합적으로 변모시켜 갑니다. 우리는 인공지능 기술이 산업에 닿는 범위, 디지털화 된 산업이 경제를 변화시키는 범위, 생산력이 확보된 경제가 문화를 자아내는 범위, 참여의 문화가 강한 개인을 만들어내는 모든 범위를 고민하여 <strong>문명의 기준을 만드는 최선두</strong>에 서겠습니다.</p>
+<p><em><strong>감사합니다.</strong></em></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">4. 부서별 직무소개</div>
+
+        <div class="prose dark:prose-invert">
+          <h3 id="비서실">비서실</h3>
+<ul>
+<li>회장 수행</li>
+<li>체인저스 관리</li>
+</ul>
+<h3 id="인공지능-정책원">인공지능 정책원</h3>
+<ul>
+<li>AI입법 및 정책 지원</li>
+<li>정책백서편찬 및 세미나</li>
+<li>국회·산·학·연·관 정책 네트워크</li>
+</ul>
+<h3 id="인공지능-이용자-진흥원">인공지능 이용자 진흥원</h3>
+<ul>
+<li>오픈소스 커뮤니티 활성화</li>
+<li>사회적 영향에 대한 모니터링</li>
+<li>민간자율AI윤리위원회 운영</li>
+</ul>
+<h3 id="인공지능-연수원">인공지능 연수원</h3>
+<ul>
+<li>최고위과정 운영</li>
+<li>AI리터러시 및 직무전환교육</li>
+<li>지역 아카데미 관리</li>
+<li>원우회 운영</li>
+</ul>
+<h3 id="ai직무자격센터">AI직무자격센터</h3>
+<ul>
+<li>자격제 운영</li>
+<li>공인교육기관지정</li>
+<li>인재매칭플랫폼 운영</li>
+</ul>
+<h3 id="ai시험인증센터">AI시험·인증센터</h3>
+<ul>
+<li>시험·인증제 운영</li>
+<li>인공지능 고영향 평가</li>
+<li>표준화 활동</li>
+</ul>
+<h3 id="데이터작업물-등록센터">데이터·작업물 등록센터</h3>
+<ul>
+<li>데이터·작업물 등록</li>
+<li>확인증 발부</li>
+</ul>
+<h3 id="경영지원팀">경영지원팀</h3>
+<ul>
+<li>인사/노무/복리후생</li>
+<li>재무/회계</li>
+<li>총무/임원수행</li>
+<li>홍보/언론관리</li>
+</ul>
+<h3 id="회원교류팀">회원교류팀</h3>
+<ul>
+<li>국제인공지능대전</li>
+<li>AI어워드&amp;기업인의 밤</li>
+<li>해외진출지원</li>
+<li>지회협력</li>
+</ul>
+<h3 id="회원사업팀">회원사업팀</h3>
+<ul>
+<li>AI시너지링크(수요·공급매칭)</li>
+<li>AI Startups(편람)</li>
+<li>정부사업 및 사업수행</li>
+</ul>
+<h3 id="임원단-분과">임원단 분과</h3>
+<ul>
+<li>해외펀드</li>
+<li>국제네트워크</li>
+<li>공공협력</li>
+<li>취약계층 교육확산</li>
+<li>여성 인공지능 전문가 양성</li>
+</ul>
+<h3 id="해외지회">해외지회</h3>
+<ul>
+<li>일본지회</li>
+</ul>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "en" }).toFormat("yyyy. MM. dd.")
+    })
+  }
+</script>
+
+
+
+
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+    
+      <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+      </script>
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

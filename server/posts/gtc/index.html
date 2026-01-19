@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="ko-kr"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTC2025 - 토큰 AI 혁명 | 한국인공지능협회 블로그</title>
+
+    
+  
+    <link href="/img/symbol.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://blog.koraia.org/posts/gtc/" />
+
+
+
+<meta name="author" content="koraia" />
+<meta name="description" content="모든 위대한 혁명은 작고 단순한 요소에서 시작됩니다.
+문자는 알파벳에서, 건축물은 벽돌에서, 생명체는 세포에서 비롯되듯이, 인공지능(AI) 세계에도 기본적인 구성 요소가 존재합니다. 그것이 바로 토큰(Token)입니다. 토큰은 AI가 언어를 처리하는 데 사용하는 기본 단위로, 글자나 단어 또는 그 일부를 의미합니다. 인공지능이 텍스트를 이해하고 생성할 때 활용하는 이 기본 요소는 현대 AI 시스템의 핵심 구성 요소입니다. 엔비디아의 최고경영자 젠슨 황은 이러한 토큰을 &quot;새로운 시대를 열어가는 핵심 조각&quot;이라고 표현했습니다.
+젠슨 황의 말처럼, 토큰은 AI의 새로운 세계를 여는 열쇠 역할을 합니다. 이 기초적인 단위를 통해 AI는 우주 탐사 데이터 분석, 복잡한 과학적 정보 해석, 신약 개발, 그리고 미래 예측과 같은 고도로 복잡한 작업을 수행할 수 있게 되었습니다.
+이처럼 토큰은 단순하지만 강력한 AI 혁명의 기반을 형성하고 있으며, 현대 인공지능 기술의 발전과 확장을 가능하게 하는 필수적인 요소입니다.
+" />
+
+
+<meta name="keywords" content="GTC2025,에이전틱AI">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="https://blog.koraia.org/posts/gtc/">
+  <meta property="og:site_name" content="한국인공지능협회 블로그">
+  <meta property="og:title" content="GTC2025 - 토큰 AI 혁명">
+  <meta property="og:description" content="모든 위대한 혁명은 작고 단순한 요소에서 시작됩니다.
+문자는 알파벳에서, 건축물은 벽돌에서, 생명체는 세포에서 비롯되듯이, 인공지능(AI) 세계에도 기본적인 구성 요소가 존재합니다. 그것이 바로 토큰(Token)입니다. 토큰은 AI가 언어를 처리하는 데 사용하는 기본 단위로, 글자나 단어 또는 그 일부를 의미합니다. 인공지능이 텍스트를 이해하고 생성할 때 활용하는 이 기본 요소는 현대 AI 시스템의 핵심 구성 요소입니다. 엔비디아의 최고경영자 젠슨 황은 이러한 토큰을 &#34;새로운 시대를 열어가는 핵심 조각&#34;이라고 표현했습니다.
+젠슨 황의 말처럼, 토큰은 AI의 새로운 세계를 여는 열쇠 역할을 합니다. 이 기초적인 단위를 통해 AI는 우주 탐사 데이터 분석, 복잡한 과학적 정보 해석, 신약 개발, 그리고 미래 예측과 같은 고도로 복잡한 작업을 수행할 수 있게 되었습니다.
+이처럼 토큰은 단순하지만 강력한 AI 혁명의 기반을 형성하고 있으며, 현대 인공지능 기술의 발전과 확장을 가능하게 하는 필수적인 요소입니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-20T09:38:09+09:00">
+    <meta property="article:modified_time" content="2025-03-20T09:38:09+09:00">
+    <meta property="article:tag" content="GTC2025">
+    <meta property="article:tag" content="에이전틱AI">
+    <meta property="og:image" content="https://www.radiofreemobile.com/wp-content/uploads/2025/03/GTC2025.jpg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.radiofreemobile.com/wp-content/uploads/2025/03/GTC2025.jpg">
+  <meta name="twitter:title" content="GTC2025 - 토큰 AI 혁명">
+  <meta name="twitter:description" content="모든 위대한 혁명은 작고 단순한 요소에서 시작됩니다.
+문자는 알파벳에서, 건축물은 벽돌에서, 생명체는 세포에서 비롯되듯이, 인공지능(AI) 세계에도 기본적인 구성 요소가 존재합니다. 그것이 바로 토큰(Token)입니다. 토큰은 AI가 언어를 처리하는 데 사용하는 기본 단위로, 글자나 단어 또는 그 일부를 의미합니다. 인공지능이 텍스트를 이해하고 생성할 때 활용하는 이 기본 요소는 현대 AI 시스템의 핵심 구성 요소입니다. 엔비디아의 최고경영자 젠슨 황은 이러한 토큰을 &#34;새로운 시대를 열어가는 핵심 조각&#34;이라고 표현했습니다.
+젠슨 황의 말처럼, 토큰은 AI의 새로운 세계를 여는 열쇠 역할을 합니다. 이 기초적인 단위를 통해 AI는 우주 탐사 데이터 분석, 복잡한 과학적 정보 해석, 신약 개발, 그리고 미래 예측과 같은 고도로 복잡한 작업을 수행할 수 있게 되었습니다.
+이처럼 토큰은 단순하지만 강력한 AI 혁명의 기반을 형성하고 있으며, 현대 인공지능 기술의 발전과 확장을 가능하게 하는 필수적인 요소입니다.">
+
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.svg" alt="미래를 여는 AI," />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://blog.koraia.org/" class="text-lg font-semibold cursor-pointer">
+          미래를 여는 AI,
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">사단법인 한국인공지능협회</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+
+      
+
+      
+      
+      
+      
+
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="About">About</div>
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="GTC2025 - 토큰 AI 혁명">
+  <meta itemprop="description" content="모든 위대한 혁명은 작고 단순한 요소에서 시작됩니다.
+문자는 알파벳에서, 건축물은 벽돌에서, 생명체는 세포에서 비롯되듯이, 인공지능(AI) 세계에도 기본적인 구성 요소가 존재합니다. 그것이 바로 토큰(Token)입니다. 토큰은 AI가 언어를 처리하는 데 사용하는 기본 단위로, 글자나 단어 또는 그 일부를 의미합니다. 인공지능이 텍스트를 이해하고 생성할 때 활용하는 이 기본 요소는 현대 AI 시스템의 핵심 구성 요소입니다. 엔비디아의 최고경영자 젠슨 황은 이러한 토큰을 &#34;새로운 시대를 열어가는 핵심 조각&#34;이라고 표현했습니다.
+젠슨 황의 말처럼, 토큰은 AI의 새로운 세계를 여는 열쇠 역할을 합니다. 이 기초적인 단위를 통해 AI는 우주 탐사 데이터 분석, 복잡한 과학적 정보 해석, 신약 개발, 그리고 미래 예측과 같은 고도로 복잡한 작업을 수행할 수 있게 되었습니다.
+이처럼 토큰은 단순하지만 강력한 AI 혁명의 기반을 형성하고 있으며, 현대 인공지능 기술의 발전과 확장을 가능하게 하는 필수적인 요소입니다.">
+  <meta itemprop="datePublished" content="2025-03-20T09:38:09+09:00">
+  <meta itemprop="dateModified" content="2025-03-20T09:38:09+09:00">
+  <meta itemprop="wordCount" content="1429">
+  <meta itemprop="image" content="https://www.radiofreemobile.com/wp-content/uploads/2025/03/GTC2025.jpg">
+  <meta itemprop="keywords" content="GTC2025,에이전틱AI">
+
+      <header>
+        <h1 itemprop="headline">GTC2025 - 토큰 AI 혁명</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2025-03-20T09:38:09&#43;09:00</span>
+          
+
+          | <span>7 minute read</span>
+
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="https://cdn-icons-png.flaticon.com/512/16683/16683419.png" alt="" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">koraia</span>
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=GTC2025%20-%20%ed%86%a0%ed%81%b0%20AI%20%ed%98%81%eb%aa%85&amp;url=https://blog.koraia.org/posts/gtc/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://blog.koraia.org/posts/gtc/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="https://www.radiofreemobile.com/wp-content/uploads/2025/03/GTC2025.jpg" alt="GTC2025 - 토큰 AI 혁명" />
+        
+
+        <p>모든 위대한 혁명은 작고 단순한 요소에서 시작됩니다.</p>
+<p>문자는 알파벳에서, 건축물은 벽돌에서, 생명체는 세포에서 비롯되듯이, 인공지능(AI) 세계에도 기본적인 구성 요소가 존재합니다. 그것이 바로 토큰(Token)입니다.
+토큰은 AI가 언어를 처리하는 데 사용하는 기본 단위로, 글자나 단어 또는 그 일부를 의미합니다. 인공지능이 텍스트를 이해하고 생성할 때 활용하는 이 기본 요소는 현대 AI 시스템의 핵심 구성 요소입니다. 엔비디아의 최고경영자 젠슨 황은 이러한 토큰을 &quot;새로운 시대를 열어가는 핵심 조각&quot;이라고 표현했습니다.</p>
+<p>젠슨 황의 말처럼, 토큰은 AI의 새로운 세계를 여는 열쇠 역할을 합니다. 이 기초적인 단위를 통해 AI는 우주 탐사 데이터 분석, 복잡한 과학적 정보 해석, 신약 개발, 그리고 미래 예측과 같은 고도로 복잡한 작업을 수행할 수 있게 되었습니다.</p>
+<p>이처럼 토큰은 단순하지만 강력한 AI 혁명의 기반을 형성하고 있으며, 현대 인공지능 기술의 발전과 확장을 가능하게 하는 필수적인 요소입니다.</p>
+<hr>
+<h2 id="ai-슈퍼볼이라-불리는-gtc">AI 슈퍼볼이라 불리는 GTC</h2>
+<p><img src="https://cdn.koreabiomed.com/news/photo/202503/26968_28483_3155.jpg" alt="gtc">
+<a href="https://www.nvidia.com/gtc/" target="_blank">GTC(GPU Technology Conference)</a>
+는 2009년 소규모 학술 행사로 시작하여 세계적인 기술 박람회로 발전했습니다. 초창기에는 소수의 연구원들이 호텔에 모여 GPU(그래픽 처리 장치)의 활용 가능성을 논의하는 자리였으나, AI 기술의 급속한 발전과 함께 그 규모와 영향력이 크게 확대되었습니다.</p>
+<p>최근 개최된 GTC2025에서는 'AI 슈퍼볼'이라 불릴 만큼 기술 업계의 주목을 받았습니다. 2025년 3월 17일부터 21일까지 미국 캘리포니아 산호세에서 열린 이번 행사에는 현장에 2만 5천 명이 참석하고 30만 명이 온라인으로 참여했으며, 전 세계 400여 개 글로벌 기업들이 전시 부스를 운영했습니다.</p>
+<p>AI 기술의 현재와 미래를 아우르는 다양한 주제를 다룬 GTC2025는 학술적 행사에서 시작해 이제는 첨단 기술 산업의 핵심 행사로 자리매김했음을 보여주었습니다.</p>
+<hr>
+<h2 id="젠슨-황의-기조연설-미래의-청사진을-펼치다">젠슨 황의 기조연설: 미래의 청사진을 펼치다</h2>
+<p><img src="https://dims.apnews.com/dims4/default/07d5f0a/2147483647/strip/true/crop/5905x3937+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F47%2F4a%2F6e659edde658b05225a096a6a85b%2F9d806622a07846798348e6375b3bc87a" alt="젠슨황">
+최근 GTC에서 NVIDIA(엔비디아)의 CEO 젠슨 황(Jensen Huang)은 <code>토큰</code> 개념을 중심으로 미래 AI 기술이 얼마나 빠르게 발전하고 있는지 소개했습니다.</p>
+<p><img src="https://devblogs.microsoft.com/surface-duo/wp-content/uploads/sites/53/2023/08/word-image-3428-6.png" alt="토큰">
+토큰은 AI가 사용하는 가장 작은 데이터 단위로, 이제 문장 작성뿐만 아니라 우주 탐사, 자율 주행 자동차, 의료 진단같은 복잡한 문제 해결에도 활용됩니다.</p>
+<p>하지만 수많은 토큰을 빠르게 처리하기 위해선 기존 컴퓨팅의 전력과 속도의 한계를 넘어선 새로운 형태의 컴퓨터가 필요합니다. 이를 위해 엔비디아는 'AI 팩토리(AI Factory)'라는 새로운 데이터센터 개념을 소개했습니다.</p>
+<p><img src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/chrome_Q5u6Yk0NOZ.jpg?quality=90&amp;strip=all&amp;crop=0,2.3747276688453,100,95.250544662309" alt="gpu"></p>
+<p>젠슨황은 AI 팩토리에 들어갈 차세대 GPU인 '블랙웰 울트라(Blackwell Ultra)'와 '루빈(Rubin)' 시리즈를 공개했습니다. 요즘 우리가 사용하는 챗GPT나 클로드 같은 AI 서비스는 엄청난 컴퓨팅 파워가 필요합니다.</p>
+<p>블랙웰 울트라는 이전 세대 대비 성능이 최소 두 배 이상 향상된 프로세서로, 288GB 메모리를 탑재했습니다.
+이 288GB 메모리는 엔비디아의 이전 세대 AI 가속기인 A100(최대 80GB)과 비교하면 3.6배, H100(최대 141GB)과 비교해도 2배 이상 큰 용량입니다. 이는 단일 GPU에서 훨씬 더 큰 AI 모델을 로드하고 실행할 수 있다는 의미입니다.</p>
+<p>실제로 이 메모리 용량은 GPT-4와 같은 대규모 언어 모델의 더 많은 부분을 한 번에 GPU에 올려 처리할 수 있게 해주며, 고해상도 이미지 생성 시 더 복잡한 프롬프트와 더 정교한 스타일 적용이 가능해집니다. A100이나 H100으로는 메모리 제약 때문에 모델을 여러 GPU에 분산시키거나 정밀도를 낮추는 최적화가 필요했던 작업들을 이제 단일 블랙웰 울트라로 더 효율적으로 처리할 수 있게 되었습니다.</p>
+<p>루빈 GPU는 2026년 출시 예정인 차세대 GPU 시리즈로, 이름은 암흑물질 연구에 크게 기여한 미국의 여성 천문학자 베라 루빈에서 따왔습니다. 이 프로세서는 전력 소비를 대폭 줄이면서도 연산 성능을 획기적으로 높인 친환경 고성능 AI 프로세서입니다. 쉽게 말해, 지금보다 전기를 훨씬 적게 쓰면서도 더 똑똑한 AI를 만들 수 있게 되는 것이죠.</p>
+<hr>
+<h2 id="양자-컴퓨팅-엔비디아의-새로운-도전">양자 컴퓨팅: 엔비디아의 새로운 도전</h2>
+<p>이번 GTC에서 가장 놀라운 발표 중 하나는 엔비디아가 양자 컴퓨팅 시장에 진출한다는 소식이었습니다. 양자 컴퓨팅이란 무엇일까요? 일반 컴퓨터가 0과 1만 사용해 계산하는 것과 달리, 양자 컴퓨터는 0과 1이 동시에 존재할 수 있는 양자역학의 원리를 활용합니다.</p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/e1tw/image/gw80cTrCF92O9Io1iarcqwoCdpw.gif" alt="미로">
+쉽게 비유하자면, 일반 컴퓨터가 미로를 풀 때 한 번에 하나의 길만 탐색할 수 있다면, 양자 컴퓨터는 모든 가능한 경로를 동시에 탐색할 수 있는 것과 같습니다. 그래서 특정 문제들을 해결할 때 기존 컴퓨터보다 엄청나게 빠릅니다.</p>
+<p>엔비디아는 GTC에서 처음으로 '퀀텀데이'라는 특별 세션을 진행하고, 새로운 양자 프로세서 '퀀텀-X(Quantum-X)'를 공개했습니다. 이 프로세서는 기존 컴퓨팅 방식으로 해결이 어려운 문제들을 단 몇 초 만에 처리할 수 있습니다.</p>
+<p>예를 들어, 신약 개발에서 한 가지 약물이 인체에 어떤 영향을 미칠지 분석하려면 수많은 복잡한 계산이 필요합니다. 일반 컴퓨터로는 이런 계산에 몇 주가 걸릴 수도 있지만, 양자 컴퓨터는 이를 몇 시간 또는 몇 분으로 단축할 수 있습니다. 이외에도 복잡한 금융 모델링, 날씨 및 기후 예측 등에 활용될 전망입니다.</p>
+<hr>
+<h2 id="휴머노이드-로봇-블루-기계와-인간의-경계를-허물다">휴머노이드 로봇 '블루': 기계와 인간의 경계를 허물다</h2>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SqgpsquIcUo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<p>GTC 2025에서 또 하나 주목할 만한 혁신은 휴머노이드 로봇 '블루(Blue)'의 등장입니다. 디즈니와 딥마인드와 함께 공동 개발한 이 로봇은 인간처럼 자연스러운 움직임과 섬세한 감정 표현이 가능합니다.</p>
+<p><img src="https://www.cnet.com/a/img/resize/cc057e0d6e01f8a091d20d4c25e2e19f7672c578/hub/2025/03/18/77c04ac3-3bd2-45de-967f-662129246042/nvidia-gtc-2025-18-march-2025-09-58-00-am-copy-01-00-04-23-25-still001.jpg?auto=webp&amp;fit=crop&amp;height=675&amp;width=1200" alt="로봇블루">
+이전의 로봇들이 단순히 프로그래밍된 작업만 수행했다면, 블루는 사람의 감정을 인식하고 이에 맞춰 행동을 조정할 수 있습니다. 예를 들어, 여러분이 슬퍼 보인다면 블루는 여러분의 얼굴 표정을 분석해 위로의 말을 건넬 수 있습니다. 심지어 말로 표현하지 않은 감정까지도 얼굴 표정과 몸짓을 통해 읽어낼 수 있는 능력을 갖추고 있습니다.</p>
+<p>이런 기능은 특히 의료나 간병 분야에서 큰 잠재력을 가지고 있습니다. 예를 들어, 요양원에서 블루 같은 로봇이 간병인의 역할을 보조하여 노인들의 감정 상태를 모니터링하고 적절한 사회적 상호작용을 제공할 수 있습니다. 또는 발달장애 아동을 위한 치료 보조 로봇으로 활용될 수도 있습니다.</p>
+<hr>
+<h3 id="에이전틱-ai와-피지컬-ai">에이전틱 AI와 피지컬 AI</h3>
+<p><img src="https://www.nvidia.com/gtc/sessions/agentic-ai/_jcr_content/root/responsivegrid/nv_container/nv_container_temp3/nv_image_two.coreimg.100.410.jpeg/1739473404234/gen-ai-platform-deployment-1080.jpeg" alt="에이전트">
+또 다른 주목받은 내용은 에이전틱 인공지능(Agentic AI)과 피지컬 인공지능(Physical AI)의 개념이었습니다.</p>
+<p>에이전틱 AI는 단순히 데이터를 처리하는 것을 넘어, 스스로 사고하고 행동하는 단계로 발전하고 있습니다.에이전틱 AI는 스스로 문제의 본질을 이해하고, 목표를 세우며, 그 목표를 달성하기 위한 최적의 경로를 스스로 찾아냅니다.</p>
+<p>예를 들어 결혼식 하객 좌석 배치를 생각해보겠습니다.</p>
+<p>기존 AI도 빠르게 결과를 내지만, 친하지 않은 사람을 함께 앉히는 등 실수가 있었습니다. 그러나 에이전틱 AI는 누가 서로 친한지, 누가 누구와 다투었는지까지 고려하며 가장 좋은 배치를 찾고 효율적인 정답을 찾아냅니다.</p>
+<p>젠슨 황은 이런 에이전틱 AI가 “문제를 해결하는 방식을 바꿀 수 있다”고 강조합니다. 이전까지는 이미 저장된 데이터를 가져와 답을 찾았다면, 이제는 AI가 스스로 생각하고 판단하여 답을 만들어내는 시대가 온 것이라고 말입니다.</p>
+<p>에이전틱 인공지능은 정교한 추론과 계획, 반복 학습을 활용해 복잡한 문제를 해결하는 기술로, 인식, 추론, 행동, 학습 등 4단계 처리과정을 거칩니다.</p>
+<p>반면 물리적(피지컬) 인공지능은 로봇과 자율주행 자동차 등에 적용되는 기술로, 현실 또는 현실과 동일한 가상 공간을 구축해 인공지능을 학습시키는 것이 핵심입니다.</p>
+<p>젠슨 황은 이를 <strong>피지컬 AI(Physical AI)</strong> 로, AI가 현실 세계의 물리 법칙까지 이해하면서, 로봇을 통해 실제 생활에서 다양한 업무를 수행할 수 있게 되는 시대를 열 수 있다고 말했습니다.</p>
+<p><img src="https://thetechportal.com/wp-content/uploads/2025/03/Nvidia-Groot-N1-model-for-humanoid-robotics.jpg" alt="로봇">
+엔비디아는 이를 위해 인간형 로봇의 핵심 모델인 ‘아이작 그루트 N1(Groot N1)’을 공개했습니다. 이 로봇은 다양한 물건을 자유롭게 다루고, 복잡한 임무를 수행하며, 서로 협력할 수 있는 능력을 갖추었습니다. 이 모든 학습은 현실과 거의 구분할 수 없는 디지털 시뮬레이션 속에서 이루어진다고 합니다.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/m1CH-mgpdYg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<hr>
+<h2 id="라마-네모트론llama-nemotron">라마 네모트론(Llama Nemotron)</h2>
+<p><img src="https://s3.amazonaws.com/cms.ipressroom.com/219/files/20252/agentic-ai-reasoning-models.jpg" alt="라마 네모트론">
+'<a href="https://nvidianews.nvidia.com/news/nvidia-launches-family-of-open-reasoning-ai-models-for-developers-and-enterprises-to-build-agentic-ai-platforms" target="_blank">라마 네모트론</a>
+'는 엔비디아(NVIDIA)가 개발한 <a href="https://build.nvidia.com/nvidia/nemotron-4-340b-instruct" target="_blank">에이전틱 AI(Agentic AI)를 위한 오픈소스 대규모 언어 모델</a>
+ (LLM) 제품군입니다 이는 메타의 인공지능 대형 언어 모델(LLM) 라마를 토대로 구축되었으며, 다양한 사전 학습·훈련된 데이터를 제공합니다.</p>
+<p>라마 네모트론은 개발자들이 에이전틱 AI(지능형 자율 에이전트)를 더 쉽게 구축할 수 있도록 설계되었습니다. 이 모델은 일상 대화부터 복잡한 문제 해결, 코딩, 함수 호출까지 다양한 기능을 제공하며, 필요에 따라 추론 기능을 켜고 끌 수 있어 개발자들이 각자의 용도에 맞게 효율적으로 AI 솔루션을 개발할 수 있게 해줍니다.</p>
+<hr>
+<h2 id="그-밖에-다양한-응용-분야">그 밖에 다양한 응용 분야</h2>
+<p>GTC 2025에서는 AI가 다양한 분야에서 어떻게 활용될 수 있는지 보여주는 세션들이 많았습니다.</p>
+<p>예를 들어, 기후 변화 연구에서는 AI가 방대한 기상 데이터와 과거 패턴을 분석해 더 정확한 예측 모델을 만들 수 있습니다. 실제로 한 연구팀은 엔비디아의 GPU를 활용해 태풍 경로를 예측하는 AI 모델을 개발했는데, 이 모델은 기존 방법보다 24시간 더 일찍 정확한 경로를 예측할 수 있었습니다. 이는 재난 대비에 중요한 시간을 확보해 줍니다.</p>
+<p>의료 분야에서는 AI가 X-ray나 MRI 같은 의료 영상을 분석해 인간 의사가 놓칠 수 있는 미세한 이상을 감지합니다. 가령, 폐암 초기 징후를 발견하는 AI는 방사선 전문의보다 더 높은 정확도를 보이기도 합니다. 이는 조기 진단을 통해 생명을 구하는 데 기여할 수 있습니다.</p>
+<p>자율주행차 분야에서는 웨이모의 드라고 앙겔로프 부사장이 연사로 참여해 AI가 어떻게 안전한 자율주행을 가능하게 하는지 설명했습니다. 자율주행차는 카메라, 라이다, 레이더 등 다양한 센서에서 수집한 데이터를 AI가 실시간으로 처리하여 도로 상황을 판단하고 안전한 주행을 가능하게 합니다.</p>
+<p><img src="https://www.nvidia.com/content/nvidiaGDC/us/en_US/gtc/startups/_jcr_content/root/responsivegrid/nv_container_copy/nv_container_2116984/nv_image_copy_copy_c.coreimg.100.850.jpeg/1741124228431/gtc25-web-inception-ai-day-startups-ari.jpeg" alt="스타트업"></p>
+<h2 id="스타트업과-교육-ai-생태계-확장">스타트업과 교육: AI 생태계 확장</h2>
+<p>스타트업과 투자자를 위한 'AI 데이'가 마련되어 투자자와 스타트업 간 네트워킹, 전문가 패널 토론, 스타트업의 혁신 기술 데모 등이 진행되었습니다. 약 250개의 스타트업이 혁신 기술을 선보였으며, AI를 활용한 농업 로봇 등 실질적인 산업 효율성을 높이는 사례가 주목받았습니다.</p>
+<p>GTC에서는 처음으로 AI 자격증 시험을 무료로 제공하며 생성형 AI, 에이전틱 AI, CUDA 기반 가속 컴퓨팅 등을 교육하는 워크숍이 진행됐습니다.</p>
+<hr>
+<h2 id="gtc-2025가-보여준-미래">GTC 2025가 보여준 미래</h2>
+<p><img src="https://images.unsplash.com/photo-1495364141860-b0d03eccd065?q=80&amp;w=2676&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="시간">
+<code>“우리가 만드는 기술 덕분에, 과학자들이 이제 평생의 연구를 평생 안에 끝낼 수 있게 되었습니다.”</code></p>
+<p>AI가 우리에게 주는 가장 큰 선물은 바로 <strong>'시간'</strong> 입니다.</p>
+<p>인류가 과거 수백 년에 걸쳐 이룬 발전을, 이제는 단 몇 년 안에 이루게 한다고 젠슨황은 기조연설에서 말했습니다.</p>
+<p>GTC 2025는 단순한 기술 컨퍼런스를 넘어 AI와 가속 컴퓨팅의 미래를 결정짓는 중요한 자리였습니다. 엔비디아의 전략은 &quot;Scale-Up Before Scale-Out&quot;(확장하기 전에 성능 향상)으로 요약될 수 있습니다. 즉, 먼저 개별 GPU의 성능을 극대화한 후, 이를 기반으로 다양한 분야로 확장해 나간다는 전략입니다.</p>
+<p>이는 마치 자동차 회사가 먼저 최고 성능의 엔진을 개발한 다음, 그 엔진을 승용차, 트럭, 버스 등 다양한 차종에 적용하는 것과 유사합니다. 엔비디아는 블랙웰과 루빈 같은 최고 성능의 GPU를 개발하고, 이를 의료, 기후 연구, 자율주행, 로보틱스 등 다양한 분야에 적용하고 있습니다.</p>
+<hr>
+<p>작고 평범한 '토큰' 하나가 우리 일상과 미래를 바꿀 수 있다는 것이 참 놀랍지 않나요?</p>
+<p>AI 기술의 발전은 이렇게 작고 단순한 요소들에서부터 시작됩니다.</p>
+<p>NVIDIA가 말하는 'AI 팩토리'처럼 앞으로 더 많은 기업과 기관들이 토큰을 효율적으로 활용하여 우리 생활을 더 편리하게 만들어줄 것입니다.</p>
+<p>우리 일상을 바꿀 토큰이 가져다준 AI 시대는 벌써 시작되었습니다.</p>
+<p>이 모든 발전의 중심에는 토큰이 있습니다. 작은 조각에서 시작한 AI는 이제 우리의 삶 전체를 바꾸고 있습니다.</p>
+<p><img src="https://pbs.twimg.com/media/GmYD4CFaYAAXnxa.jpg:large" alt="시작">
+젠슨 황의 말을 빌리자면, “이 모든 것이 여기에서 시작됩니다.”</p>
+<p>우리는 지금, 새로운 AI의 시대를 눈앞에 두고 있습니다.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TEGAQxg1gVA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/mcp/" title="AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Previous page</span>
+            <span class="max-w-48 truncate">AI의 통합 표준을 열다 MCP(Model Context Protocol)의 이해</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/six-little-dragons/" title="중국에 AI 육룡이 나르샤">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Next page</span>
+            <span class="max-w-48 truncate">중국에 AI 육룡이 나르샤</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+    </article>
+  </div>
+
+  <div class="hidden lg:flex lg:flex-col lg:items-end">
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ai-슈퍼볼이라-불리는-gtc">AI 슈퍼볼이라 불리는 GTC</a></li>
+    <li><a href="#젠슨-황의-기조연설-미래의-청사진을-펼치다">젠슨 황의 기조연설: 미래의 청사진을 펼치다</a></li>
+    <li><a href="#양자-컴퓨팅-엔비디아의-새로운-도전">양자 컴퓨팅: 엔비디아의 새로운 도전</a></li>
+    <li><a href="#휴머노이드-로봇-블루-기계와-인간의-경계를-허물다">휴머노이드 로봇 '블루': 기계와 인간의 경계를 허물다</a>
+      <ul>
+        <li><a href="#에이전틱-ai와-피지컬-ai">에이전틱 AI와 피지컬 AI</a></li>
+      </ul>
+    </li>
+    <li><a href="#라마-네모트론llama-nemotron">라마 네모트론(Llama Nemotron)</a></li>
+    <li><a href="#그-밖에-다양한-응용-분야">그 밖에 다양한 응용 분야</a></li>
+    <li><a href="#스타트업과-교육-ai-생태계-확장">스타트업과 교육: AI 생태계 확장</a></li>
+    <li><a href="#gtc-2025가-보여준-미래">GTC 2025가 보여준 미래</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">1. 한국인공지능협회</div>
+
+        <div class="prose dark:prose-invert">
+          <h2 id="미션-mission">미션 (Mission)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능 시대, 문명의 기준을 세우는 것</strong><br>
+<em>AI age, Standardization of civilization</em></p>
+  </blockquote>
+
+<h2 id="비전-vision">비전 (Vision)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능의 민주화와 산업지능화 선도</strong><br>
+<em>Democratization of Artificial Intelligence and Leadership in Industrial Intelligence</em></p>
+  </blockquote>
+
+<h2 id="핵심전략-core-strategy">핵심전략 (Core Strategy)</h2>
+
+
+
+  <blockquote>
+    <p><strong>정보공유-인재양성-기업지원-시장창출로 선도적 인공지능 생태계 구축</strong><br>
+<em>Building a leading artificial intelligence ecosystem through information sharing, talent development, corporate support, and market creation</em></p>
+  </blockquote>
+
+<h2 id="행동-슬로건-slogan">행동 슬로건 (Slogan)</h2>
+
+
+
+  <blockquote>
+    <p><strong>시선은 미래를 향하고, 행동은 미래를 앞당긴다.</strong><br>
+<em>Our Eyes stares at the future &amp; Behavior moves-up the future</em></p>
+  </blockquote>
+
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">2. 설립배경</div>
+
+        <div class="prose dark:prose-invert">
+          <table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>법인명</strong></td>
+          <td style="text-align: left">사단법인 한국인공지능협회</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>법인형태</strong></td>
+          <td style="text-align: left">비영리법인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>창립총회</strong></td>
+          <td style="text-align: left">2017년 1월 임의단체 출범</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>사단법인 허가</strong></td>
+          <td style="text-align: left">2017년 6월 21일 (민법 제32조)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>주무부처</strong></td>
+          <td style="text-align: left">과학기술정보통신부</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>설립배경</strong></td>
+          <td style="text-align: left">인공지능 유관 정보, 인재, 기업, 시장 등의 교류와 연결을 통해서 인공지능 생태계를 선도</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="임원-및-회원사-현황">임원 및 회원사 현황</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>회장</strong></td>
+          <td style="text-align: left">김현철</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>임원</strong></td>
+          <td style="text-align: left">32인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>회원사</strong></td>
+          <td style="text-align: left">1,000여 인공지능 및 데이터 전문 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>협력사</strong></td>
+          <td style="text-align: left">인공지능 수요사 15,000여 곳</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격자</strong></td>
+          <td style="text-align: left">인공지능산업컨설턴트 등 20,000여명</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증사</strong></td>
+          <td style="text-align: left">217여 산업지능화 인증(AI+X Certificate) 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>전문가그룹</strong></td>
+          <td style="text-align: left">석박사, 공인자격자 중심의 산업계 인공지능 융합전문가</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="주요업무">주요업무</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>기업지원</strong></td>
+          <td style="text-align: left">회원사 커뮤니티 운영, 수요공급사매칭, 컨소시엄지원, 편람발간, 분과활동, 마케팅 및 수출지원 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인재육성</strong></td>
+          <td style="text-align: left">AI기초교육, AI직무전환 교육, 취업매칭, 일자리 창출사업 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증제도</strong></td>
+          <td style="text-align: left">AI기술 및 비즈니스 인증제 운영</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격제도</strong></td>
+          <td style="text-align: left">AI유관 8개 직무자격에 대한 시험운영 및 자격발급</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>정책지원</strong></td>
+          <td style="text-align: left">AI생태계 수요조사, 표준화 활동, 규제개선 등</td>
+      </tr>
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">3. 한국인공지능협회로의 초대</div>
+
+        <div class="prose dark:prose-invert">
+          
+
+
+  <blockquote>
+    <p>스스로 학습의 학습을 거듭하는 인공지능에 대한 이론적인 근거를 두고, 50년 전 수학자 어빙 존 굿은 **&quot;인공지능은 인류 최후의 발명품&quot;**이라는 말을 남겼습니다. 세월이 지나 현 시대를 맞이한 우리는 인공지능을 기술적 발명품을 넘어 문명 전반의 변화를 이끌어내는 일종의 시대정신으로 마주하고 있습니다. 인공지능에 대한 사회적 요구가 커지고 있는 지금이 되려 우리가 미진한 부분을 개혁하고 인간적인 가치를 추구하는 계기가 되지 않을까 싶습니다.</p>
+  </blockquote>
+
+<p>한국인공지능협회의 최초 설립정신은 인류사회가 겪는 문제를 인공지능이라는 주제로 해결해가는 <strong>주체자들(Changers)의 결성</strong>이었고, 그들의 연결을 국내외로 지속적으로 추진합니다. 협회는 회원을 지칭하는 브랜드인 <strong>체인저스(Changers)</strong> 라는 정체성을 기반으로 정책과 사업을 구성하여 대한민국 전 분야의 지능화에 기여하고 인공지능의 민주화를 선도합니다.</p>
+<p>한국인공지능협회는 그동안 <strong>1,000여 개의 인공지능 기업</strong>과 <strong>10만 명이 넘는 종사자</strong>를 대변하는 인공지능 생태계의 대표 단체로서의 역할을 성실히 수행해 왔습니다. 이제 우리는 한 걸음 더 나아가, 인공지능을 둘러싼 다양한 주제를 다룰 새로운 거버넌스를 신설하고, 그 거버넌스들 간의 유기적인 연계를 공고히 하여 설립정신을 더욱 발전시켜갑니다.</p>
+<p>이를 통해 한국인공지능협회는 단순한 산업 대표 단체를 넘어, <strong>&quot;인공지능 시대&quot;를 대표하는 단체</strong>로 우뚝서려 합니다.</p>
+<p>한국인공지능협회는 인공지능을 세상을 부양시키는 <strong>최상위 메타(Meta) 산업</strong>으로 규정하여 우리의 관점과 역할을 통합적으로 변모시켜 갑니다. 우리는 인공지능 기술이 산업에 닿는 범위, 디지털화 된 산업이 경제를 변화시키는 범위, 생산력이 확보된 경제가 문화를 자아내는 범위, 참여의 문화가 강한 개인을 만들어내는 모든 범위를 고민하여 <strong>문명의 기준을 만드는 최선두</strong>에 서겠습니다.</p>
+<p><em><strong>감사합니다.</strong></em></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">4. 부서별 직무소개</div>
+
+        <div class="prose dark:prose-invert">
+          <h3 id="비서실">비서실</h3>
+<ul>
+<li>회장 수행</li>
+<li>체인저스 관리</li>
+</ul>
+<h3 id="인공지능-정책원">인공지능 정책원</h3>
+<ul>
+<li>AI입법 및 정책 지원</li>
+<li>정책백서편찬 및 세미나</li>
+<li>국회·산·학·연·관 정책 네트워크</li>
+</ul>
+<h3 id="인공지능-이용자-진흥원">인공지능 이용자 진흥원</h3>
+<ul>
+<li>오픈소스 커뮤니티 활성화</li>
+<li>사회적 영향에 대한 모니터링</li>
+<li>민간자율AI윤리위원회 운영</li>
+</ul>
+<h3 id="인공지능-연수원">인공지능 연수원</h3>
+<ul>
+<li>최고위과정 운영</li>
+<li>AI리터러시 및 직무전환교육</li>
+<li>지역 아카데미 관리</li>
+<li>원우회 운영</li>
+</ul>
+<h3 id="ai직무자격센터">AI직무자격센터</h3>
+<ul>
+<li>자격제 운영</li>
+<li>공인교육기관지정</li>
+<li>인재매칭플랫폼 운영</li>
+</ul>
+<h3 id="ai시험인증센터">AI시험·인증센터</h3>
+<ul>
+<li>시험·인증제 운영</li>
+<li>인공지능 고영향 평가</li>
+<li>표준화 활동</li>
+</ul>
+<h3 id="데이터작업물-등록센터">데이터·작업물 등록센터</h3>
+<ul>
+<li>데이터·작업물 등록</li>
+<li>확인증 발부</li>
+</ul>
+<h3 id="경영지원팀">경영지원팀</h3>
+<ul>
+<li>인사/노무/복리후생</li>
+<li>재무/회계</li>
+<li>총무/임원수행</li>
+<li>홍보/언론관리</li>
+</ul>
+<h3 id="회원교류팀">회원교류팀</h3>
+<ul>
+<li>국제인공지능대전</li>
+<li>AI어워드&amp;기업인의 밤</li>
+<li>해외진출지원</li>
+<li>지회협력</li>
+</ul>
+<h3 id="회원사업팀">회원사업팀</h3>
+<ul>
+<li>AI시너지링크(수요·공급매칭)</li>
+<li>AI Startups(편람)</li>
+<li>정부사업 및 사업수행</li>
+</ul>
+<h3 id="임원단-분과">임원단 분과</h3>
+<ul>
+<li>해외펀드</li>
+<li>국제네트워크</li>
+<li>공공협력</li>
+<li>취약계층 교육확산</li>
+<li>여성 인공지능 전문가 양성</li>
+</ul>
+<h3 id="해외지회">해외지회</h3>
+<ul>
+<li>일본지회</li>
+</ul>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "en" }).toFormat("yyyy. MM. dd.")
+    })
+  }
+</script>
+
+
+
+
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

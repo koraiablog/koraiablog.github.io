@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>중국 on 한국인공지능협회 블로그</title>
+    <link>https://blog.koraia.org/tags/%EC%A4%91%EA%B5%AD/</link>
+    <description>Recent content in 중국 on 한국인공지능협회 블로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 21 Oct 2025 09:45:40 +0900</lastBuildDate>
+    <atom:link href="https://blog.koraia.org/tags/%EC%A4%91%EA%B5%AD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱</title>
+      <link>https://blog.koraia.org/posts/deepseek_ocr/</link>
+      <pubDate>Tue, 21 Oct 2025 09:45:40 +0900</pubDate>
+      <guid>https://blog.koraia.org/posts/deepseek_ocr/</guid>
+      <description>&lt;p&gt;혹시 AI 챗봇에게 아주 긴 문서나 두꺼운 보고서를 주고 &amp;quot;이거 요약해 줘&amp;quot;라고 시켜본 적 있으신가요? &lt;br&gt;AI는 만능처럼 보이지만, 사실 텍스트가 길어질수록 AI도 우리처럼 엄청나게 지쳐버립니다. 텍스트를 처리하는 데 필요한 시간과 컴퓨터 자원(GPU)이 기하급수적으로 늘어나기 때문인데요.&lt;br&gt;&lt;/p&gt;&#xA;&lt;p&gt;이 문제를 해결하기 위해 DeepSeek-AI 연구팀이 마치 우리가 속독하듯이, &lt;br&gt;긴 텍스트 문서를 &lt;strong&gt;이미지&lt;/strong&gt;로 바꿔 압축하는 &#39;DeepSeek-OCR&#39;이라는 획기적인 기술을 개발했습니다. 이 방법 덕분에 AI는 문서를 훨씬 적은 데이터 조각만으로 처리할 수 있게 되어, 자원 소모를 최대 10분의 1까지 줄일 수 있게 되었어요&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

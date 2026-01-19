@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ko-kr"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱 | 한국인공지능협회 블로그</title>
+
+    
+  
+    <link href="/img/symbol.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://blog.koraia.org/posts/deepseek_ocr/" />
+
+
+
+<meta name="author" content="koraia" />
+<meta name="description" content="혹시 AI 챗봇에게 아주 긴 문서나 두꺼운 보고서를 주고 &quot;이거 요약해 줘&quot;라고 시켜본 적 있으신가요? AI는 만능처럼 보이지만, 사실 텍스트가 길어질수록 AI도 우리처럼 엄청나게 지쳐버립니다. 텍스트를 처리하는 데 필요한 시간과 컴퓨터 자원(GPU)이 기하급수적으로 늘어나기 때문인데요.
+이 문제를 해결하기 위해 DeepSeek-AI 연구팀이 마치 우리가 속독하듯이, 긴 텍스트 문서를 이미지로 바꿔 압축하는 &#39;DeepSeek-OCR&#39;이라는 획기적인 기술을 개발했습니다. 이 방법 덕분에 AI는 문서를 훨씬 적은 데이터 조각만으로 처리할 수 있게 되어, 자원 소모를 최대 10분의 1까지 줄일 수 있게 되었어요
+" />
+
+
+<meta name="keywords" content="딥시크,중국,LLM,GPU 효율화,비전 토큰">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="https://blog.koraia.org/posts/deepseek_ocr/">
+  <meta property="og:site_name" content="한국인공지능협회 블로그">
+  <meta property="og:title" content="딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱">
+  <meta property="og:description" content="혹시 AI 챗봇에게 아주 긴 문서나 두꺼운 보고서를 주고 &#34;이거 요약해 줘&#34;라고 시켜본 적 있으신가요? AI는 만능처럼 보이지만, 사실 텍스트가 길어질수록 AI도 우리처럼 엄청나게 지쳐버립니다. 텍스트를 처리하는 데 필요한 시간과 컴퓨터 자원(GPU)이 기하급수적으로 늘어나기 때문인데요.
+이 문제를 해결하기 위해 DeepSeek-AI 연구팀이 마치 우리가 속독하듯이, 긴 텍스트 문서를 이미지로 바꿔 압축하는 &#39;DeepSeek-OCR&#39;이라는 획기적인 기술을 개발했습니다. 이 방법 덕분에 AI는 문서를 훨씬 적은 데이터 조각만으로 처리할 수 있게 되어, 자원 소모를 최대 10분의 1까지 줄일 수 있게 되었어요">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-21T09:45:40+09:00">
+    <meta property="article:modified_time" content="2025-10-21T09:45:40+09:00">
+    <meta property="article:tag" content="딥시크">
+    <meta property="article:tag" content="중국">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="GPU 효율화">
+    <meta property="article:tag" content="비전 토큰">
+    <meta property="og:image" content="https://github.com/deepseek-ai/DeepSeek-OCR/raw/main/assets/logo.svg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://github.com/deepseek-ai/DeepSeek-OCR/raw/main/assets/logo.svg">
+  <meta name="twitter:title" content="딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱">
+  <meta name="twitter:description" content="혹시 AI 챗봇에게 아주 긴 문서나 두꺼운 보고서를 주고 &#34;이거 요약해 줘&#34;라고 시켜본 적 있으신가요? AI는 만능처럼 보이지만, 사실 텍스트가 길어질수록 AI도 우리처럼 엄청나게 지쳐버립니다. 텍스트를 처리하는 데 필요한 시간과 컴퓨터 자원(GPU)이 기하급수적으로 늘어나기 때문인데요.
+이 문제를 해결하기 위해 DeepSeek-AI 연구팀이 마치 우리가 속독하듯이, 긴 텍스트 문서를 이미지로 바꿔 압축하는 &#39;DeepSeek-OCR&#39;이라는 획기적인 기술을 개발했습니다. 이 방법 덕분에 AI는 문서를 훨씬 적은 데이터 조각만으로 처리할 수 있게 되어, 자원 소모를 최대 10분의 1까지 줄일 수 있게 되었어요">
+
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.svg" alt="미래를 여는 AI," />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://blog.koraia.org/" class="text-lg font-semibold cursor-pointer">
+          미래를 여는 AI,
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">사단법인 한국인공지능협회</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+
+      
+
+      
+      
+      
+      
+
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="About">About</div>
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱">
+  <meta itemprop="description" content="혹시 AI 챗봇에게 아주 긴 문서나 두꺼운 보고서를 주고 &#34;이거 요약해 줘&#34;라고 시켜본 적 있으신가요? AI는 만능처럼 보이지만, 사실 텍스트가 길어질수록 AI도 우리처럼 엄청나게 지쳐버립니다. 텍스트를 처리하는 데 필요한 시간과 컴퓨터 자원(GPU)이 기하급수적으로 늘어나기 때문인데요.
+이 문제를 해결하기 위해 DeepSeek-AI 연구팀이 마치 우리가 속독하듯이, 긴 텍스트 문서를 이미지로 바꿔 압축하는 &#39;DeepSeek-OCR&#39;이라는 획기적인 기술을 개발했습니다. 이 방법 덕분에 AI는 문서를 훨씬 적은 데이터 조각만으로 처리할 수 있게 되어, 자원 소모를 최대 10분의 1까지 줄일 수 있게 되었어요">
+  <meta itemprop="datePublished" content="2025-10-21T09:45:40+09:00">
+  <meta itemprop="dateModified" content="2025-10-21T09:45:40+09:00">
+  <meta itemprop="wordCount" content="1110">
+  <meta itemprop="image" content="https://github.com/deepseek-ai/DeepSeek-OCR/raw/main/assets/logo.svg">
+  <meta itemprop="keywords" content="딥시크,중국,LLM,GPU 효율화,비전 토큰">
+
+      <header>
+        <h1 itemprop="headline">딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2025-10-21T09:45:40&#43;09:00</span>
+          
+
+          | <span>6 minute read</span>
+
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="https://cdn-icons-png.flaticon.com/512/2118/2118520.png" alt="" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">koraia</span>
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+    
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=%eb%94%a5%ec%8b%9c%ed%81%ac%ea%b0%80%20GPU%eb%a5%bc%201/10%eb%a1%9c%20%eb%98%90%20%ec%a4%84%ec%98%80%eb%8c%80%ec%9a%94.%20%eb%84%a4,%200%20%ed%95%98%eb%82%98%20%eb%ba%90%eb%8b%a4%ea%b3%a0%ec%9a%94.%20%f0%9f%98%b1&amp;url=https://blog.koraia.org/posts/deepseek_ocr/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://blog.koraia.org/posts/deepseek_ocr/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="https://github.com/deepseek-ai/DeepSeek-OCR/raw/main/assets/logo.svg" alt="딥시크가 GPU를 1/10로 또 줄였대요. 네, 0 하나 뺐다고요. 😱" />
+        
+
+        <p>혹시 AI 챗봇에게 아주 긴 문서나 두꺼운 보고서를 주고 &quot;이거 요약해 줘&quot;라고 시켜본 적 있으신가요? <br>AI는 만능처럼 보이지만, 사실 텍스트가 길어질수록 AI도 우리처럼 엄청나게 지쳐버립니다. 텍스트를 처리하는 데 필요한 시간과 컴퓨터 자원(GPU)이 기하급수적으로 늘어나기 때문인데요.<br></p>
+<p>이 문제를 해결하기 위해 DeepSeek-AI 연구팀이 마치 우리가 속독하듯이, <br>긴 텍스트 문서를 <strong>이미지</strong>로 바꿔 압축하는 'DeepSeek-OCR'이라는 획기적인 기술을 개발했습니다. 이 방법 덕분에 AI는 문서를 훨씬 적은 데이터 조각만으로 처리할 수 있게 되어, 자원 소모를 최대 10분의 1까지 줄일 수 있게 되었어요</p>
+<p><a href="https://github.com/deepseek-ai/DeepSeek-OCR" target="_blank">딥시크 OCR Github 바로가기</a>
+</p>
+<hr>
+<h2 id="1-ai가-긴-글을-읽을-때-gpu가-비명을-지르는-이유">1. AI가 긴 글을 읽을 때 'GPU가 비명을 지르는' 이유</h2>
+<p>AI, 특히 챗GPT와 같은 대규모 언어 모델(LLM)은 우리가 주는 텍스트를 '<strong>토큰(Token)</strong>'이라는 작은 단위로 쪼개서 처리합니다. 예를 들어, &quot;나는 학교에 간다&quot;라는 문장은 &quot;나&quot;, &quot;는&quot;, &quot;학교&quot;, &quot;에&quot;, &quot;간다&quot;처럼 나뉠 수 있죠.</p>
+<p>문제는 AI가 이 토큰들의 '문맥'을 파악하는 방식에 있습니다. AI는 문장 속 모든 토큰이 다른 모든 토큰과 어떤 관계가 있는지 '<strong>서로 일일이 대조</strong>'합니다.</p>
+<ul>
+<li>100개의 토큰(짧은 문단)을 처리하는 것은 100 x 100 = 10,000번의 계산이 필요합니다.</li>
+<li>1,000개의 토큰(긴 문서 한 페이지)을 처리하려면 1,000 x 1,000 = 1,000,000번의 계산이 필요합니다.</li>
+</ul>
+<p>텍스트 길이가 10배 늘어났을 뿐인데, 계산량(컴퓨팅 자원)은 그 제곱인 <strong>100배</strong>로 폭증합니다. 😱 (이를 기술 용어로 '<strong>제곱 비례 복잡도(Quadratic Scaling)</strong>'라고 부릅니다.)</p>
+<p>이것이 바로 AI에게 긴 문서를 맡기면 GPU가 과열되고 비용이 기하급수적으로 증가하는 근본적인 이유입니다.</p>
+<h2 id="2-deepseek-ocr의-역발상-텍스트를-텍스트로-읽지-말자">2. DeepSeek-OCR의 역발상: &quot;텍스트를 텍스트로 읽지 말자&quot;</h2>
+<p>AI 업계는 이 문제를 해결하기 위해 애썼습니다. 고해상도 문서를 퍼즐처럼 조각내어 처리해봤지만(타일 기반), 조각(토큰) 수가 너무 많아졌습니다. 통째로 처리하려니 GPU 메모리가 터져버렸죠.</p>
+<p>여기서 <strong>DeepSeek-OCR</strong>은 아주 영리한 역발상을 제시합니다.</p>
+
+
+
+  <blockquote>
+    <p>&quot;1,000개의 텍스트 토큰을 하나하나 분석하지 말고,
+그냥 그 1,000단어가 담긴 <strong>페이지 전체를 '사진 한 장'으로 찍어서 AI에게 보여주자!</strong>&quot;</p>
+  </blockquote>
+
+<p>텍스트가 아닌, 텍스트가 담긴 '<strong>시각적 양식(Visual Modality)</strong>'으로 접근한 것입니다. AI는 이 '사진'을 <strong>딥 인코더 DeepEncoder</strong>라는 강력한 압축 엔진을 통해 훨씬 적은 수의 '<strong>비전 토큰(Vision Token)</strong>', 즉 'AI가 이미지를 이해하는 데 필요한 핵심 시각 정보 조각'으로 변환합니다.</p>
+<hr>
+<h3 id="사례-1-10배-압축하고도-97-정확도를-지킨-광학적-압축">사례 1: 10배 압축하고도 97% 정확도를 지킨 '광학적 압축'</h3>
+<p>이 방식이 얼마나 효율적인지 실제 테스트 결과를 보면 놀랍습니다.</p>
+<p><strong>📊 텍스트 토큰 vs 비전 토큰 압축 효율 (Fox 벤치마크)</strong></p>
+<p><img src="https://github.com/deepseek-ai/DeepSeek-OCR/blob/main/assets/fig1.png?raw=true" alt="이미지1"></p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">원본 텍스트 토큰 수 (AI가 읽어야 할 글자 수)</th>
+          <th style="text-align: left">압축 후 비전 토큰 수 (AI가 본 '정보 조각' 수)</th>
+          <th style="text-align: left">압축률</th>
+          <th style="text-align: left">OCR 해독 정확도</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">600 ~ 700개 (긴 문서)</td>
+          <td style="text-align: left">100개 (Small Mode)</td>
+          <td style="text-align: left">6.7배</td>
+          <td style="text-align: left"><strong>98.5%</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">800 ~ 900개 (매우 긴 문서)</td>
+          <td style="text-align: left">100개 (Small Mode)</td>
+          <td style="text-align: left">8.5배</td>
+          <td style="text-align: left"><strong>96.8%</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1,200 ~ 1,300개 (초고밀도 문서)</td>
+          <td style="text-align: left">64개 (Tiny Mode)</td>
+          <td style="text-align: left">19.7배</td>
+          <td style="text-align: left">약 59.1%</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>이 표가 우리에게 말해주는 것:</strong></p>
+<ul>
+<li>
+<p><strong>일반일을 위한 해석:</strong>
+800 ~ 900단어짜리 빽빽한 문서를 AI가 텍스트로 읽으려면 800 ~ 900개의 조각을 처리해야 했습니다. 하지만 DeepSeek-OCR은 이 페이지를 '사진'으로 찍어 <strong>단 100개</strong>의 '시각 정보 조각'으로 압축했습니다. 8.5배나 압축했는데도, 원본 내용을 96.8%나 정확하게 복원해냈습니다. 10배 빠른 AI '속독'이 가능해진 것입니다!</p>
+</li>
+<li>
+<p><strong>전문가를 위한 통찰:</strong>
+GPU 효율은 단순 8.5배가 아닙니다. 기존 방식의 계산량이 O(n^2) (여기서 n=900)였다면, 새 방식은 O(k^2) (여기서 k=100)입니다. 즉, 900^2 (810,000) 대비 100^2 (10,000)로, <strong>이론상 계산 부하를 최대 81배까지 줄일 수 있는 잠재력</strong>을 보여줍니다. 또한, 19.7배의 초고압축(Tiny Mode)에서는 정확도가 59.1%로 떨어지는 것을 통해, 압축률과 정확도 간의 상충 관계(trade-off)를 보여주는 구체적인 기술 지표(empirical guideline)를 제공합니다.</p>
+</li>
+</ul>
+<hr>
+<h3 id="사례-2-단순-읽기ocr-10를-넘어-구조적-이해ocr-20로">사례 2: 단순 '읽기(OCR 1.0)'를 넘어 '구조적 이해(OCR 2.0)'로</h3>
+<p>DeepSeek-OCR의 진정한 가치는 단순히 글자를 빨리 읽는 것을 넘어섭니다. 이미지 속의 '구조'를 이해하는 '<strong>딥 파싱(Deep Parsing)</strong>' 능력을 갖추고 있기 때문입니다.</p>
+<p><img src="https://github.com/deepseek-ai/DeepSeek-OCR/blob/main/assets/show2.jpg?raw=true" alt="이미지1"></p>
+<p><strong>1. 금융/과학: 이미지 속 '차트'를 '엑셀 데이터'로 변환</strong></p>
+<ul>
+<li><strong>문제:</strong> 보고서 속의 막대그래프나 파이 차트는 단순한 '그림'이어서 데이터를 복사할 수 없었습니다.</li>
+<li><strong>해결:</strong> DeepSeek-OCR은 이 차트를 '보고' 그 안의 데이터를 인식하여, 우리가 즉시 엑셀이나 구글 시트에 붙여넣을 수 있는 <strong>HTML 테이블 형식</strong>으로 변환해줍니다.</li>
+</ul>
+<p><strong>2. 화학/STEM: '화학 구조식'을 '데이터베이스 언어'로 변환</strong></p>
+<ul>
+<li><strong>문제:</strong> 논문 속의 복잡한 분자 구조식 이미지는 AI에게 그냥 '그림'일 뿐이었습니다.</li>
+<li><strong>해결:</strong> 이 모델은 화학 구조식을 AI가 이해하고 데이터베이스에서 검색할 수 있는 표준 언어인 <strong>SMILES 형식</strong>으로 자동 변환합니다. AI가 이미지를 보고 &quot;이 물질은 벤젠 고리를 포함하고 있군&quot;이라고 분석할 수 있게 된 것입니다.</li>
+</ul>
+<p><img src="https://github.com/deepseek-ai/DeepSeek-OCR/blob/main/assets/show1.jpg?raw=true" alt="이미지2"></p>
+<p><strong>3. 교육/기술: '수학 도형'의 관계 이해</strong></p>
+<ul>
+<li><strong>문제:</strong> 수학 문제지의 복잡한 도형(예: 직각삼각형, 원의 접선)은 그 관계를 파악하기 어렵습니다.</li>
+<li><strong>해결:</strong> DeepSeek-OCR은 이 도형들의 구조적 관계(예: '선 AB'와 '선 CD'가 직각으로 만난다)를 인식하고 파싱할 수 있습니다.</li>
+</ul>
+<p><img src="https://github.com/deepseek-ai/DeepSeek-OCR/blob/main/assets/show4.jpg?raw=true" alt="이미지2"></p>
+<hr>
+<h3 id="사례-3-ai의-기억-관리법-미래-비전">사례 3: AI의 '기억 관리법' (미래 비전)</h3>
+<p>이 '광학적 압축' 기술은 AI의 장기 기억력을 관리하는 방식에도 혁신적인 아이디어를 제공합니다. 바로 인간의 '<strong>망각 메커니즘</strong>'을 모방하는 것입니다.</p>
+<p>우리의 기억도 방금 겪은 일은 생생하고(고해상도), 1년 전 일은 핵심만 남고 흐릿해지(저해상도/요약)는 것처럼 말이죠.</p>
+<ol>
+<li>
+<p><strong>최신 기억 (고해상도):</strong>
+AI가 방금 나눈 대화나 최근에 읽은 문서는 정보 손실이 없도록 <strong>선명한 고해상도 이미지</strong>로 렌더링하여 정확하게 보관합니다. (낮은 압축률)</p>
+</li>
+<li>
+<p><strong>오래된 기억 (점진적 압축):</strong>
+시간이 지난 오래된 대화 기록이나 문서는 어떨까요? AI가 이 기록을 이미지로 렌더링한 뒤, <strong>해상도를 점진적으로 낮추어(흐릿하게 만들어) 압축률을 높입니다.</strong> (높은 압축률, 적은 토큰)</p>
+</li>
+</ol>
+<p>이렇게 하면, AI는 한정된 GPU 자원 내에서도 <strong>최신 정보는 날카롭게, 오래된 정보는 효율적으로</strong> 보관하며 '<strong>이론상 무제한의 대화 기록(Context)</strong>'을 관리할 수 있게 됩니다.</p>
+<hr>
+<h2 id="이-기술이-나와-무슨-상관이죠">이 기술이 나와 무슨 상관이죠?</h2>
+<p>DeepSeek-OCR이 제시한 '광학적 압축'은 단순히 신기한 기술을 넘어, LLM이 직면한 가장 큰 벽인 '컴퓨팅 비용' 문제를 해결할 강력한 열쇠입니다.</p>
+<p><strong>✅ 사용자가 얻을 이득:</strong></p>
+<ul>
+<li><strong>더 빠르고 저렴한 AI:</strong> AI가 긴 PDF, 보고서, 심지어 손글씨 메모까지 '속독'할 수 있게 되어, 우리가 AI 서비스를 이용하는 비용이 훨씬 저렴해질 수 있습니다.</li>
+<li><strong>더 똑똑한 AI:</strong> 단순 텍스트를 넘어 차트, 도표, 화학식까지 '이해'하는 AI가 여러분의 업무와 학습을 더 깊이 있게 도울 수 있습니다.</li>
+<li><strong>기억력 좋은 AI:</strong> AI가 대화의 맥락을 훨씬 더 오래 기억하여(마치 '망각 메커니즘'처럼), 더 자연스럽고 연속적인 대화가 가능해집니다.</li>
+</ul>
+<p><strong>✅ 개발자가 얻을 통찰:</strong></p>
+<ul>
+<li><strong>O(n^2) 병목 현상의 실용적 우회로:</strong> 텍스트 모달리티의 제곱 비례 복잡도 문제를 시각 모달리티로 전환하여 O(k^2) (k « n)로 해결하는 강력한 아키텍처적 대안을 제시합니다.</li>
+<li><strong>고속 데이터 생성 파이프라인:</strong> 이 기술을 활용하면 <strong>단일 A100 GPU로 하루 20만 페이지</strong> 이상의 고품질 학습 데이터를 생성할 수 있습니다. 이는 VLM/LLM 사전 학습 데이터 구축에 드는 시간과 비용을 획기적으로 줄여줍니다.</li>
+<li><strong>구체적인 최적화 지표 획득:</strong> 1,000 토큰 미만의 문서는 64~100개의 비전 토큰으로도 충분하다는 실험 결과는, 향후 VLM 설계 시 토큰 최적화를 위한 명확한 기술적 가이드라인(empirical guidelines)이 됩니다.</li>
+</ul>
+<p>DeepSeek-OCR은 우리가 AI의 연산 능력 한계에 부딪혔을 때, &quot;한 걸음 물러서서 문제를 바라보는&quot; 창의적인 접근 방식이 얼마나 강력한지를 보여주는 멋진 사례입니다.</p>
+<hr>
+<h2 id="-쉬어가기--on2-이-도대체-무슨-뜻일까요">[ 쉬어가기 ] O(n^2) 이 도대체 무슨 뜻일까요?</h2>
+<p>AI 관련 글을 읽다 보면 O(n^2) (빅오-엔-스퀘어)라는 암호 같은 기호를 자주 마주치게 됩니다. 이건 &quot;작업량이 입력값(n)의 '제곱'에 비례해 폭발한다&quot;는 뜻으로, '제곱 비례 복잡도'라고 부릅니다.</p>
+<p>이걸 '파티의 악수 문제'에 비유하면 아주 쉽습니다.</p>
+<ul>
+<li>
+<p>파티에 3명(n=3)이 있습니다. 모든 사람이 서로 한 번씩 악수하려면 총 몇 번의 악수가 필요할까요?</p>
+<ul>
+<li>A가 B, C와 악수 (2번)</li>
+<li>B가 C와 악수 (1번)</li>
+<li><strong>총 3번</strong>의 악수가 필요합니다.</li>
+</ul>
+</li>
+<li>
+<p>그런데 파티에 10명(n=10)이 있다면 어떨까요?</p>
+<ul>
+<li>1번 사람이 9명과 악수</li>
+<li>2번 사람이 8명과 악수</li>
+<li>...</li>
+<li>9번 사람이 1명과 악수</li>
+<li><strong>총 45번</strong>의 악수가 필요합니다.</li>
+</ul>
+</li>
+</ul>
+<p>사람 수(n)는 약 <strong>3.3배</strong> (3명에서 10명) 늘었을 뿐인데, 해야 할 일(악수)은 <strong>15배</strong>(3번에서 45번으로)나 늘어났습니다.</p>
+<p>만약 파티에 <strong>100명</strong>(n=100)이 모인다면, 악수는 <strong>총 4,950번</strong> 필요합니다. <br>
+입력값(n)이 10배(10명에서 100명) 늘어나자, 작업량은 약 <strong>100배</strong>(45번에서 4950번으로) 가까이 폭증했습니다.</p>
+<p>이것이 바로 O(n^2) 의 무서움입니다.</p>
+<p>LLM(AI)의 세계에서 '사람(n)'은 '단어 토큰 수'이고, '악수'는 '문맥을 파악하기 위한 계산'입니다. <br>
+1,000개의 단어(토큰)를 처리한다는 것은, 1,000명의 사람이 파티에서 서로 악수하는 것과 비슷하게 1000 x 1000 = 1,000,000 (백만)에 비례하는 막대한 계산이 필요하다는 뜻입니다. <br><br></p>
+<p>DeepSeek-OCR은 이 '사람 수(n)' 자체를 획기적으로 줄여(1000명에서 100명), 계산량을 100배 줄여버린 기술입니다.<br><br>
+다음번에도 AI가 세상을 어떻게 바꾸고 있는지, 더 흥미롭고 유익한 소식으로 찾아뵙겠습니다.</p>
+
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/state_of_ai_report_2025/" title="State of AI Report 2025 국문(번역) 보고서">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Previous page</span>
+            <span class="max-w-48 truncate">State of AI Report 2025 국문(번역) 보고서</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/korea/" title="대한민국 AI G3 전략, 제가 한번 쉽고 깊이 있게 파헤쳐 봤는데요!">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">Next page</span>
+            <span class="max-w-48 truncate">대한민국 AI G3 전략, 제가 한번 쉽고 깊이 있게 파헤쳐 봤는데요!</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+    </article>
+  </div>
+
+  <div class="hidden lg:flex lg:flex-col lg:items-end">
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-ai가-긴-글을-읽을-때-gpu가-비명을-지르는-이유">1. AI가 긴 글을 읽을 때 'GPU가 비명을 지르는' 이유</a></li>
+    <li><a href="#2-deepseek-ocr의-역발상-텍스트를-텍스트로-읽지-말자">2. DeepSeek-OCR의 역발상: &quot;텍스트를 텍스트로 읽지 말자&quot;</a>
+      <ul>
+        <li><a href="#사례-1-10배-압축하고도-97-정확도를-지킨-광학적-압축">사례 1: 10배 압축하고도 97% 정확도를 지킨 '광학적 압축'</a></li>
+        <li><a href="#사례-2-단순-읽기ocr-10를-넘어-구조적-이해ocr-20로">사례 2: 단순 '읽기(OCR 1.0)'를 넘어 '구조적 이해(OCR 2.0)'로</a></li>
+        <li><a href="#사례-3-ai의-기억-관리법-미래-비전">사례 3: AI의 '기억 관리법' (미래 비전)</a></li>
+      </ul>
+    </li>
+    <li><a href="#이-기술이-나와-무슨-상관이죠">이 기술이 나와 무슨 상관이죠?</a></li>
+    <li><a href="#-쉬어가기--on2-이-도대체-무슨-뜻일까요">[ 쉬어가기 ] O(n^2) 이 도대체 무슨 뜻일까요?</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">1. 한국인공지능협회</div>
+
+        <div class="prose dark:prose-invert">
+          <h2 id="미션-mission">미션 (Mission)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능 시대, 문명의 기준을 세우는 것</strong><br>
+<em>AI age, Standardization of civilization</em></p>
+  </blockquote>
+
+<h2 id="비전-vision">비전 (Vision)</h2>
+
+
+
+  <blockquote>
+    <p><strong>인공지능의 민주화와 산업지능화 선도</strong><br>
+<em>Democratization of Artificial Intelligence and Leadership in Industrial Intelligence</em></p>
+  </blockquote>
+
+<h2 id="핵심전략-core-strategy">핵심전략 (Core Strategy)</h2>
+
+
+
+  <blockquote>
+    <p><strong>정보공유-인재양성-기업지원-시장창출로 선도적 인공지능 생태계 구축</strong><br>
+<em>Building a leading artificial intelligence ecosystem through information sharing, talent development, corporate support, and market creation</em></p>
+  </blockquote>
+
+<h2 id="행동-슬로건-slogan">행동 슬로건 (Slogan)</h2>
+
+
+
+  <blockquote>
+    <p><strong>시선은 미래를 향하고, 행동은 미래를 앞당긴다.</strong><br>
+<em>Our Eyes stares at the future &amp; Behavior moves-up the future</em></p>
+  </blockquote>
+
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">2. 설립배경</div>
+
+        <div class="prose dark:prose-invert">
+          <table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>법인명</strong></td>
+          <td style="text-align: left">사단법인 한국인공지능협회</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>법인형태</strong></td>
+          <td style="text-align: left">비영리법인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>창립총회</strong></td>
+          <td style="text-align: left">2017년 1월 임의단체 출범</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>사단법인 허가</strong></td>
+          <td style="text-align: left">2017년 6월 21일 (민법 제32조)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>주무부처</strong></td>
+          <td style="text-align: left">과학기술정보통신부</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>설립배경</strong></td>
+          <td style="text-align: left">인공지능 유관 정보, 인재, 기업, 시장 등의 교류와 연결을 통해서 인공지능 생태계를 선도</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="임원-및-회원사-현황">임원 및 회원사 현황</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>회장</strong></td>
+          <td style="text-align: left">김현철</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>임원</strong></td>
+          <td style="text-align: left">32인</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>회원사</strong></td>
+          <td style="text-align: left">1,000여 인공지능 및 데이터 전문 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>협력사</strong></td>
+          <td style="text-align: left">인공지능 수요사 15,000여 곳</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격자</strong></td>
+          <td style="text-align: left">인공지능산업컨설턴트 등 20,000여명</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증사</strong></td>
+          <td style="text-align: left">217여 산업지능화 인증(AI+X Certificate) 기업</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>전문가그룹</strong></td>
+          <td style="text-align: left">석박사, 공인자격자 중심의 산업계 인공지능 융합전문가</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="주요업무">주요업무</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">구분</th>
+          <th style="text-align: left">내용</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>기업지원</strong></td>
+          <td style="text-align: left">회원사 커뮤니티 운영, 수요공급사매칭, 컨소시엄지원, 편람발간, 분과활동, 마케팅 및 수출지원 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인재육성</strong></td>
+          <td style="text-align: left">AI기초교육, AI직무전환 교육, 취업매칭, 일자리 창출사업 등</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>인증제도</strong></td>
+          <td style="text-align: left">AI기술 및 비즈니스 인증제 운영</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>자격제도</strong></td>
+          <td style="text-align: left">AI유관 8개 직무자격에 대한 시험운영 및 자격발급</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>정책지원</strong></td>
+          <td style="text-align: left">AI생태계 수요조사, 표준화 활동, 규제개선 등</td>
+      </tr>
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">3. 한국인공지능협회로의 초대</div>
+
+        <div class="prose dark:prose-invert">
+          
+
+
+  <blockquote>
+    <p>스스로 학습의 학습을 거듭하는 인공지능에 대한 이론적인 근거를 두고, 50년 전 수학자 어빙 존 굿은 **&quot;인공지능은 인류 최후의 발명품&quot;**이라는 말을 남겼습니다. 세월이 지나 현 시대를 맞이한 우리는 인공지능을 기술적 발명품을 넘어 문명 전반의 변화를 이끌어내는 일종의 시대정신으로 마주하고 있습니다. 인공지능에 대한 사회적 요구가 커지고 있는 지금이 되려 우리가 미진한 부분을 개혁하고 인간적인 가치를 추구하는 계기가 되지 않을까 싶습니다.</p>
+  </blockquote>
+
+<p>한국인공지능협회의 최초 설립정신은 인류사회가 겪는 문제를 인공지능이라는 주제로 해결해가는 <strong>주체자들(Changers)의 결성</strong>이었고, 그들의 연결을 국내외로 지속적으로 추진합니다. 협회는 회원을 지칭하는 브랜드인 <strong>체인저스(Changers)</strong> 라는 정체성을 기반으로 정책과 사업을 구성하여 대한민국 전 분야의 지능화에 기여하고 인공지능의 민주화를 선도합니다.</p>
+<p>한국인공지능협회는 그동안 <strong>1,000여 개의 인공지능 기업</strong>과 <strong>10만 명이 넘는 종사자</strong>를 대변하는 인공지능 생태계의 대표 단체로서의 역할을 성실히 수행해 왔습니다. 이제 우리는 한 걸음 더 나아가, 인공지능을 둘러싼 다양한 주제를 다룰 새로운 거버넌스를 신설하고, 그 거버넌스들 간의 유기적인 연계를 공고히 하여 설립정신을 더욱 발전시켜갑니다.</p>
+<p>이를 통해 한국인공지능협회는 단순한 산업 대표 단체를 넘어, <strong>&quot;인공지능 시대&quot;를 대표하는 단체</strong>로 우뚝서려 합니다.</p>
+<p>한국인공지능협회는 인공지능을 세상을 부양시키는 <strong>최상위 메타(Meta) 산업</strong>으로 규정하여 우리의 관점과 역할을 통합적으로 변모시켜 갑니다. 우리는 인공지능 기술이 산업에 닿는 범위, 디지털화 된 산업이 경제를 변화시키는 범위, 생산력이 확보된 경제가 문화를 자아내는 범위, 참여의 문화가 강한 개인을 만들어내는 모든 범위를 고민하여 <strong>문명의 기준을 만드는 최선두</strong>에 서겠습니다.</p>
+<p><em><strong>감사합니다.</strong></em></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">4. 부서별 직무소개</div>
+
+        <div class="prose dark:prose-invert">
+          <h3 id="비서실">비서실</h3>
+<ul>
+<li>회장 수행</li>
+<li>체인저스 관리</li>
+</ul>
+<h3 id="인공지능-정책원">인공지능 정책원</h3>
+<ul>
+<li>AI입법 및 정책 지원</li>
+<li>정책백서편찬 및 세미나</li>
+<li>국회·산·학·연·관 정책 네트워크</li>
+</ul>
+<h3 id="인공지능-이용자-진흥원">인공지능 이용자 진흥원</h3>
+<ul>
+<li>오픈소스 커뮤니티 활성화</li>
+<li>사회적 영향에 대한 모니터링</li>
+<li>민간자율AI윤리위원회 운영</li>
+</ul>
+<h3 id="인공지능-연수원">인공지능 연수원</h3>
+<ul>
+<li>최고위과정 운영</li>
+<li>AI리터러시 및 직무전환교육</li>
+<li>지역 아카데미 관리</li>
+<li>원우회 운영</li>
+</ul>
+<h3 id="ai직무자격센터">AI직무자격센터</h3>
+<ul>
+<li>자격제 운영</li>
+<li>공인교육기관지정</li>
+<li>인재매칭플랫폼 운영</li>
+</ul>
+<h3 id="ai시험인증센터">AI시험·인증센터</h3>
+<ul>
+<li>시험·인증제 운영</li>
+<li>인공지능 고영향 평가</li>
+<li>표준화 활동</li>
+</ul>
+<h3 id="데이터작업물-등록센터">데이터·작업물 등록센터</h3>
+<ul>
+<li>데이터·작업물 등록</li>
+<li>확인증 발부</li>
+</ul>
+<h3 id="경영지원팀">경영지원팀</h3>
+<ul>
+<li>인사/노무/복리후생</li>
+<li>재무/회계</li>
+<li>총무/임원수행</li>
+<li>홍보/언론관리</li>
+</ul>
+<h3 id="회원교류팀">회원교류팀</h3>
+<ul>
+<li>국제인공지능대전</li>
+<li>AI어워드&amp;기업인의 밤</li>
+<li>해외진출지원</li>
+<li>지회협력</li>
+</ul>
+<h3 id="회원사업팀">회원사업팀</h3>
+<ul>
+<li>AI시너지링크(수요·공급매칭)</li>
+<li>AI Startups(편람)</li>
+<li>정부사업 및 사업수행</li>
+</ul>
+<h3 id="임원단-분과">임원단 분과</h3>
+<ul>
+<li>해외펀드</li>
+<li>국제네트워크</li>
+<li>공공협력</li>
+<li>취약계층 교육확산</li>
+<li>여성 인공지능 전문가 양성</li>
+</ul>
+<h3 id="해외지회">해외지회</h3>
+<ul>
+<li>일본지회</li>
+</ul>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2017 - 2026 한국인공지능협회 블로그
+  </p>
+  
+
+  
+  <p>🌱 사단법인 한국인공지능협회</p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "en" }).toFormat("yyyy. MM. dd.")
+    })
+  }
+</script>
+
+
+
+
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
