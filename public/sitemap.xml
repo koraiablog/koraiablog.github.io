@@ -2,22 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/ai-%ED%8A%B8%EB%A0%8C%EB%93%9C/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/anthropic/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/claude-4.6/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gpt-5.3/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/openai/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%EA%B8%B0%EC%88%A0-%EC%A0%84%EB%A7%9D/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/something-big-is-happening/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EC%9D%BC%EC%9E%90%EB%A6%AC-%EB%B3%80%ED%99%94/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EC%9E%90%EB%8F%99%ED%99%94/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-12T17:47:48+09:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/genesis_mission/</loc>
     <lastmod>2026-01-19T11:04:48+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai-%EC%9E%90%EC%9C%A8-%EC%97%B0%EA%B5%AC/</loc>
-    <lastmod>2026-01-19T11:04:48+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/ai-%ED%8A%B8%EB%A0%8C%EB%93%9C/</loc>
-    <lastmod>2026-01-19T11:04:48+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-01-19T11:04:48+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-01-19T11:04:48+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-01-19T11:04:48+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%EB%A7%A8%ED%95%B4%ED%8A%BC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/</loc>
@@ -27,9 +60,6 @@
     <lastmod>2026-01-19T11:04:48+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%EC%A0%9C%EB%84%A4%EC%8B%9C%EC%8A%A4-%EB%AF%B8%EC%85%98/</loc>
-    <lastmod>2026-01-19T11:04:48+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-19T11:04:48+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai-%EA%B2%A9%EC%B0%A8/</loc>
@@ -125,9 +155,6 @@
     <loc>http://localhost:1313/tags/gpt-4o/</loc>
     <lastmod>2025-03-27T10:33:25+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/openai/</loc>
-    <lastmod>2025-03-27T10:33:25+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%83%9D%EC%84%B1%EC%84%B1/</loc>
     <lastmod>2025-03-27T10:33:25+09:00</lastmod>
   </url><url>
@@ -135,9 +162,6 @@
     <lastmod>2025-03-24T09:44:10+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/mcp/</loc>
-    <lastmod>2025-03-24T09:44:10+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/anthropic/</loc>
     <lastmod>2025-03-24T09:44:10+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%EB%94%94%EC%A7%80%ED%84%B8%EC%A0%84%ED%99%98/</loc>

@@ -6,8 +6,64 @@
     <description>Recent content in Tags on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 19 Jan 2026 11:04:48 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 17:47:48 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Thu, 12 Feb 2026 17:47:48 +0900</pubDate>
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Anthropic</title>
+      <link>http://localhost:1313/tags/anthropic/</link>
+      <pubDate>Thu, 12 Feb 2026 17:47:48 +0900</pubDate>
+      <guid>http://localhost:1313/tags/anthropic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude 4.6</title>
+      <link>http://localhost:1313/tags/claude-4.6/</link>
+      <pubDate>Thu, 12 Feb 2026 17:47:48 +0900</pubDate>
+      <guid>http://localhost:1313/tags/claude-4.6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPT-5.3</title>
+      <link>http://localhost:1313/tags/gpt-5.3/</link>
+      <pubDate>Thu, 12 Feb 2026 17:47:48 +0900</pubDate>
+      <guid>http://localhost:1313/tags/gpt-5.3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>http://localhost:1313/tags/openai/</link>
+      <pubDate>Thu, 12 Feb 2026 17:47:48 +0900</pubDate>
+      <guid>http://localhost:1313/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>딥러닝</title>
+      <link>http://localhost:1313/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</link>
+      <pubDate>Thu, 12 Feb 2026 17:47:48 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EB%94%A5%EB%9F%AC%EB%8B%9D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>일자리 변화</title>
+      <link>http://localhost:1313/tags/%EC%9D%BC%EC%9E%90%EB%A6%AC-%EB%B3%80%ED%99%94/</link>
+      <pubDate>Thu, 12 Feb 2026 17:47:48 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EC%9D%BC%EC%9E%90%EB%A6%AC-%EB%B3%80%ED%99%94/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>자동화</title>
+      <link>http://localhost:1313/tags/%EC%9E%90%EB%8F%99%ED%99%94/</link>
+      <pubDate>Thu, 12 Feb 2026 17:47:48 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EC%9E%90%EB%8F%99%ED%99%94/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI 자율 연구</title>
       <link>http://localhost:1313/tags/ai-%EC%9E%90%EC%9C%A8-%EC%97%B0%EA%B5%AC/</link>
@@ -191,13 +247,6 @@
       <description></description>
     </item>
     <item>
-      <title>OpenAI</title>
-      <link>http://localhost:1313/tags/openai/</link>
-      <pubDate>Thu, 27 Mar 2025 10:33:25 +0900</pubDate>
-      <guid>http://localhost:1313/tags/openai/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>이미지생성성</title>
       <link>http://localhost:1313/tags/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%83%9D%EC%84%B1%EC%84%B1/</link>
       <pubDate>Thu, 27 Mar 2025 10:33:25 +0900</pubDate>
@@ -209,13 +258,6 @@
       <link>http://localhost:1313/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</link>
       <pubDate>Mon, 24 Mar 2025 09:44:10 +0900</pubDate>
       <guid>http://localhost:1313/tags/ai%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Anthropic</title>
-      <link>http://localhost:1313/tags/anthropic/</link>
-      <pubDate>Mon, 24 Mar 2025 09:44:10 +0900</pubDate>
-      <guid>http://localhost:1313/tags/anthropic/</guid>
       <description></description>
     </item>
     <item>
