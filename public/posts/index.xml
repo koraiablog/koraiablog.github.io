@@ -6,14 +6,21 @@
     <description>Recent content in Posts on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 12 Feb 2026 17:47:48 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 25 Feb 2026 11:47:48 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>무언가 큰 일이 일어나고 있다</title>
+      <title>소프트웨어 산업 혁명</title>
+      <link>http://localhost:1313/posts/software-industrial-revolution/</link>
+      <pubDate>Wed, 25 Feb 2026 11:47:48 +0900</pubDate>
+      <guid>http://localhost:1313/posts/software-industrial-revolution/</guid>
+      <description>&lt;p&gt;2025년 말은 AI 역사에 있어 진정한 변곡점이었습니다. 최첨단 AI 모델들의 성능이 비약적으로 향상되고, AI가 자율적으로 목표를 수행하는 &#39;에이전트(Agent)&#39; 환경이 무르익으면서, AI 코딩 비서들이 마침내 완벽하게 퍼즐을 맞췄습니다. 그리고 정말 순식간에, 이 기술은 &#39;그냥 찰떡같이&#39; 작동하게 되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;&#39;소프트웨어 산업 혁명&#39;의 시작을 환영합니다. 제1차 산업 혁명이 그랬듯, 이번 혁명 역시 세상을 심오하고 전혀 예상치 못한 방식으로 뒤바꿔 놓을 것입니다. 하지만 수십 년이 걸렸던 제1차 산업 혁명과 달리, 이번 혁명은 그리 오래 걸리지 않을 것입니다. 어쩌면 단 몇 년조차 걸리지 않을 수도 있습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>무언가 거대한 일이 일어나고 있습니다</title>
       <link>http://localhost:1313/posts/something-big-is-happening/</link>
       <pubDate>Thu, 12 Feb 2026 17:47:48 +0900</pubDate>
       <guid>http://localhost:1313/posts/something-big-is-happening/</guid>
-      <description>&lt;h2 id=&#34;-7700만-조회수를-기록한-경고&#34;&gt;🚨 7700만 조회수를 기록한 경고&lt;/h2&gt;&#xA;&lt;p&gt;2026년 2월, 실리콘밸리를 충격에 빠뜨린 글 하나가 소셜 미디어를 강타했습니다. AI 스타트업 창업자 Matt Shumer가 작성한 &amp;quot;Something Big Is Happening&amp;quot;은 단 며칠 만에 7700만 뷰를 돌파하며 전 세계 기술 커뮤니티를 뒤흔들었습니다.&lt;/p&gt;&#xA;&lt;p&gt;&amp;quot;나는 더 이상 코드를 작성하지 않는다. AI가 나보다 잘하기 때문이다.&amp;quot;&lt;/p&gt;&#xA;&lt;p&gt;6년간 AI 회사를 운영해온 업계 내부자의 이 한 문장은, 우리가 AI를 &amp;quot;편리한 도구&amp;quot; 정도로 여기며 안심하던 시대가 끝났음을 선언합니다. 2월 5일, OpenAI와 Anthropic이 동시에 공개한 최신 모델들은 단순히 성능이 좋아진 수준이 아닙니다. &lt;strong&gt;AI가 스스로를 개선하는 시대&lt;/strong&gt;, 인간 전문가보다 더 빠르고 정확하게 일하는 시대가 시작되었습니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;2026년 2월, 실리콘밸리를 충격에 빠뜨린 글 하나가 소셜 미디어를 강타했습니다. AI 스타트업 창업자 Matt Shumer가 작성한 &amp;quot;Something Big Is Happening&amp;quot;은 단 며칠 만에 7700만 뷰를 돌파하며 전 세계 기술 커뮤니티를 뒤흔들었습니다. (2026년 2월 26일 기준 8500만 돌파)&lt;/p&gt;&#xA;&lt;p&gt;&amp;quot;나는 더 이상 코드를 작성하지 않는다. AI가 나보다 잘하기 때문이다.&amp;quot;&lt;/p&gt;&#xA;&lt;p&gt;6년간 AI 회사를 운영해온 업계 내부자의 이 한 문장은, 우리가 AI를 &amp;quot;편리한 도구&amp;quot; 정도로 여기며 안심하던 시대가 끝났음을 선언합니다. 2월 5일, OpenAI와 Anthropic이 동시에 공개한 최신 모델들은 단순히 성능이 좋아진 수준이 아닙니다. &lt;strong&gt;AI가 스스로를 개선하는 시대&lt;/strong&gt;, 인간 전문가보다 더 빠르고 정확하게 일하는 시대가 시작되었습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI 시대의 새로운 &#39;트리니티 실험&#39;, 제네시스 미션</title>
