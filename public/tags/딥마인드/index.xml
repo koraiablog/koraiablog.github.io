@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>딥마인드 on 한국인공지능협회 블로그</title>
+    <link>http://localhost:1313/tags/%EB%94%A5%EB%A7%88%EC%9D%B8%EB%93%9C/</link>
+    <description>Recent content in 딥마인드 on 한국인공지능협회 블로그</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 13 Mar 2026 17:48:10 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%EB%94%A5%EB%A7%88%EC%9D%B8%EB%93%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>바둑판에서 생명의 지도까지: &#39;알파(Alpha)&#39;의 위대한 진화</title>
+      <link>http://localhost:1313/posts/alphafold/</link>
+      <pubDate>Fri, 13 Mar 2026 17:48:10 +0900</pubDate>
+      <guid>http://localhost:1313/posts/alphafold/</guid>
+      <description>&lt;p&gt;다이어트나 웨이트 트레이닝을 하시는 분들에게 &#39;단백질&#39;이라고 하면 가장 먼저 무엇이 떠오르시나요? 아마 퍽퍽한 닭가슴살이나 헬스장 한편에 놓인 커다란 단백질 보충제 통일 것입니다. 근육을 키워주고 포만감을 주는 중요한 &#39;영양소&#39; 정도로 친숙하죠.&lt;/p&gt;&#xA;&lt;p&gt;우리는 보통 몸이 움직이는 이유를 근육에서 찾고, 생각하는 이유를 뇌에서 찾고, 면역이 작동하는 이유를 항체에서 찾습니다. 그런데 생명과학의 렌즈를 끼고 더 깊이 들어가 보면, 이 모든 활동은 결국 거의 언제나 같은 단어로 모이게 됩니다.&lt;/p&gt;&#xA;&lt;p&gt;바로 &lt;strong&gt;단백질&lt;/strong&gt;입니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

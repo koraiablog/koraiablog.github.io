@@ -6,13 +6,20 @@
     <description>Recent content in Categories on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 25 Feb 2026 11:47:48 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 17:48:10 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI 트렌드</title>
       <link>http://localhost:1313/categories/ai-%ED%8A%B8%EB%A0%8C%EB%93%9C/</link>
-      <pubDate>Wed, 25 Feb 2026 11:47:48 +0900</pubDate>
+      <pubDate>Fri, 13 Mar 2026 17:48:10 +0900</pubDate>
       <guid>http://localhost:1313/categories/ai-%ED%8A%B8%EB%A0%8C%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>과학기술</title>
+      <link>http://localhost:1313/categories/%EA%B3%BC%ED%95%99%EA%B8%B0%EC%88%A0/</link>
+      <pubDate>Fri, 13 Mar 2026 17:48:10 +0900</pubDate>
+      <guid>http://localhost:1313/categories/%EA%B3%BC%ED%95%99%EA%B8%B0%EC%88%A0/</guid>
       <description></description>
     </item>
     <item>
