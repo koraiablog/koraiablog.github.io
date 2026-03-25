@@ -6,8 +6,43 @@
     <description>Recent content in Tags on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 13 Mar 2026 17:48:10 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 13:46:59 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>사카나AI</title>
+      <link>http://localhost:1313/tags/%EC%82%AC%EC%B9%B4%EB%82%98ai/</link>
+      <pubDate>Wed, 25 Mar 2026 13:46:59 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EC%82%AC%EC%B9%B4%EB%82%98ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>사후 학습</title>
+      <link>http://localhost:1313/tags/%EC%82%AC%ED%9B%84-%ED%95%99%EC%8A%B5/</link>
+      <pubDate>Wed, 25 Mar 2026 13:46:59 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EC%82%AC%ED%9B%84-%ED%95%99%EC%8A%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>소버린 AI</title>
+      <link>http://localhost:1313/tags/%EC%86%8C%EB%B2%84%EB%A6%B0-ai/</link>
+      <pubDate>Wed, 25 Mar 2026 13:46:59 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EC%86%8C%EB%B2%84%EB%A6%B0-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>오픈 웨이트</title>
+      <link>http://localhost:1313/tags/%EC%98%A4%ED%94%88-%EC%9B%A8%EC%9D%B4%ED%8A%B8/</link>
+      <pubDate>Wed, 25 Mar 2026 13:46:59 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%EC%98%A4%ED%94%88-%EC%9B%A8%EC%9D%B4%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>파운데이션 모델</title>
+      <link>http://localhost:1313/tags/%ED%8C%8C%EC%9A%B4%EB%8D%B0%EC%9D%B4%EC%85%98-%EB%AA%A8%EB%8D%B8/</link>
+      <pubDate>Wed, 25 Mar 2026 13:46:59 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%ED%8C%8C%EC%9A%B4%EB%8D%B0%EC%9D%B4%EC%85%98-%EB%AA%A8%EB%8D%B8/</guid>
+      <description></description>
+    </item>
     <item>
       <title>노벨화학상</title>
       <link>http://localhost:1313/tags/%EB%85%B8%EB%B2%A8%ED%99%94%ED%95%99%EC%83%81/</link>

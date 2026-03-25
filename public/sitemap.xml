@@ -3,16 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/ai-%ED%8A%B8%EB%A0%8C%EB%93%9C/</loc>
-    <lastmod>2026-03-13T17:48:10+09:00</lastmod>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-03-13T17:48:10+09:00</lastmod>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-03-13T17:48:10+09:00</lastmod>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-03-13T17:48:10+09:00</lastmod>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EC%82%AC%EC%B9%B4%EB%82%98ai/</loc>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EC%82%AC%ED%9B%84-%ED%95%99%EC%8A%B5/</loc>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EC%86%8C%EB%B2%84%EB%A6%B0-ai/</loc>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/sovereign/</loc>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%EC%98%A4%ED%94%88-%EC%9B%A8%EC%9D%B4%ED%8A%B8/</loc>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%ED%8C%8C%EC%9A%B4%EB%8D%B0%EC%9D%B4%EC%85%98-%EB%AA%A8%EB%8D%B8/</loc>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-27T13:46:59+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%EA%B3%BC%ED%95%99%EA%B8%B0%EC%88%A0/</loc>
     <lastmod>2026-03-13T17:48:10+09:00</lastmod>
@@ -33,9 +54,6 @@
     <lastmod>2026-03-13T17:48:10+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%EC%95%8C%ED%8C%8C%ED%8F%B4%EB%93%9C/</loc>
-    <lastmod>2026-03-13T17:48:10+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-03-13T17:48:10+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai/</loc>

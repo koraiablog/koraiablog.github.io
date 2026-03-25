@@ -6,8 +6,15 @@
     <description>Recent content in AI 트렌드 on 한국인공지능협회 블로그</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 13 Mar 2026 17:48:10 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 13:46:59 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/ai-%ED%8A%B8%EB%A0%8C%EB%93%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>소버린 AI, 꼭 처음부터 다시 만들어야 할까?</title>
+      <link>http://localhost:1313/posts/sovereign/</link>
+      <pubDate>Wed, 25 Mar 2026 13:46:59 +0900</pubDate>
+      <guid>http://localhost:1313/posts/sovereign/</guid>
+      <description>&lt;p&gt;AI 생태계에도 가끔 판을 흔드는 ‘메기’가 등장합니다. 연애 예능에서 판도를 바꾸는 메기 출연자처럼, 최근 일본의 인공지능 기업 &#39;사카나AI(Sakana AI)&#39;가 치열한 거대언어모델(LLM) 경쟁 한가운데에 예상 밖의 화두를 던졌습니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>바둑판에서 생명의 지도까지: &#39;알파(Alpha)&#39;의 위대한 진화</title>
       <link>http://localhost:1313/posts/alphafold/</link>
